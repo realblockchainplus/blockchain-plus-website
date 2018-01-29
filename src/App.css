@@ -1,0 +1,75 @@
+.App {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.section {
+  display: flex;
+}
+
+iframe {
+  height: 300px;
+  width: 100%;
+}
+.box-container {
+}
+.box-row {
+}
+.box {
+  padding: 50px 30px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5px;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.box:hover {
+  -webkit-box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+.box:hover .box-icon img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.box-icon {
+  height: 160px;
+  margin-bottom: 20px;
+}
+.box-icon img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  max-width: 100%;
+  height: auto;
+}
+.box-header {
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+.box-text {
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
