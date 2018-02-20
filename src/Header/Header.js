@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Header.css';
+import NavList from './NavList';
 
 class Header extends Component {
   scrollToID(element) {
@@ -9,7 +10,6 @@ class Header extends Component {
     const targetOffset = target.offsetTop - offSet;
     const htmlElement = document.documentElement;
     const currentScrollTop = htmlElement.scrollTop;
-    console.log(currentScrollTop, targetOffset);
     htmlElement.animate([
       { scrollTop: currentScrollTop },
       { scrollTop: targetOffset }
@@ -31,26 +31,9 @@ class Header extends Component {
             <a className="navbar-brand" href="#">
               <img src="blockchainplus_header_brand.png" style={{ height: '50px' }}/>
             </a>        
-            <div className={`${classes.white} collapse navbar-collapse`} id="mainNavbar">
-              <ul className="nav ml-auto" role="tablist">
-                <li className="nav-item active">
-                  <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#sectionOne">Overview</a>
-                </li>
-                <li className="nav-item">
-                  {/* <button className="nav-link" data-id="sectionTwo" onClick={(ev) => this.scrollToID(ev.target)}>Key Concepts</button> */}
-                  <a className="nav-link" href="#sectionTwo">Overview</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#sectionThree">FAQ</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#sectionFour">Contact</a>
-                </li>
-              </ul>
-            </div>
+            <NavList
+              navItems={this.props.navItems} 
+            />
           </div>
         </nav>
       </div>

@@ -2,6 +2,7 @@ html,body {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
+  background-color: rgb(63, 171, 214);
 }
 
 body > div {

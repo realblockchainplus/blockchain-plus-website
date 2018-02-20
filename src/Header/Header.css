@@ -11,3 +11,31 @@
 .white a {
   color: white;
 }
+
+.nav-link:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 10px solid #ffffff;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav-link:hover:before,
+.nav-item.active > a:before {
+  opacity: 1;
+  top: 0;
+}
+
+.nav-item.active a,
+.nav-link:hover {
+  border-top: 3px solid #ffffff;
+}
