@@ -37,15 +37,28 @@ Run (browser will automatically open and page will load)
 yarn start
 ```
 
+## Production
+
+### Build & Deploy Instructions (Needs to be automated)
+
+Create an optimized production build
+
+```
+yarn build
+```
+
+Copy the contents of the newly created `build` folder
+
+Connect to the web server, navigate to `/var/www/html/blockchainplus.co` and paste the contents of your clipboard
+
+Open index.php and edit these lines to match the new js / css bundles located in `static`:
+
+```
+<script type="text/javascript" src="/blockchain-plus-website/static/js/main.{versionGUID}.js"></script>
+<link href="/blockchain-plus-website/static/css/main.{versionGUID}.css" rel="stylesheet">
+```
+
 ## Built With
 
 * [React](https://facebook.github.io/react/) - A declarative, efficient, and flexible JavaScript library for building user interfaces
 * [Webpack](https://webpack.github.io/) - Module bundler
-
-## Authors
-
-* **Scott Donnelly** - [villith](https://github.com/villith)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
