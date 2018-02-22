@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import Image from 'react';
 import Header from './Header/Header';
 import Section from './Section/Section';
 import Panel from './Panel/Panel';
-import Box from './Box/Box';
 import Particles from 'react-particles-js';
 import { Parallax } from 'react-scroll-parallax';
 import ScrollReveal from 'scrollreveal';
@@ -11,80 +9,101 @@ import ScrollReveal from 'scrollreveal';
 import classes from './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    window.sr = ScrollReveal({ duration: 1000 });
+  }
   state = {
     direction: '',
     lastScrollPos: 0,
     navItems: [
       {
         name: 'Home',
-        href: ''
+        id: 'home'
       },
       {
         name: 'Overview',
-        href: 'overview'
+        id: 'overview'
       },
       {
         name: 'Key Concepts',
-        href: 'key-concepts'
+        id: 'key-concepts'
       },
       {
         name: 'FAQ',
-        href: 'faq'
+        id: 'faq'
       },
       {
         name: 'Contact',
-        href: 'contact'
+        id: 'contact'
       },
     ],
-    overview: [
-      {
-        image: 'lock.svg',
-        header: 'Information Privacy',
-        text: 'Unlike Blockchain, information is not stored on every node but instead only on participating nodes.'
+    sections: {
+      overview: {
+        header: null,
+        body: {
+          boxes: [
+            {
+              image: 'lock.svg',
+              title: 'Information Privacy',
+              description: 'Unlike Blockchain, information is not stored on every node but instead only on participating nodes.'
+            },
+            {
+              image: 'couple.svg',
+              title: 'Small Business First',
+              description: 'Practical and useful ledger system for transactional purposes.'
+            },
+            {
+              image: 'racing.svg',
+              title: 'Cutting Transaction Speed',
+              description: 'Parallel transaction happens between transactional nodes, so there is no centralized blockchain.'
+            }
+          ],
+          delays: [0, 500, 250]
+        }
       },
-      {
-        image: 'couple.svg',
-        header: 'Small Business First',
-        text: 'Practical and useful ledger system for transactional purposes.'
-      },
-      {
-        image: 'racing.svg',
-        header: 'Cutting Transaction Speed',
-        text: 'Parallel transaction happens between transactional nodes, so there is no centralized blockchain.'
+      keyConcepts: {
+        header: {
+          title: 'Key Concepts',
+          description: 'Innovative concepts are what make BlockChain+ possible. Discussed in detail with a research paper, the following is an overview!'
+        },
+        body: {
+          boxes: [
+            {
+              image: 'connect.svg',
+              title: 'Information not stored "everywhere"',
+              description: 'Transactional information such as sender / receiver and amount is only stored on participating nodes, enabling both security and speed.'
+            },
+            {
+              image: 'creativity.svg',
+              title: 'Random Number Teleportation',
+              description: 'Innovative concept of random number teleportation is used to generate the same random number on all nodes without transmitting to each other.'
+            },
+            {
+              image: 'link.svg',
+              title: 'Witness and partner Nodes',
+              description: 'Randomly selected witness and partner nodes are used in typical transactions for validation and execution purposes.'
+            },
+            {
+              image: 'network-lock.svg',
+              title: 'Mitigated Risk and Security Considerations',
+              description: 'Discussed in detail, Blockchain+ made it very hard for hacker nodes to execute fraudulent transactions.'
+            },
+            {
+              image: 'flame.svg',
+              title: 'Fast Transaction Execution Speed',
+              description: 'Parallel transactions happen on the Blockchain+ network, making execution speeds faster without compromising security concerns.'
+            },
+            {
+              image: 'couple.svg',
+              title: 'Small Business-Focused Operation',
+              description: 'At its heart, BlockChain+ overcomes the problems faced by open blockchains (Bitcoin, etc.) to make it useful for businesses to use this technology for their ledger system.'
+            }
+          ],
+          delays: [0, 0, 0, 500, 500, 500]
+        }
       }
-    ],
-    keyConcepts: [
-      {
-        image: 'connect.svg',
-        header: 'Information not stored "everywhere"',
-        text: 'Transactional information such as sender / receiver and amount is only stored on participating nodes, enabling both security and speed.'
-      },
-      {
-        image: 'creativity.svg',
-        header: 'Random Number Teleportation',
-        text: 'Innovative concept of random number teleportation is used to generate the same random number on all nodes without transmitting to each other.'
-      },
-      {
-        image: 'link.svg',
-        header: 'Witness and Guarantor Nodes',
-        text: 'Randomly selected witness and guarantor nodes are used in typical transactions for validation and execution purposes.'
-      },
-      {
-        image: 'network-lock.svg',
-        header: 'Mitigated Risk and Security Considerations',
-        text: 'Discussed in detail, Blockchain+ made it very hard for hacker nodes to execute fraudulent transactions.'
-      },
-      {
-        image: 'flame.svg',
-        header: 'Fast Transaction Execution Speed',
-        text: 'Parallel transactions happen on the Blockchain+ network, making execution speeds faster without compromising security concerns.'
-      },
-      {
-        image: 'online-store.svg',
-        header: 'Small Business-Focused Operation',
-        text: 'At its heart, BlockChain+ overcomes the problems faced by open blockchains (Bitcoin, etc.) to make it useful for businesses to use this technology for their ledger system.'
-      }
-    ]
+    }
   }
 
   componentDidMount() {
@@ -103,28 +122,15 @@ class App extends Component {
         lastScrollPos: newScrollPos
       });
     });
-
-    window.sr = ScrollReveal({ duration: 1000 });
-    const overviewDelays = [0, 500, 250];
-    const keyConceptDelays = [0, 0, 0, 500, 500, 500];
-    for (let i = 0; i < this.state.overview.length; i++) {
-      window.sr.reveal(`#overview-box-${i}`, { delay: overviewDelays[i] });
-    }
-    for (let i = 0; i < this.state.keyConcepts.length; i++) {
-      window.sr.reveal(`#key-concepts-box-${i}`, { delay: keyConceptDelays[i] });
-    }
-
   };
 
   render() {
-    const textStyle = {
-      color: 'white',
-      fontSize: '16px'
-    };
+    let width = window.innerWidth;
+    let numValue = width < 768 ? 10 : 80;
     const params = {
       "particles": {
         "number": {
-          "value": 100,
+          "value": numValue,
           "density": {
             "enable": true,
             "value_area": 800
@@ -231,24 +237,19 @@ class App extends Component {
     };
     const particlesStyle = {
       backgroundImage: 'url(world_map.svg)',
-      backgroundSize: '100%'
-    };
-    const parallaxStyle = {
-      // height: '100%'
+      backgroundSize: 'cover'
     };
     return (
       <div id='app' className={classes.App}>
         <Header
           scrollTop={this.state.lastScrollPos}
-          navItems={this.state.navItems}
+          content={this.state.navItems}
         />
         <Parallax
           className={classes.parallax}
           offsetYMax={1000}
           offsetYMin={-1000}
           slowerScrollRate={true}
-          // styleInner={parallaxStyle}
-          // styleOuter={parallaxStyle}
           tag="div"
         >
           <Particles
@@ -257,33 +258,22 @@ class App extends Component {
           />
         </Parallax>
         <Panel />
-        <div className={`${classes['section']} py-5`} id="overview" style={{ backgroundColor: "#F2FEFE" }}>
-          <div className={`${classes['box-container']} container`}>
-            <div className={`${classes['box-row']} row`}>
-              {this.state.overview.map((box, index) => {
-                const { image, header, text } = box;
-                return <Box
-                  key={index}
-                  id={`box-${index}`}
-                  boxCategory={'overview'}
-                  image={image}
-                  header={header}
-                  text={text}
-                />
-              })}
-            </div>
-          </div>
-        </div>
+        <Section
+          id={'overview'}
+          category={'overview'}
+          content={this.state.sections.overview}
+          backgroundColor={'#F2FEFE'}
+        />
         <div className={`${classes['section']} py-5`} id="sectionThree" style={{ color: 'white', backgroundColor: "rgba(0,0,0,0.25)" }}>
           <div className='container'>
-            <div className='row'>
-              <div className='col-6'>
+            <div className='row no-gutters'>
+              <div className='col-12 col-sm-6'>
                 <h2>Public Blockchain With Benefits</h2>
                 <p>Blockchain+ inherits the best from both public and private-based 
                 Blockchain architecture. The ledger function is easy to implement for 
                 small to enterprise-level firms and can provide security and transparency</p>
               </div>
-              <div className='col-6'>
+              <div className='col-12 col-sm-6'>
                 <div className={`${classes['carousel-img-container']} text-center`}>
                   <img src='1.png'/>
                 </div>
@@ -296,26 +286,12 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className={`${classes['section']} py-5`} id="key-concepts" style={{ backgroundColor: "#F2FEFE" }}>
-          <div className={`${classes['box-container']} container text-center`}>
-            <h2>KEY CONCEPTS</h2>
-            <p>Innovative concepts are what make BlockChain+ possible. Discussed in detail with a research paper, the following is an overview!</p>
-            <div className={`${classes['box-row']} row`}>
-              {this.state.keyConcepts.map((box, index) => {
-                const { image, header, text } = box;
-                return <Box
-                  key={index}
-                  id={`box-${index}`}
-                  boxCategory={'key-concepts'}
-                  image={image}
-                  header={header}
-                  text={text}
-                />
-              })}
-            </div>
-          </div>
-        </div>
-        <div style={{ height: '100%' }} id='content'></div>
+        <Section
+          id={'key-concepts'}
+          category={'key-concepts'}
+          content={this.state.sections.keyConcepts}
+          backgroundColor={'#F2FEFE'}
+        />
         <div className="modal fade" tabIndex="-1" role="dialog" id="investorModal">
           <div className="modal-dialog" role="document">
             <div className="modal-content">

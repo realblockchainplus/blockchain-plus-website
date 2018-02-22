@@ -9,9 +9,12 @@
 }
 
 .white a {
-  color: white;
+  color: white !important;
 }
 
+.nav-link {
+  
+}
 .nav-link:before {
   content: "";
   position: absolute;
@@ -38,4 +41,8 @@
 .nav-item.active a,
 .nav-link:hover {
   border-top: 3px solid #ffffff;
+}
+
+.navbar-toggler-icon {
+  color: white;
 }

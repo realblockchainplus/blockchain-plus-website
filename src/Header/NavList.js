@@ -5,18 +5,15 @@ import classes from './Header.css';
 class NavList extends Component {
   render() {
     return (
-      <div className={`${classes.white} collapse navbar-collapse`} id="mainNavbar">
-        <ul className="nav ml-auto" role="tablist">
-          {this.props.navItems.map((navItem, index) => {
-            const { name, href } = navItem;
-            return <NavListItem
-              key={index}
-              name={name}
-              href={href}
-            />
-          })}
-        </ul>
-      </div>
+      this.props.content.map((navItem, index) => {
+        const { name, id } = navItem;
+        return <NavListItem
+          key={index}
+          name={name}
+          id={id}
+          scrollToId={this.props.scrollToId}
+        />
+      })
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Section from '../Section/Section';
+import classes from './Panel.css'
 
 class Panel extends Component {
   componentDidMount() {
@@ -9,21 +9,12 @@ class Panel extends Component {
     // let t = s.text(100,50,'Snap("#svg") should reference an svg element, not a div. Or create it by supplying width,height Snap(100,100)');
   }
   render() {
-    let divStyle = {
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      backgroundColor: 'rgba(0,0,0,0)'
-    }
-    let spanStyle = {
-      fontSize: '40px',
-      color: 'white'
-    }
+    const maxWidth = window.innerWidth;
     return (
-      <div style={divStyle}>
+      <div style={{ color: 'white' }} className={`${classes['panel-container']} text-center`}>
         {/* <svg id='svgout' /> */}
-        <img src="logo_text.svg" style={{ height: '125px', marginBottom: '10px' }} />
+        <img src="logo_text.svg" style={{ maxWidth: maxWidth, marginBottom: '10px' }} />
+        <h4 style={{ textTransform: 'uppercase' }}>Next-generation distributed ledger system</h4>
       </div>
     );
   }
