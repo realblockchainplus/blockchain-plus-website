@@ -1,6 +1,41 @@
-# Test React Site
+# BlockChain+
 
-[A mock website for practicing React](https://villith.github.io/blockchain-plus-website)
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+```
+nodeJS
+npm OR yarn
+```
+
+### Installing
+
+Clone the repository
+
+```
+git clone https://{yourUsername}@bitbucket.org/mistletoe91/blockchainplus.git
+```
+
+Change directory
+
+```
+cd blockchainplus
+```
+
+Install dependencies
+
+```
+yarn install
+```
+
+Run (browser will automatically open and page will load)
+
+```
+yarn start
+```
 
 ## Built With
 
