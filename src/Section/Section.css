@@ -1,3 +1,5 @@
-.section {}
+.section {
+  min-height: 35%;
+}
 .section-container {}
 .section-header {}
