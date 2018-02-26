@@ -69,7 +69,7 @@ class App extends Component {
       },
       {
         id: 'carousel',
-        backgroundColor: 'rgba(0,0,0,0.25)',
+        backgroundColor: 'rgba(0,0,0,0.5)',
         header: null,
         body: {
           boxes: null,
@@ -225,6 +225,10 @@ class App extends Component {
       //     text: 'Placeholder text'
       //   }
       // }
+      {
+        id: 'faq',
+        backgroundColor: 'rgba(0,0,0,0.5)',
+      }
     ]
   }
 
