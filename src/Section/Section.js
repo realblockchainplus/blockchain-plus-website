@@ -10,6 +10,7 @@ class Section extends Component {
         <SectionContainer
           content={this.props.content}
           scrollReveal={this.props.scrollReveal}
+          backgroundColor={backgroundColor}
         />
       </div>
     );

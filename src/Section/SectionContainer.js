@@ -5,12 +5,14 @@ import classes from './Section.css';
 
 class SectionContainer extends Component {
   render() {
-    const { id, header, body } = this.props.content;
+    const { content, backgroundColor } = this.props;
+    const { id, header, body } = content;
     return (
       <div className={`${classes['section-container']} container`}>
         {header !== null &&
           <SectionHeader
             content={header}
+            backgroundColor={backgroundColor}
           />
         }
         <SectionBody 
