@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Box from '../Box/Box';
 import CarouselContainer from '../Carousel/CarouselContainer';
 import Accordion from '../Accordion/Accordion';
+import RandomNumberContainer from '../RandomNumber/RandomNumberContainer';
 import classes from './Section.css';
 
 class SectionBody extends Component {
@@ -32,6 +33,9 @@ class SectionBody extends Component {
           <Accordion
             content={this.props.content.panels}
           />
+        }
+        {this.props.id === 'random-number' &&
+          <RandomNumberContainer />
         }
       </div>
     );
