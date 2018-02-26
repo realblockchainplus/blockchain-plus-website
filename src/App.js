@@ -186,48 +186,30 @@ class App extends Component {
           slides: null
         }
       },
-      // {
-      //   id: 'faq',
-      //   backgroundColor: 'rgba(0,0,0,0.25)',
-      //   header: {
-      //     title: 'Frequently Asked Questions',
-      //     description: 'This section will have collapsible panels that contain frequently asked questions and their answers'
-      //   },
-      //   body: {
-      //     panels: [
-      //       {
-      //         question: 'This is a test question',
-      //         answer: 'This is a test answer!'
-      //       },
-      //       {
-      //         question: 'This is a test question',
-      //         answer: 'This is a test answer!'
-      //       },
-      //       {
-      //         question: 'This is a test question',
-      //         answer: 'This is a test answer!'
-      //       },
-      //       {
-      //         question: 'This is a test question',
-      //         answer: 'This is a test answer!'
-      //       }
-      //     ]
-      //   }
-      // },
-      // {
-      //   id: 'random-number',
-      //   backgroundColor: 'rgba(242,254,254,1)',
-      //   header: {
-      //     title: 'Random Number Teleportation',
-      //     description: 'This is the section where random number generation via jellyfish movement will be demonstrated'
-      //   },
-      //   body: {
-      //     text: 'Placeholder text'
-      //   }
-      // }
       {
         id: 'faq',
         backgroundColor: 'rgba(0,0,0,0.5)',
+        header: {
+          title: 'Frequently Asked Questions',
+          description: 'Some basic questions regarding Blockchain+'
+        },
+        body: {
+          panels: [
+            {
+              question: 'In simple words, what are the benefits of Blockchain+ ?',
+              answer: 'This research paper exploits an opportunity to implement private transactions in public, open-based blockchain architecture without compromising security, transparency or trust. It tackles problems we are facing presently, such as public vs. private blockchains, information being stored on “every node,” and the speed of execution. BlockChain+ offers a solution to these problems with an open-source, ledger-based approach. Information is only stored in participating nodes.'
+            },
+            {
+              question: 'Why open BlockChains (Bitcoin, etc.) cannot perform ledger functions very well?',
+              answer: 'As discussed in detail in this research paper, open blockchain architecture performs transactions by appending information to one massive blockchain. This database get bulky with time thereby compromising speed and raising questions regarding its effectiveness to execute transactions faster.'
+            },
+            {
+              question: 'What is in it for investors ?',
+              answer: 'Crypto ledger system are the reality of the future. It is expected that sooner or later, there will be a strong focus on operational aspects of blockchain, such as quick validation and execution. This is where BlockChain+ outshines and make itself useful for small businesses and individuals. As an investor, you get early access to the groundbreaking invention of Blockchain+. Reach out to us today by filling out the contact form to get updates or an answer to any question you might have.'
+            }
+          ]
+        }
+      },
       }
     ]
   }

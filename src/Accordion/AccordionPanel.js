@@ -11,6 +11,7 @@ class AccordionPanel extends Component {
       <div className={`${classes['accordion-panel']} col-12`}>
         <AccordionHeader
           question={question}
+          isActive={isActive}
           index={index}
           handleToggle={handleToggle}
         />

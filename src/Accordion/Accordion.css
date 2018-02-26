@@ -1,12 +1,25 @@
 .accordion-panel {
-  background-color: rgba(242,254,254,1);
-  margin-top: 5px;
-  margin-bottom: 5px;
-  transition: all 0.5s ease;
+  width: 80%;
+  margin: auto;
+  background-color: rgba(242,254,254,0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.25);
 }
 .accordion-header {
   color: darkblue;
   cursor: pointer;
+  user-select: none;
+}
+.accordion-header h5 {
+  display: inline;
+}
+.accordion > svg {
+  position: absolute;
+  color: rgba(242,254,254,1);
+  z-index: -1;
 }
 .accordion-body {
+  height: 0px;
+  transition: all 0.2s ease-out;
+  overflow: hidden;
 }

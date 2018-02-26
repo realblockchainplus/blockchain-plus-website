@@ -3,9 +3,9 @@ import classes from './Accordion.css';
 
 class AccordionBody extends Component {
   render() {
-    const display = this.props.isActive ? 'block' : 'none';
+    const height = this.props.isActive ? { height: '160px' } : {}
     return (
-      <div className={`${classes['accordion-body']}`} style={{ display: `${display}` }}>
+      <div className={`${classes['accordion-body']} container`} style={height}>
         <p>{this.props.answer}</p>
       </div>
     );
