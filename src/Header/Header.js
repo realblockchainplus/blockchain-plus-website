@@ -9,14 +9,51 @@ class Header extends Component {
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: true,
+      scrollTop: 0,
+      direction: ''
     };
   }
 
-  toggleNavbar() {
-    this.setState({
-      collapsed: !this.state.collapsed
+  componentDidMount() {
+    window.addEventListener('scroll', (ev) => {
+      let lastScrollPos = this.state.scrollTop;
+      let newScrollPos = document.documentElement.scrollTop;
+      let direction = '';
+      if (lastScrollPos < newScrollPos) {
+        direction += 'down';
+      }
+      else {
+        direction += 'up';
+      }
+      this.setState({
+        direction,
+        scrollTop: newScrollPos
+      });
     });
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.state.scrollTop === 0 && nextState.scrollTop !== 0) {
+      return true;
+    }
+    else if (this.state.scrollTop !== 0 && nextState.scrollTop === 0) {
+      return true;
+    }
+    else if (this.state.collapsed !== nextState.collapsed) {
+      return true
+    }
+    else {
+      return false;
+    }
+  }
+
+  toggleNavbar() {
+    if (window.innerWidth < 768) {
+      this.setState({
+        collapsed: !this.state.collapsed
+      });
+    }
   }
 
   scrollToId(ev, id) {
@@ -30,18 +67,27 @@ class Header extends Component {
       start = start || timestamp;
       const progress = timestamp - start;
       const time = Math.min(1, ((timestamp - start) / duration));
-      const result = this.props.scrollTop - ((time * time) * (this.props.scrollTop - targetOffset));
+      const result = this.state.scrollTop - ((time * time) * (this.state.scrollTop - targetOffset));
       window.scrollTo(0, result);
+      console.log(progress, duration);
       if (progress < duration) {
         window.requestAnimationFrame(step);
       }
+      else {
+        this.toggleNavbar();
+      }
     }
-    window.requestAnimationFrame(step);
+    if (this.state.scrollTop !== targetOffset) {
+      window.requestAnimationFrame(step);
+    }
+    else {
+      this.toggleNavbar();
+    }
   };
 
   render() {
     const isMobile = window.innerWidth < 768;
-    const scrollStyle = this.props.scrollTop !== 0 || (this.state.collapsed === false && isMobile === true) ? 'nav-opaque' : 'nav-transparent';
+    const scrollStyle = this.state.scrollTop !== 0 || (this.state.collapsed === false && isMobile === true) ? 'nav-opaque' : 'nav-transparent';
     return (
       <div>
         <Navbar light className={`navbar fixed-top navbar-toggleable-md ${classes[scrollStyle]}`}>
