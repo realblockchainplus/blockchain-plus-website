@@ -75,8 +75,6 @@ class CarouselContainer extends Component {
               </CarouselItem>
             );
           })};
-          <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-          <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
         </Carousel>
       </div>
     );
