@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
 import classes from './Header.css';
 import NavList from './NavList';
 
@@ -47,7 +47,7 @@ class Header extends Component {
         <Navbar light className={`navbar fixed-top navbar-toggleable-md ${classes[scrollStyle]}`}>
           <div className='container'>
             <NavbarBrand href="/">
-              <img src="blockchainplus_header_brand.png" style={{ height: '50px' }}/>
+              <img src="blockchainplus_header_brand.png" alt="Blockchain Logo" style={{ height: '50px' }}/>
             </NavbarBrand>
             <div style={{ display: 'inline', position: 'fixed', right: 0 }} className="mr-2">
               <NavbarToggler style={{ color: 'white' }} onClick={this.toggleNavbar} />

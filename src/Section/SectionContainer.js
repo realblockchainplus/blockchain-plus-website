@@ -5,7 +5,7 @@ import classes from './Section.css';
 
 class SectionContainer extends Component {
   render() {
-    const { header, body } = this.props.content;
+    const { id, header, body } = this.props.content;
     return (
       <div className={`${classes['section-container']} container`}>
         {header !== null &&
@@ -14,7 +14,7 @@ class SectionContainer extends Component {
           />
         }
         <SectionBody 
-          category={this.props.category}
+          id={id}
           content={body}
           scrollReveal={this.props.scrollReveal}
         />

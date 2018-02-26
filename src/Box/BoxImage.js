@@ -5,7 +5,7 @@ class BoxImage extends Component {
   render() {
     return (
       <div className={classes['box-image']}>
-        <img src={this.props.image} />
+        <img src={this.props.image} alt={this.props.title} />
       </div>
     );
   }

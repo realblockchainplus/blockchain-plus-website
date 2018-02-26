@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Box from '../Box/Box';
 import CarouselContainer from '../Carousel/CarouselContainer';
+import Accordion from '../Accordion/Accordion';
 import classes from './Section.css';
 
 class SectionBody extends Component {
@@ -13,7 +14,7 @@ class SectionBody extends Component {
             return <Box
               key={index}
               id={`box-${index}`}
-              category={this.props.category}
+              category={this.props.id}
               image={image}
               title={title}
               description={description}
@@ -25,6 +26,11 @@ class SectionBody extends Component {
         {this.props.content.slides &&
           <CarouselContainer
             content={this.props.content.slides}
+          />
+        }
+        {this.props.content.panels &&
+          <Accordion
+            content={this.props.content.panels}
           />
         }
       </div>

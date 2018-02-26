@@ -4,12 +4,11 @@ import classes from './Section.css';
 
 class Section extends Component {
   render() {
-    const backgroundColor = this.props.backgroundColor;
+    const { id, backgroundColor } = this.props.content;
     return (
-      <div className={`${classes['section']} py-5`} id={this.props.id} style={{ backgroundColor: `${backgroundColor}` }}>
+      <div className={`${classes['section']} py-5`} id={id} style={{ backgroundColor: `${backgroundColor}` }}>
         <SectionContainer
           content={this.props.content}
-          category={this.props.category}
           scrollReveal={this.props.scrollReveal}
         />
       </div>

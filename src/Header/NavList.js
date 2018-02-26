@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import NavListItem from './NavListItem';
-import classes from './Header.css';
 
 class NavList extends Component {
   render() {

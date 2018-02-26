@@ -1,0 +1,12 @@
+.accordion-panel {
+  background-color: rgba(242,254,254,1);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: all 0.5s ease;
+}
+.accordion-header {
+  color: darkblue;
+  cursor: pointer;
+}
+.accordion-body {
+}

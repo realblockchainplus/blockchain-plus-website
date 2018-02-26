@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import Section from './Section/Section';
-import Panel from './Panel/Panel';
+import Hero from './Hero/Hero';
 import Particles from 'react-particles-js';
 import { Parallax } from 'react-scroll-parallax';
 import ScrollReveal from 'scrollreveal';
@@ -38,8 +38,10 @@ class App extends Component {
         id: 'contact'
       },
     ],
-    sections: {
-      overview: {
+    sections: [
+      {
+        id: 'overview',
+        backgroundColor: 'rgba(242,254,254,1)',        
         header: null,
         body: {
           boxes: [
@@ -65,7 +67,9 @@ class App extends Component {
           slides: null
         }
       },
-      carousel: {
+      {
+        id: 'carousel',
+        backgroundColor: 'rgba(0,0,0,0.25)',
         header: null,
         body: {
           boxes: null,
@@ -89,12 +93,12 @@ class App extends Component {
               key: 1,
               images: [
                 {
-                  src: '1.png',
-                  altText: 'Image 1'
+                  src: '3.png',
+                  altText: 'Image 3'
                 },
                 {
-                  src: '2.png',
-                  altText: 'Image 2'
+                  src: '4.png',
+                  altText: 'Image 4'
                 }
               ],
               title: 'Open Source-Based Operation',
@@ -104,12 +108,12 @@ class App extends Component {
               key: 2,
               images: [
                 {
-                  src: '1.png',
-                  altText: 'Image 1'
+                  src: '5.png',
+                  altText: 'Image 5'
                 },
                 {
-                  src: '2.png',
-                  altText: 'Image 2'
+                  src: '6.png',
+                  altText: 'Image 6'
                 }
               ],
               title: 'Witness & Guarantor-Based Ledger System',
@@ -119,12 +123,12 @@ class App extends Component {
               key: 3,
               images: [
                 {
-                  src: '1.png',
-                  altText: 'Image 1'
+                  src: '7.png',
+                  altText: 'Image 7'
                 },
                 {
-                  src: '2.png',
-                  altText: 'Image 2'
+                  src: '8.png',
+                  altText: 'Image 8'
                 }
               ],
               title: 'Risk Assessment & Mitigation',
@@ -133,7 +137,9 @@ class App extends Component {
           ]
         }
       },
-      keyConcepts: {
+      {
+        id: 'key-concepts',
+        backgroundColor: 'rgba(242,254,254,1)',
         header: {
           title: 'Key Concepts',
           description: 'Innovative concepts are what make BlockChain+ possible. Discussed in detail with a research paper, the following is an overview!'
@@ -179,8 +185,47 @@ class App extends Component {
           ],
           slides: null
         }
-      }
-    }
+      },
+      // {
+      //   id: 'faq',
+      //   backgroundColor: 'rgba(0,0,0,0.25)',
+      //   header: {
+      //     title: 'Frequently Asked Questions',
+      //     description: 'This section will have collapsible panels that contain frequently asked questions and their answers'
+      //   },
+      //   body: {
+      //     panels: [
+      //       {
+      //         question: 'This is a test question',
+      //         answer: 'This is a test answer!'
+      //       },
+      //       {
+      //         question: 'This is a test question',
+      //         answer: 'This is a test answer!'
+      //       },
+      //       {
+      //         question: 'This is a test question',
+      //         answer: 'This is a test answer!'
+      //       },
+      //       {
+      //         question: 'This is a test question',
+      //         answer: 'This is a test answer!'
+      //       }
+      //     ]
+      //   }
+      // },
+      // {
+      //   id: 'random-number',
+      //   backgroundColor: 'rgba(242,254,254,1)',
+      //   header: {
+      //     title: 'Random Number Teleportation',
+      //     description: 'This is the section where random number generation via jellyfish movement will be demonstrated'
+      //   },
+      //   body: {
+      //     text: 'Placeholder text'
+      //   }
+      // }
+    ]
   }
 
   componentDidMount() {
@@ -334,44 +379,13 @@ class App extends Component {
             style={particlesStyle}
           />
         </Parallax>
-        <Panel />
-        <Section
-          id={'overview'}
-          category={'overview'}
-          content={this.state.sections.overview}
-          backgroundColor={'#F2FEFE'}
-        />
-        <Section
-          id={'carousel'}
-          category={'carousel'}
-          content={this.state.sections.carousel}
-          backgroundColor={'rgba(0,0,0,0.25)'}
-        />
-        <Section
-          id={'key-concepts'}
-          category={'key-concepts'}
-          content={this.state.sections.keyConcepts}
-          backgroundColor={'#F2FEFE'}
-        />
-        <div className="modal fade" tabIndex="-1" role="dialog" id="investorModal">
-          <div className="modal-dialog" role="document">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title">Modal title</h5>
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="modal-body">
-                <p>Modal body text goes here.</p>
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-primary">Save changes</button>
-                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Hero />
+        {this.state.sections.map((section, index) => {
+          return <Section
+            key={index}
+            content={section}
+          />
+        })}
       </div>
     );
   }

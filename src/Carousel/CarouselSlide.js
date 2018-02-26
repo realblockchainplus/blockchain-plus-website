@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
-import classes from './Carousel.css';
+import CarouselText from './CarouselText';
+import CarouselImage from './CarouselImage';
 
 class CarouselSlide extends Component {
   render() {
     const { images, title, description } = this.props;
     return (
       <div className='row no-gutters'>
-        <div className='col-12 col-sm-6'>
-          <h2>{title}</h2>
-          <p>{description}</p>
-        </div>
+        <CarouselText 
+          title={title}
+          description={description}
+        />
         <div className='col-12 col-sm-6'>
           {images.map((image, index) => {
             return (
-              <div key={index} className={`${classes['carousel-img-container']} text-center`}>
-                <img
-                  src={image.src}
-                  alt={image.altText}
-                />
-              </div>
+              <CarouselImage
+                key={index}
+                image={image}
+              />
             );
           })}
         </div>
