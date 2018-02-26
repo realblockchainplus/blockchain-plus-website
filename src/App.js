@@ -14,8 +14,6 @@ class App extends Component {
     window.sr = ScrollReveal({ duration: 1000 });
   }
   state = {
-    direction: '',
-    lastScrollPos: 0,
     navItems: [
       {
         name: 'Home',
@@ -215,21 +213,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', (ev) => {
-      let lastScrollPos = this.state.lastScrollPos;
-      let newScrollPos = document.documentElement.scrollTop;
-      let direction = '';
-      if (lastScrollPos < newScrollPos) {
-        direction += 'down';
-      }
-      else {
-        direction += 'up';
-      }
-      this.setState({
-        direction,
-        lastScrollPos: newScrollPos
-      });
-    });
   };
 
   render() {
@@ -350,7 +333,6 @@ class App extends Component {
     return (
       <div id='app' className={classes.App}>
         <Header
-          scrollTop={this.state.lastScrollPos}
           content={this.state.navItems}
         />
         <Parallax
