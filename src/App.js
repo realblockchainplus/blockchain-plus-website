@@ -283,7 +283,7 @@ class App extends Component {
         },
         "move": {
           "enable": true,
-          "speed": 0.5,
+          "speed": 1.5,
           "direction": "none",
           "random": true,
           "straight": false,
@@ -348,14 +348,13 @@ class App extends Component {
         />
         <Parallax
           className={classes.parallax}
-          offsetYMax={1000}
-          offsetYMin={-1000}
+          offsetYMax={window.innerHeight}
+          offsetYMin={-window.innerHeight}
           slowerScrollRate={true}
           tag="div"
         >
           <Particles
             params={params}
-            style={particlesStyle}
           />
         </Parallax>
         <Hero />
