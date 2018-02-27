@@ -2,5 +2,18 @@
   min-height: 35%;
 }
 .section-container {}
-.section-header {}
+.section-header {
+}
+.section-header h2 {
+  text-transform: uppercase;
+}
 .section-body {}
+
+
+@media(min-width: 768px) {
+  .section-header p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
