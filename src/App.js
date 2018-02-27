@@ -208,6 +208,17 @@ class App extends Component {
           ]
         }
       },
+      {
+        id: 'random-number',
+        backgroundColor: 'rgba(242,254,254,1)',
+        header: {
+          title: 'Random Number Teleportation',
+          description: 'We generate our random numbers via the random movement of jellyfish.'
+        },
+        body: {
+          text: 'Placeholder text',
+          apps: ['randomNumber']
+        }
       }
     ]
   }
