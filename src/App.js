@@ -62,8 +62,7 @@ class App extends Component {
               description: 'Parallel transaction happens between transactional nodes, so there is no centralized blockchain.',
               delay: 250
             }
-          ],
-          slides: null
+          ]
         }
       },
       {
@@ -71,7 +70,6 @@ class App extends Component {
         backgroundColor: 'rgba(0,0,0,0.5)',
         header: null,
         body: {
-          boxes: null,
           slides: [
             {
               key: 0,
@@ -181,8 +179,7 @@ class App extends Component {
               description: 'At its heart, BlockChain+ overcomes the problems faced by open blockchains (Bitcoin, etc.) to make it useful for businesses to use this technology for their ledger system.',
               delay: 250
             }
-          ],
-          slides: null
+          ]
         }
       },
       {
@@ -216,6 +213,7 @@ class App extends Component {
           title: 'Random Number Teleportation',
           description: 'We generate our random numbers via the random movement of jellyfish.'
         },
+        body: {}
         body: {
           text: 'Placeholder text',
           apps: ['randomNumber']
