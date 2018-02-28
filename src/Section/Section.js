@@ -3,13 +3,15 @@ import SectionContainer from './SectionContainer';
 import classes from './Section.css';
 
 class Section extends Component {
+  
   render() {
-    const { id, backgroundColor } = this.props.content;
+    const { index, content, scrollReveal } = this.props;
+    const { id, backgroundColor } = content;
     return (
       <div className={`${classes['section']} py-5`} id={id} style={{ backgroundColor: `${backgroundColor}` }}>
         <SectionContainer
-          content={this.props.content}
-          scrollReveal={this.props.scrollReveal}
+          content={content}
+          scrollReveal={scrollReveal}
           backgroundColor={backgroundColor}
         />
       </div>

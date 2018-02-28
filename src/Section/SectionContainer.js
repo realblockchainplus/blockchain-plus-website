@@ -7,8 +7,9 @@ class SectionContainer extends Component {
   render() {
     const { content, backgroundColor } = this.props;
     const { id, header, body } = content;
+    const overflowStyle = id === 'faq' ? { overflowY: 'hidden' } : {}
     return (
-      <div className={`${classes['section-container']} container`}>
+      <div className={`${classes['section-container']} container my-auto`} style={overflowStyle}>
         {header !== null &&
           <SectionHeader
             content={header}

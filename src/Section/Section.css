@@ -1,7 +1,9 @@
 .section {
-  min-height: 35%;
+  min-height: 70%;
 }
-.section-container {}
+.section-container {
+  height: 100%;
+}
 .section-header {
 }
 .section-header h2 {
