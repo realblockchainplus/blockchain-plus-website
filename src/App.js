@@ -428,10 +428,6 @@ class App extends Component {
       },
       "retina_detect": true
     };
-    const particlesStyle = {
-      backgroundImage: 'url(world_map.svg)',
-      backgroundSize: 'cover'
-    };
     return (
       <div id='app' className={classes.App}>
         <Header
