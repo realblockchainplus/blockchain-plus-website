@@ -6,7 +6,7 @@ class CarouselSlide extends Component {
   render() {
     const { images, title, description } = this.props;
     return (
-      <div className='row no-gutters'>
+      <div className='row no-gutters py-3'>
         <CarouselText 
           title={title}
           description={description}

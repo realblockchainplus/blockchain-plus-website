@@ -16,8 +16,9 @@
   width: 40%;
   margin-left: 15px;
   margin-right: 15px;
-  background-color: rgba(63, 171, 214, 0.75);
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(32,86,107, 0.95);
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.75);
 }
 .carousel-img-container:not(:first-child) {
   margin-top: 15px;
