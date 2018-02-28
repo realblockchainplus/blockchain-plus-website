@@ -11,8 +11,10 @@ class Accordion extends Component {
     questionMarks: []
   }
   componentDidMount() {
-    const questionMarks = this.createQuestionMarks();
-    this.setState({ questionMarks });
+    this.updateQuestionMarks();
+    window.addEventListener('resize', () => {
+      this.updateQuestionMarks();
+    })
   }
   handleToggle(panelId) {
     if (panelId === this.state.activePanel) {
@@ -28,13 +30,17 @@ class Accordion extends Component {
     const height = this.accordion.clientHeight;
     for (let i = 0; i < this.state.numQuestionMarks; i++) {
       let questionMark = {};
-      questionMark.x = Math.random() * (width - 200);
-      questionMark.y = Math.random() * height;
+      questionMark.x = Math.random() * width;
+      questionMark.y = Math.random() * (height * 2);
       questionMark.size = Math.random() * (6 - 1) + 1;
       questionMark.rotation = Math.random() * (45 - -45) + -45;
       questionMarks.push(questionMark);
     }
     return questionMarks;
+  }
+  updateQuestionMarks() {
+    const questionMarks = this.createQuestionMarks();
+    this.setState({ questionMarks });
   }
   render() {
     console.log('Accordion render');
@@ -47,7 +53,7 @@ class Accordion extends Component {
             key={index}
             icon={faQuestion}
             size={`${intSize}x`}
-            style={{ top: y, left: x, transform: `rotate(${rotation}deg)` }}
+            style={{ top: y, left: x - (intSize * 35), transform: `rotate(${rotation}deg)` }}
           />
         })}
         {this.props.content.map((panel, index) => {

@@ -1,3 +1,6 @@
+.accordion {
+  overflow: hidden;
+}
 .accordion-panel {
   width: 80%;
   margin: auto;
