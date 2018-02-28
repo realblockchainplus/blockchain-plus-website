@@ -3,11 +3,11 @@ import classes from './RandomNumber.css';
 
 class RandomNumberText extends Component {
   state = {
-    testString: 'That is a jellyfish!',
+    testString: null,
     hashResult: 'Hashing...'
   }
   componentDidMount() {
-    this.sha256(this.state.testString);
+    this.generateRandomString(() => { this.sha256(this.state.testString) });
   }
   hex(buffer) {
     const hexCodes = [];
@@ -21,9 +21,7 @@ class RandomNumberText extends Component {
     }
 
     const hashResult = hexCodes.join("");
-    this.setState({
-      hashResult
-    });
+    this.setState({ hashResult });
   }
   sha256(str) {
     const buffer = new TextEncoder("utf-8").encode(str);
@@ -31,6 +29,15 @@ class RandomNumberText extends Component {
       return this.hex(hash);
     });
   }
+  generateRandomString(callback) {
+    const image = () => {
+      return <img src='jellyfish3.png' />
+    }
+    let string = btoa(image);
+    let testString = string.substr(Math.floor(Math.random() * string.length));
+    this.setState({ testString }, () => {callback()});
+  }
+
   render() {
     return (
       <div className={`${classes['random-number-text']} col-4`}>
