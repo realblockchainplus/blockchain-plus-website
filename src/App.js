@@ -33,9 +33,13 @@ class App extends Component {
         id: 'faq'
       },
       {
-        name: 'Contact',
-        id: 'contact'
+        name: 'RNG',
+        id: 'random-number'
       },
+      {
+        name: 'Team',
+        id: 'team'
+      }
     ],
     sections: [
       {
