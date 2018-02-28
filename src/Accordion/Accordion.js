@@ -43,7 +43,6 @@ class Accordion extends Component {
     this.setState({ questionMarks });
   }
   render() {
-    console.log('Accordion render');
     return (
       <div ref={(accordion) => { this.accordion = accordion }}  className={`${classes['accordion']} my-5`}>
         {this.state.questionMarks.map((questionMark, index) => {

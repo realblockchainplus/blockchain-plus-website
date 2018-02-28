@@ -69,7 +69,6 @@ class Header extends Component {
       const time = Math.min(1, ((timestamp - start) / duration));
       const result = this.state.scrollTop - ((time * time) * (this.state.scrollTop - targetOffset));
       window.scrollTo(0, result);
-      console.log(progress, duration);
       if (progress < duration) {
         window.requestAnimationFrame(step);
       }
