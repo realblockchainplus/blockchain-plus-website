@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header/Header';
 import Section from './Section/Section';
 import Hero from './Hero/Hero';
+import Footer from './Footer/Footer';
 import Particles from 'react-particles-js';
 import { Parallax } from 'react-scroll-parallax';
 import ScrollReveal from 'scrollreveal';
@@ -220,7 +221,95 @@ class App extends Component {
           apps: ['randomNumber']
         }
       }
-    ]
+    ],
+    footer: {
+      brand: 'blockchainplus_logo.png',
+      columns: [
+        {
+          title: 'Column',
+          items: [
+            {
+              text: 'These',
+              link: '#'
+            },
+            {
+              text: 'Are',
+              link: '#'
+            },
+            {
+              text: 'Example',
+              link: '#'
+            },
+            {
+              text: 'Items',
+              link: '#'
+            }
+          ]
+        },
+        {
+          title: 'Learn',
+          items: [
+            {
+              text: 'Whitepaper',
+              link: '#'
+            },
+            {
+              text: 'Roadmap',
+              link: '#'
+            },
+            {
+              text: 'Github',
+              link: '#'
+            }
+          ]
+        },
+        {
+          title: 'Company',
+          items: [
+            {
+              text: 'About',
+              link: '#'
+            },
+            {
+              text: 'Careers',
+              link: '#'
+            },
+            {
+              text: 'Press',
+              link: '#'
+            },
+            {
+              text: 'Legal & Privacy',
+              link: '#'
+            },
+            {
+              text: 'Support',
+              link: '#'
+            }
+          ]
+        },
+        {
+          title: 'Social',
+          items: [
+            {
+              text: 'Blog',
+              link: '#'
+            },
+            {
+              text: 'Twitter',
+              link: '#'
+            },
+            {
+              text: 'Facebook',
+              link: '#'
+            }
+          ]
+        }
+      ],
+      languages: [
+        'English'
+      ]
+    }
   }
 
   componentDidMount() {
@@ -365,6 +454,9 @@ class App extends Component {
             content={section}
           />
         })}
+        <Footer
+          content={this.state.footer}
+        />
       </div>
     );
   }
