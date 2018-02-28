@@ -1,7 +1,6 @@
 .carousel-container {
-  min-height: 50%;
+  max-height: 100%;
 }
-
 .carousel-text {
   color: white;
 }
