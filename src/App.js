@@ -348,11 +348,12 @@ class App extends Component {
         />
         <Parallax
           className={classes.parallax}
-          offsetYMax={window.innerHeight}
-          offsetYMin={-window.innerHeight}
+          offsetYMax={1500}
+          offsetYMin={-1500}
           slowerScrollRate={true}
           tag="div"
         >
+          <img src='jellyfish_constellation_small2.png' />
           <Particles
             params={params}
           />

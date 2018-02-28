@@ -26,3 +26,9 @@ iframe {
 .parallax div {
   height: 100%;
 }
+
+.parallax img {
+  top: 25%;
+  position: absolute;
+  width: 25%;
+}
