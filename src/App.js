@@ -218,9 +218,144 @@ class App extends Component {
           description: 'We generate our random numbers via the random movement of jellyfish.'
         },
         body: {}
+      },
+      {
+        id: 'team',
+        backgroundColor: 'rgba(0,0,0,0.5)',
+        header: {
+          title: 'Blockchain+ Team',
+          description: 'Description for the team section'
+        },
         body: {
-          text: 'Placeholder text',
-          apps: ['randomNumber']
+          teamSections: [
+            {
+              id: 'advisors',
+              title: 'Advisors',
+              description: 'These are the advisors',
+              defaultImage: '',
+              defaultTitle: '',
+              members: [
+                {
+                  title: 'Dr',
+                  firstName: 'Mister',
+                  middleName: null,
+                  lastName: 'Bigshot',
+                  jobTitle: 'Super Blockchain Expert',
+                  description: 'This is the description of the super blockchain expert.',
+                  image:  '009-doctor-1.svg',
+                  links: []
+                },
+                {
+                  title: null,
+                  firstName: 'Advisor',
+                  middleName: null,
+                  lastName: 'Two',
+                  jobTitle: 'Number Two',
+                  description: 'This is the description of the super blockchain expert.',
+                  image:  '001-diver.svg',
+                  links: []
+                },
+                {
+                  title: null,
+                  firstName: 'Advisor',
+                  middleName: null,
+                  lastName: 'Three',
+                  jobTitle: 'Number Three',
+                  description: 'This is the description of the super blockchain expert.',
+                  image:  '002-nun.svg',
+                  links: []
+                },
+                {
+                  title: null,
+                  firstName: 'Advisor',
+                  middleName: null,
+                  lastName: 'Four',
+                  jobTitle: 'Number Four',
+                  description: 'This is the description of the super blockchain expert.',
+                  image:  '003-welder.svg',
+                  links: []
+                },
+                {
+                  title: null,
+                  firstName: 'Advisor',
+                  middleName: null,
+                  lastName: 'Five',
+                  jobTitle: 'Number Five',
+                  description: 'This is the description of the super blockchain expert.',
+                  image:  '004-croupier.svg',
+                  links: []
+                },
+                {
+                  title: null,
+                  firstName: 'Advisor',
+                  middleName: null,
+                  lastName: 'Six',
+                  jobTitle: 'Number Six',
+                  description: 'This is the description of the super blockchain expert.',
+                  image:  '005-firefighter.svg',
+                  links: []
+                },
+                {
+                  title: null,
+                  firstName: 'Advisor',
+                  middleName: null,
+                  lastName: 'Seven',
+                  jobTitle: 'Number Seven',
+                  description: 'This is the description of the super blockchain expert.',
+                  image:  '006-stewardess.svg',
+                  links: []
+                },
+                {
+                  title: null,
+                  firstName: 'Advisor',
+                  middleName: null,
+                  lastName: 'Eight',
+                  jobTitle: 'Number Eight',
+                  description: 'This is the description of the super blockchain expert.',
+                  image:  '007-showman.svg',
+                  links: []
+                }
+              ]
+            },
+            {
+              id: 'employees',
+              title: 'Employees',
+              description: 'These are the employees',
+              defaultImage: '',
+              defaultTitle: '',
+              members: [
+                {
+                  title: null,
+                  firstName: 'Jeevan',
+                  middleName: null,
+                  lastName: 'Singh',
+                  jobTitle: 'CEO',
+                  description: 'This is the description of the CEO.',
+                  image: '008-farmer.svg',
+                  links: []
+                }
+              ]
+            },
+            {
+              id: 'community-members',
+              title: 'Community Members',
+              description: 'These are the community members',
+              defaultImage: '',
+              defaultTitle: '',
+              members: [
+                {
+                  title: null,
+                  firstName: 'Joe',
+                  middleName: null,
+                  lastName: 'Schmoe',
+                  jobTitle: 'Contributor',
+                  description: 'This is the description of the community member.',
+                  image: '011-boss.svg',
+                  links: []
+                }
+              ]
+            }
+          ]
         }
       }
     ],

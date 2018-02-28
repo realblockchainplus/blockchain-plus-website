@@ -3,6 +3,7 @@ import Box from '../Box/Box';
 import CarouselContainer from '../Carousel/CarouselContainer';
 import Accordion from '../Accordion/Accordion';
 import RandomNumberContainer from '../RandomNumber/RandomNumberContainer';
+import TeamContainer from '../Team/TeamContainer';
 import classes from './Section.css';
 
 class SectionBody extends Component {
@@ -36,6 +37,11 @@ class SectionBody extends Component {
         }
         {this.props.id === 'random-number' &&
           <RandomNumberContainer />
+        }
+        {this.props.content.teamSections &&
+          <TeamContainer 
+            content={this.props.content.teamSections}
+          />
         }
       </div>
     );
