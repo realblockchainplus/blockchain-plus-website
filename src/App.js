@@ -558,7 +558,7 @@ class App extends Component {
 
   render() {
     let width = window.innerWidth;
-    let numValue = width < 768 ? 10 : 80;
+    let numValue = width < 768 ? 10 : 60;
     const params = {
       "particles": {
         "number": {
@@ -586,9 +586,9 @@ class App extends Component {
         },
         "opacity": {
           "value": 1,
-          "random": true,
+          "random": false,
           "anim": {
-            "enable": true,
+            "enable": false,
             "speed": 1,
             "opacity_min": 0,
             "sync": false
@@ -596,7 +596,7 @@ class App extends Component {
         },
         "size": {
           "value": 5,
-          "random": true,
+          "random": false,
           "anim": {
             "enable": false,
             "speed": 40,
@@ -615,7 +615,7 @@ class App extends Component {
           "enable": true,
           "speed": 1.5,
           "direction": "none",
-          "random": true,
+          "random": false,
           "straight": false,
           "out_mode": "out",
           "bounce": false,
@@ -630,7 +630,7 @@ class App extends Component {
         "detect_on": "canvas",
         "events": {
           "onhover": {
-            "enable": true,
+            "enable": false,
             "mode": "bubble"
           },
           "onclick": {
@@ -679,10 +679,10 @@ class App extends Component {
           slowerScrollRate={true}
           tag="div"
         >
-          <img src='jellyfish_constellation_small2.png' />
           <Particles
             params={params}
           />
+          <img src='jellyfish_constellation.png' alt='jellyfish constellation'/>
         </Parallax>
         <Hero />
         {this.state.sections.map((section, index) => {
