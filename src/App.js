@@ -6,6 +6,7 @@ import Footer from './Footer/Footer';
 import Particles from 'react-particles-js';
 import { Parallax } from 'react-scroll-parallax';
 import ScrollReveal from 'scrollreveal';
+import bodymovin from 'bodymovin';
 
 import classes from './App.css';
 
@@ -554,6 +555,13 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // bodymovin.loadAnimation({
+    //   container: document.getElementById('bm'),
+    //   renderer: 'svg',
+    //   loop: true,
+    //   autoplay: true,
+    //   path: 'data3.json'
+    // });
   };
 
   render() {
@@ -682,6 +690,7 @@ class App extends Component {
           <Particles
             params={params}
           />
+          {/* <div id='bm' className={classes.bodymovin}></div> */}
           <img src='jellyfish_constellation.png' alt='jellyfish constellation'/>
         </Parallax>
         <Hero />
