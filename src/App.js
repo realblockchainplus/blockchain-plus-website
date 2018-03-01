@@ -674,8 +674,8 @@ class App extends Component {
         />
         <Parallax
           className={classes.parallax}
-          offsetYMax={1500}
-          offsetYMin={-1500}
+          offsetYMax={3000}
+          offsetYMin={-3000}
           slowerScrollRate={true}
           tag="div"
         >
