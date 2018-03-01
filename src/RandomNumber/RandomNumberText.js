@@ -31,7 +31,7 @@ class RandomNumberText extends Component {
   }
   generateRandomString(callback) {
     const image = () => {
-      return <img src='jellyfish3.png' />
+      return <img src='jellyfish3.png' alt='' />
     }
     let string = btoa(image);
     let testString = string.substr(Math.floor(Math.random() * string.length));

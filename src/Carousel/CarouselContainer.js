@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   Carousel,
-  CarouselControl,
   CarouselIndicators,
   CarouselItem
 } from 'reactstrap';

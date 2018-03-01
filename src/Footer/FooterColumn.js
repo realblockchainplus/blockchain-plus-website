@@ -13,6 +13,7 @@ class FooterColumn extends Component {
         />
         {items.map((item, index) => {
           return <FooterItem
+            key={index}
             content={item}
             index={index}
           />
