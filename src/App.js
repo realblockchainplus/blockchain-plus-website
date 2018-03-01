@@ -224,14 +224,14 @@ class App extends Component {
         backgroundColor: 'rgba(0,0,0,0.5)',
         header: {
           title: 'Blockchain+ Team',
-          description: 'Description for the team section'
+          description: null
         },
         body: {
           teamSections: [
             {
               id: 'advisors',
               title: 'Advisors',
-              description: 'These are the advisors',
+              description: null,
               defaultImage: '',
               defaultTitle: '',
               members: [
@@ -240,10 +240,17 @@ class App extends Component {
                   firstName: 'Mister',
                   middleName: null,
                   lastName: 'Bigshot',
-                  jobTitle: 'Super Blockchain Expert',
-                  description: 'This is the description of the super blockchain expert.',
+                  jobTitle: 'Past Head Business Development @ IBM',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci sagittis eu volutpat odio facilisis mauris sit amet. Elementum pulvinar etiam non quam lacus suspendisse faucibus.',
                   image:  '009-doctor-1.svg',
-                  links: []
+                  links: {
+                    github: 'villith',
+                    linkedin: null,
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: 'sdonnelly',
+                    blog: null
+                  }
                 },
                 {
                   title: null,
@@ -251,9 +258,16 @@ class App extends Component {
                   middleName: null,
                   lastName: 'Two',
                   jobTitle: 'Number Two',
-                  description: 'This is the description of the super blockchain expert.',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae nunc sed velit dignissim sodales ut eu sem integer. Quis commodo odio aenean sed adipiscing diam donec.',
                   image:  '001-diver.svg',
-                  links: []
+                  links: {
+                    github: 'villith',
+                    linkedin: '',
+                    facebook: '',
+                    googlePlus: null,
+                    bitbucket: 'sdonnelly',
+                    blog: null
+                  }
                 },
                 {
                   title: null,
@@ -261,9 +275,16 @@ class App extends Component {
                   middleName: null,
                   lastName: 'Three',
                   jobTitle: 'Number Three',
-                  description: 'This is the description of the super blockchain expert.',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque.',
                   image:  '002-nun.svg',
-                  links: []
+                  links: {
+                    github: 'villith',
+                    linkedin: '',
+                    facebook: null,
+                    googlePlus: '',
+                    bitbucket: 'sdonnelly',
+                    blog: null
+                  }
                 },
                 {
                   title: null,
@@ -271,9 +292,16 @@ class App extends Component {
                   middleName: null,
                   lastName: 'Four',
                   jobTitle: 'Number Four',
-                  description: 'This is the description of the super blockchain expert.',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Orci phasellus egestas tellus rutrum tellus.',
                   image:  '003-welder.svg',
-                  links: []
+                  links: {
+                    github: 'villith',
+                    linkedin: null,
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: 'sdonnelly',
+                    blog: ''
+                  }
                 },
                 {
                   title: null,
@@ -281,9 +309,16 @@ class App extends Component {
                   middleName: null,
                   lastName: 'Five',
                   jobTitle: 'Number Five',
-                  description: 'This is the description of the super blockchain expert.',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                   image:  '004-croupier.svg',
-                  links: []
+                  links: {
+                    github: 'villith',
+                    linkedin: null,
+                    facebook: '',
+                    googlePlus: null,
+                    bitbucket: 'sdonnelly',
+                    blog: null
+                  }
                 },
                 {
                   title: null,
@@ -291,9 +326,16 @@ class App extends Component {
                   middleName: null,
                   lastName: 'Six',
                   jobTitle: 'Number Six',
-                  description: 'This is the description of the super blockchain expert.',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis.',
                   image:  '005-firefighter.svg',
-                  links: []
+                  links: {
+                    github: 'villith',
+                    linkedin: '',
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: 'sdonnelly',
+                    blog: null
+                  }
                 },
                 {
                   title: null,
@@ -301,9 +343,16 @@ class App extends Component {
                   middleName: null,
                   lastName: 'Seven',
                   jobTitle: 'Number Seven',
-                  description: 'This is the description of the super blockchain expert.',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at consectetur lorem donec massa sapien. Mattis ullamcorper velit sed ullamcorper morbi.',
                   image:  '006-stewardess.svg',
-                  links: []
+                  links: {
+                    github: 'villith',
+                    linkedin: '',
+                    facebook: '',
+                    googlePlus: '',
+                    bitbucket: 'sdonnelly',
+                    blog: ''
+                  }
                 },
                 {
                   title: null,
@@ -311,16 +360,23 @@ class App extends Component {
                   middleName: null,
                   lastName: 'Eight',
                   jobTitle: 'Number Eight',
-                  description: 'This is the description of the super blockchain expert.',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Augue mauris augue neque gravida in. Mi in nulla posuere sollicitudin aliquam ultrices.',
                   image:  '007-showman.svg',
-                  links: []
+                  links: {
+                    github: 'villith',
+                    linkedin: null,
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: 'sdonnelly',
+                    blog: null
+                  }
                 }
               ]
             },
             {
               id: 'employees',
-              title: 'Employees',
-              description: 'These are the employees',
+              title: 'Team',
+              description: null,
               defaultImage: '',
               defaultTitle: '',
               members: [
@@ -330,16 +386,57 @@ class App extends Component {
                   middleName: null,
                   lastName: 'Singh',
                   jobTitle: 'CEO',
-                  description: 'This is the description of the CEO.',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Ut eu sem integer vitae justo eget magna fermentum iaculis.',
                   image: '008-farmer.svg',
-                  links: []
+                  links: {
+                    github: 'villith',
+                    linkedin: null,
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: 'sdonnelly',
+                    blog: null
+                  }
+                },
+                {
+                  title: null,
+                  firstName: 'Jaswinder',
+                  middleName: null,
+                  lastName: 'Singh',
+                  jobTitle: 'CTO',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                  image: 'tugboat_jas_headshot.png',
+                  links: {
+                    github: 'mistletoe91',
+                    linkedin: '',
+                    facebook: '',
+                    googlePlus: null,
+                    bitbucket: 'mistletoe91',
+                    blog: null
+                  }
+                },
+                {
+                  title: null,
+                  firstName: 'Scott',
+                  middleName: null,
+                  lastName: 'Donnelly',
+                  jobTitle: 'Developer',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                  image: '008-farmer.svg',
+                  links: {
+                    github: 'villith',
+                    linkedin: 'scott-donnelly-527418125',
+                    facebook: 'scott.donnelly.315',
+                    googlePlus: '116327139909718037058',
+                    bitbucket: 'sdonnelly',
+                    blog: 'https://medium.com/@scott.donnelly790'
+                  }
                 }
               ]
             },
             {
               id: 'community-members',
-              title: 'Community Members',
-              description: 'These are the community members',
+              title: 'Ambassadors',
+              description: null,
               defaultImage: '',
               defaultTitle: '',
               members: [
@@ -351,7 +448,14 @@ class App extends Component {
                   jobTitle: 'Contributor',
                   description: 'This is the description of the community member.',
                   image: '011-boss.svg',
-                  links: []
+                  links: {
+                    github: 'villith',
+                    linkedin: null,
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: 'sdonnelly',
+                    blog: null
+                  }
                 }
               ]
             }

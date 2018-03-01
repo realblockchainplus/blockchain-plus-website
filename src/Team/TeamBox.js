@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import TeamPortrait from './TeamPortrait';
+import TeamLinks from './TeamLinks';
+import TeamDescription from './TeamDescription';
 import classes from './Team.css';
 
 class TeamBox extends Component {
@@ -23,21 +26,24 @@ class TeamBox extends Component {
   render() {
     const { content, index, id, handleMemberSelect } = this.props;
     const { firstName, middleName, lastName, title, jobTitle, description, image, links } = content;
-    const fullName = [title, firstName, middleName, lastName].join(' ');
-    const placeholderDesc = `This is the description of ${fullName} the ${jobTitle}`;
+    const fullName = [title, firstName, middleName, lastName].filter(name => name !== null).join(' ');
     return (
-      <div className={`${classes['team-box']} col-6 col-md-3 text-center`}>
-        <a href='#team' onClick={() => {handleMemberSelect(id, index)}}>
-          <div className={`${classes['team-portrait']}`}>
-            <img src={image} />
-            <h4>{fullName}</h4>
-          </div>
-        </a>
-        <div className={`${classes['team-links']}`}>
-          {links.map((link, index) => {
-            return <p>{link}</p>
-          })}
-        </div>
+      <div className={`${classes['team-box']} px-2 my-3 text-center`}>
+        <TeamPortrait
+          id={id}
+          index={index}
+          name={fullName}
+          image={image}
+          jobTitle={jobTitle}
+          handleMemberSelect={handleMemberSelect}
+        />
+        <TeamLinks
+          links={links}
+          size={'2x'}
+        /> 
+        <TeamDescription
+          description={description}
+        />
       </div>
     );
   }
