@@ -1,0 +1,46 @@
+.parallax {
+  height: 100%;
+}
+
+.parallax div {
+  height: 100%;
+}
+
+.parallax img {
+  top: 25%;
+  position: absolute;
+  width: 25%;
+}
+
+.rotate-entering { 
+  transform: rotateX(-90deg) translateZ(-50px)
+}
+.rotate-entered {
+  transform: translateZ(50px),
+}
+.rotate-exiting {
+  transform: rotateX(90deg) translateZ(50px)
+}
+.rotate-exited {
+  transform: translateZ(-50px),
+}
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-appear-active,
+.fade-enter-active {
+  transition: opacity .3s linear;
+  opacity: 1;
+}
+
+.fade-exit {
+  transition: opacity .2s linear;
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+}
