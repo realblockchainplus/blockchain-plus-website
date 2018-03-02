@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import classes from './Footer.css';
 
-class componentName extends Component {
+class FooterHeader extends Component {
   render() {
     return (
-      <div>
+      <div className={`${classes['footer-header']}`}>
         <p><strong>{this.props.title}</strong></p>
       </div>
     );
   }
 }
 
-export default componentName;
+export default FooterHeader;

@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import FooterHeader from './FooterHeader';
 
 class FooterLanguage extends Component {
   render() {
     return (
       <div>
-        <p><strong>Language</strong></p>
+        <FooterHeader
+          title={'Language'}
+        />
       </div>
     );
   }

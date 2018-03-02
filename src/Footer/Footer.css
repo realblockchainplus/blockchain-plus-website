@@ -5,16 +5,21 @@
   border-top: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.footer-category h5 {
+.footer-brand {}
+.footer-column {}
+
+.footer-header p {
+  text-transform: uppercase;
   color: rgb(2, 75, 158);
   font-size: 18px;
   font-weight: 700;
+  margin-bottom: 5px;
 }
 
-.footer-links p {
-  font-size: 14px;
-  line-height: 19px;
-  margin-bottom: 0px;
+.footer-item a {
+  text-transform: uppercase;
+  color: #292b2c;
+  font-size: 13px;
   text-decoration: none;
 }
 
