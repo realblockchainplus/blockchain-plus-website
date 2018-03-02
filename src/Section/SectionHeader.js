@@ -5,7 +5,7 @@ class SectionHeader extends Component {
   render() {
     const { content, backgroundColor } = this.props;
     const { title, description } = content;
-    const fontColor = backgroundColor === 'rgba(0,0,0,0.5)' ? 'rgba(242,254,254,1)' : 'black';
+    const fontColor = backgroundColor === 'rgba(32,86,107, 1)' ? 'rgba(242,254,254,1)' : 'black';
     return (
       <div className={`${classes['section-header']} text-center`} style={{ color: `${fontColor}`}}>
         <h1>{title}</h1>

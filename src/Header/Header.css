@@ -14,8 +14,8 @@
 }
 
 .nav-link {
-  
 }
+
 .nav-link:before {
   content: "";
   position: absolute;
