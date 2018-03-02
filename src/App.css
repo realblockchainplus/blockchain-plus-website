@@ -1,22 +1,6 @@
 .App {
   height: 100%;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-.App-intro {
-  font-size: large;
-}
-
-iframe {
-  height: 300px;
-  width: 100%;
+  background-color: rgb(63, 171, 214);
 }
 
 .parallax {

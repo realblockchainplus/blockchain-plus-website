@@ -72,7 +72,7 @@ class App extends Component {
       },
       {
         id: 'carousel',
-        backgroundColor: 'rgba(0,0,0,0.5)',
+        backgroundColor: 'rgba(32,86,107, 1)',
         header: null,
         body: {
           slides: [
@@ -189,7 +189,7 @@ class App extends Component {
       },
       {
         id: 'faq',
-        backgroundColor: 'rgba(0,0,0,0.5)',
+        backgroundColor: 'rgba(32,86,107, 1)',
         header: {
           title: 'Frequently Asked Questions',
           description: 'Some basic questions regarding Blockchain+'
@@ -222,7 +222,7 @@ class App extends Component {
       },
       {
         id: 'team',
-        backgroundColor: 'rgba(0,0,0,0.5)',
+        backgroundColor: 'rgba(32,86,107, 1)',
         header: {
           title: 'Blockchain+ Team',
           description: null
