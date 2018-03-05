@@ -36,6 +36,12 @@ class App extends Component {
     ],
     sections: [
       {
+        id: 'hero',
+        backgroundColor: 'rgba(0,0,0,0)',
+        header: {},
+        body: {}
+      },
+      {
         id: 'overview',
         backgroundColor: 'rgba(242,254,254,1)',        
         header: null,
