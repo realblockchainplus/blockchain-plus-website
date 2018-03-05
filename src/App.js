@@ -10,30 +10,42 @@ import classes from './App.css';
 
 class App extends Component {
   state = {
+    bodyHeight: null,
     navItems: [
       {
         name: 'Home',
+        page: '',
         id: 'home'
       },
       {
         name: 'Overview',
+        page: '',
         id: 'overview'
       },
       {
         name: 'Key Concepts',
+        page: '',
         id: 'key-concepts'
       },
       {
         name: 'FAQ',
+        page: '',
         id: 'faq'
       },
       {
         name: 'RNG',
+        page: '',
         id: 'random-number'
       },
       {
         name: 'Team',
+        page: '',
         id: 'team'
+      },
+      {
+        name: 'Whitepaper',
+        page: 'whitepaper',
+        id: 'whitepaper'
       }
     ],
     sections: [

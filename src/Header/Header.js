@@ -11,7 +11,7 @@ class Header extends Component {
     this.state = {
       collapsed: true,
       scrollTop: 0,
-      direction: ''
+      direction: '',
     };
   }
 
@@ -57,7 +57,6 @@ class Header extends Component {
   }
 
   scrollToId(ev, id) {
-    ev.preventDefault();
     const offSet = 74;
     const target = document.getElementById(id)
     const targetOffset = target ? target.offsetTop - offSet : 0;

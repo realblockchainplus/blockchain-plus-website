@@ -3,6 +3,10 @@ import { Router, Route, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import MainPage from '../Pages/MainPage/MainPage';
 import Whitepaper from '../Pages/Whitepaper/Whitepaper';
+import Particles from 'react-particles-js';
+import { Parallax } from 'react-scroll-parallax';
+import diff from 'deep-diff';
+import { AnimatedSwitch } from 'react-router-transition';
 // import Fade from '../Transitions/Fade';
 import classes from './Body.css';
 
@@ -29,32 +33,39 @@ const transitionStyles = {
 };
 
 class Body extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    let differences = diff(this.props, nextProps);
+    if (differences) {
+      if (differences[0].path[1] === 'key') {
+        return false;
+      }
+    }
+    return true;
+  }
   render() {
-    console.log(this.props);
     return (
       <div className={`${classes['body']}`}>
-        <TransitionGroup>
-          <CSSTransition
-            appear
-            classNames="fade"
-            timeout={duration}
-          >
-            <Switch key={this.props.location.key} location={this.props.location}>
-              <Route path='/' exact
-                render={() => {
-                  return <MainPage 
-                    content={this.props.content}
-                  />
-                }}
+        <Switch
+          key={this.props.location.key}
+          location={this.props.location}
+        >
+          <Route path='/' exact
+            render={() => {
+              return <MainPage
+                id='main-page'
+                content={this.props.content}
               />
-              <Route path='/whitepaper'
-                render={() => {
-                  return <Whitepaper />
-                }}
+            }}
+          />
+          <Route path='/whitepaper'
+            render={() => {
+              return <Whitepaper
+                id='whitepaper'
+                content={this.props.content}
               />
-            </Switch>
-          </CSSTransition>
-        </TransitionGroup>
+            }}
+          />
+        </Switch>
       </div>
     );
   }
