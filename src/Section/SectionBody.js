@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Hero from '../Hero/Hero';
 import Box from '../Box/Box';
 import CarouselContainer from '../Carousel/CarouselContainer';
 import Accordion from '../Accordion/Accordion';
@@ -10,6 +11,9 @@ class SectionBody extends Component {
   render() {
     return (
       <div className={`${classes['section-body']} row`}>
+        {this.props.id === 'hero' &&
+          <Hero />
+        }
         {this.props.content.boxes && 
           this.props.content.boxes.map((box, index) => {
             const { image, title, description, delay } = box;

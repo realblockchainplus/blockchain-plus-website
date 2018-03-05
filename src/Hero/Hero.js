@@ -23,10 +23,12 @@ class Hero extends Component {
   }
   render() {
     return (
-      <div style={{ color: 'white' }} className={`${classes['hero-container']} text-center`}>
-        {/* <svg id='svgout' /> */}
-        <img src="logo_text.svg" alt='Blockchain Plus Text Logo' style={{ maxWidth: this.state.width, marginBottom: '10px' }} />
-        <h4 style={{ textTransform: 'uppercase' }}>Next-generation distributed ledger system</h4>
+      <div className={`${classes['hero-section']}`}>
+        <div style={{ color: 'white' }} className={`${classes['hero-container']} text-center`}>
+          {/* <svg id='svgout' /> */}
+          <img src="logo_text.svg" alt='Blockchain Plus Text Logo' style={{ maxWidth: this.state.width, marginBottom: '10px' }} />
+          <h4 style={{ textTransform: 'uppercase' }}>Next-generation distributed ledger system</h4>
+        </div>
       </div>
     );
   }
