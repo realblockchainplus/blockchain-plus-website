@@ -1,6 +1,15 @@
 .section {
   min-height: 70%;
 }
+.section-hero {
+  height: 100vh;
+}
+.section-hero .section-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .section-container {
   height: 100%;
 }
