@@ -1,16 +1,4 @@
-.parallax {
-  height: 100%;
-}
-
-.parallax div {
-  height: 100%;
-}
-
-.parallax img {
-  top: 25%;
-  position: absolute;
-  width: 25%;
-}
+.main-page {}
 
 .rotate-entering { 
   transform: rotateX(-90deg) translateZ(-50px)

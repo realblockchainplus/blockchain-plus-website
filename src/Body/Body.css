@@ -1,3 +1,18 @@
+.body {
+  min-height: 100%;
+}
+.switch-wrapper {}
+.parallax {
+}
+
+.parallax div {
+}
+
+.parallax img {
+  top: 25%;
+  position: absolute;
+  width: 25%;
+}
 .fade-appear,
 .fade-enter {
   opacity: 0;
