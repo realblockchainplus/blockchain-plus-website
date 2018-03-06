@@ -11,7 +11,7 @@ class CarouselSlide extends Component {
           title={title}
           description={description}
         />
-        <div className='col-12 col-sm-6'>
+        <div className='col-12 col-md-6'>
           {images.map((image, index) => {
             return (
               <CarouselImage

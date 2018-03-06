@@ -630,7 +630,7 @@ class App extends Component {
 
   render() {
     let width = window.innerWidth;
-    let numValue = width < 768 ? 10 : 60;
+    let numValue = Math.floor(width / 50);
     let height = document.documentElement.scrollHeight;
     console.log(height);
     const params = {

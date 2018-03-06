@@ -14,18 +14,12 @@ class Box extends Component {
         x: 0,
         y: 90,
         z: 0
-      },
-      viewOffset: {
-        top: 0,
-        right: 100,
-        bottom: 0,
-        left: 0
       }
     });
   }
   render() {
     return (
-      <div className='box-anim col-12 col-md-4' id={`${this.props.category}-${this.props.id}`}>
+      <div className='box-anim col-12 col-md-6 col-lg-4' id={`${this.props.category}-${this.props.id}`}>
         <div className={`${classes['box']}`}>
           <BoxImage
             title={this.props.title}

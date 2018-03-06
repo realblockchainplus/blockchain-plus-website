@@ -13,7 +13,7 @@ class MainPage extends Component {
   }
   render() {
     let width = window.innerWidth;
-    let numValue = width < 768 ? 10 : 60;
+    let numValue = width < 992 ? 10 : 60;
     return (
       <div id={this.props.id} className={`${classes[this.props.id]}`}>
         {this.props.content.map((section, index) => {

@@ -49,7 +49,7 @@ class Header extends Component {
   }
 
   toggleNavbar() {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 992) {
       this.setState({
         collapsed: !this.state.collapsed
       });
@@ -84,7 +84,7 @@ class Header extends Component {
   };
 
   render() {
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < 992;
     const scrollStyle = this.state.scrollTop !== 0 || (this.state.collapsed === false && isMobile === true) ? 'nav-opaque' : 'nav-transparent';
     return (
       <div>
