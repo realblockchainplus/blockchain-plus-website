@@ -209,7 +209,7 @@ class App extends Component {
       },
       {
         id: 'faq',
-        backgroundColor: 'rgba(32,86,107, 1)',
+        backgroundColor: 'rgba(32,86,107,1)',
         header: {
           title: 'Frequently Asked Questions',
           description: 'Some basic questions regarding Blockchain+'
@@ -250,7 +250,7 @@ class App extends Component {
       },
       {
         id: 'team',
-        backgroundColor: 'rgba(32,86,107, 1)',
+        backgroundColor: 'rgba(32,86,107,1)',
         header: {
           title: 'Blockchain+ Team',
           description: null
