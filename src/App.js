@@ -557,6 +557,7 @@ class App extends Component {
           items: [
             {
               text: 'Whitepaper',
+              page: 'whitepaper',
               link: '#'
             },
             {
