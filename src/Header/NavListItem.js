@@ -9,8 +9,8 @@ class NavListItem extends Component {
   render() {
     const pagePath = `/${this.props.page}`;
     return (
-      <li className={`${classes['white']} nav-item`}>
-        <NavLink activeClassName='active' className='btn nav-link' to={pagePath} onClick={(ev) => { this.addDelay(ev) }}>{this.props.name}</NavLink>
+      <li className={`${classes['white']} ${classes['nav-item']}`}>
+        <NavLink activeClassName='active' className={`btn nav-link ${classes['nav-link']}`} to={pagePath} onClick={(ev) => { this.addDelay(ev) }}>{this.props.name}</NavLink>
       </li>
     );
   }
