@@ -7,7 +7,7 @@ class RandomNumberText extends Component {
     hashResult: 'Hashing...'
   }
   componentDidMount() {
-    this.generateRandomString(() => { this.sha256(this.state.testString) });
+    this.generateRandomString((randomString) => { this.sha256(randomString) });
   }
   hex(buffer) {
     const hexCodes = [];
@@ -35,7 +35,7 @@ class RandomNumberText extends Component {
     }
     let string = btoa(image);
     let testString = string.substr(Math.floor(Math.random() * string.length));
-    this.setState({ testString }, () => {callback()});
+    callback(testString);
   }
 
   render() {
