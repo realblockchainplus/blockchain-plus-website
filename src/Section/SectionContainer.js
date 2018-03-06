@@ -5,7 +5,7 @@ import classes from './Section.css';
 
 class SectionContainer extends Component {
   render() {
-    const { content, backgroundColor } = this.props;
+    const { content } = this.props;
     const { id, header, body } = content;
     const overflowStyle = id === 'faq' ? { overflowY: 'hidden' } : {}
     return (
@@ -13,7 +13,6 @@ class SectionContainer extends Component {
         {header !== null &&
           <SectionHeader
             content={header}
-            backgroundColor={backgroundColor}
           />
         }
         <SectionBody 

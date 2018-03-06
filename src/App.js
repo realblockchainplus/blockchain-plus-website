@@ -5,7 +5,6 @@ import Footer from './Footer/Footer';
 import Particles from 'react-particles-js';
 import { Parallax } from 'react-scroll-parallax';
 import bodymovin from 'bodymovin';
-
 import classes from './App.css';
 
 class App extends Component {
@@ -56,7 +55,6 @@ class App extends Component {
     sections: [
       {
         id: 'hero',
-        backgroundColor: 'rgba(0,0,0,0)',
         header: {},
         body: {}
       },
@@ -92,7 +90,6 @@ class App extends Component {
       },
       {
         id: 'carousel',
-        backgroundColor: 'rgba(32,86,107, 1)',
         header: null,
         body: {
           slides: [
@@ -161,7 +158,6 @@ class App extends Component {
       },
       {
         id: 'key-concepts',
-        backgroundColor: 'rgba(242,254,254,1)',
         header: {
           title: 'Key Concepts',
           description: 'Innovative concepts are what make BlockChain+ possible. Discussed in detail with a research paper, the following is an overview!'
@@ -209,7 +205,6 @@ class App extends Component {
       },
       {
         id: 'faq',
-        backgroundColor: 'rgba(32,86,107,1)',
         header: {
           title: 'Frequently Asked Questions',
           description: 'Some basic questions regarding Blockchain+'
@@ -241,7 +236,6 @@ class App extends Component {
       },
       {
         id: 'random-number',
-        backgroundColor: 'rgba(242,254,254,1)',
         header: {
           title: 'Random Number Teleportation',
           description: 'We generate our random numbers via the random movement of jellyfish.'
@@ -250,7 +244,6 @@ class App extends Component {
       },
       {
         id: 'team',
-        backgroundColor: 'rgba(32,86,107,1)',
         header: {
           title: 'Blockchain+ Team',
           description: null

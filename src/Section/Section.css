@@ -1,8 +1,21 @@
 .section {
   min-height: 70%;
 }
+.section:nth-child(even) {
+  background-color: rgba(242,254,254,1);
+}
+.section:nth-child(odd) {
+  background-color: rgba(0,0,0,0.5);
+}
+.section:nth-child(even) .section-header {
+  color: #292b2c;
+}
+.section:nth-child(odd) .section-header {
+  color: rgba(242,254,254,1);
+}
 .section-hero {
   height: 100vh;
+  background-color: rgba(0,0,0,0) !important;
 }
 .section-hero .section-body {
   position: absolute;
@@ -19,7 +32,6 @@
   text-transform: uppercase;
 }
 .section-body {}
-
 
 @media(min-width: 992px) {
   .section-header p {

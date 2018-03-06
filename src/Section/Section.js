@@ -6,14 +6,13 @@ class Section extends Component {
   
   render() {
     const { content, scrollReveal } = this.props;
-    const { id, backgroundColor } = content;
+    const { id } = content;
     const heroSection = id === 'hero' ? 'section-hero' : '';
     return (
-      <div className={`${classes['section']} ${classes[heroSection]} py-5`} id={id} style={{ backgroundColor: `${backgroundColor}` }}>
+      <div className={`${classes['section']} ${classes[heroSection]} py-5`} id={id}>
         <SectionContainer
           content={content}
           scrollReveal={scrollReveal}
-          backgroundColor={backgroundColor}
         />
       </div>
     );
