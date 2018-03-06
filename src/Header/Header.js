@@ -61,12 +61,14 @@ class Header extends Component {
     const target = document.getElementById(id)
     const targetOffset = target ? target.offsetTop - offSet : 0;
     let start = null;
+    let scrollTop = document.documentElement.scrollTop;
     const duration = 750;
     const step = (timestamp) => {
       start = start || timestamp;
       const progress = timestamp - start;
       const time = Math.min(1, ((timestamp - start) / duration));
-      const result = this.state.scrollTop - ((time * time) * (this.state.scrollTop - targetOffset));
+      scrollTop = document.documentElement.scrollTop;
+      const result = scrollTop - ((time * time) * (scrollTop - targetOffset));
       window.scrollTo(0, result);
       if (progress < duration) {
         window.requestAnimationFrame(step);
@@ -75,7 +77,7 @@ class Header extends Component {
         this.toggleNavbar();
       }
     }
-    if (this.state.scrollTop !== targetOffset) {
+    if (scrollTop !== targetOffset) {
       window.requestAnimationFrame(step);
     }
     else {
