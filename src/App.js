@@ -18,9 +18,9 @@ class App extends Component {
         id: 'home'
       },
       {
-        name: 'Overview',
+        name: 'Benefits',
         page: '',
-        id: 'overview'
+        id: 'benefits'
       },
       {
         name: 'Key Concepts',
@@ -43,6 +43,11 @@ class App extends Component {
         id: 'team'
       },
       {
+        name: 'Partners',
+        page: '',
+        id: 'partners'
+      },
+      {
         name: 'Whitepaper',
         page: 'whitepaper',
         id: 'whitepaper'
@@ -56,27 +61,30 @@ class App extends Component {
         body: {}
       },
       {
-        id: 'overview',
+        id: 'benefits',
         backgroundColor: 'rgba(242,254,254,1)',        
-        header: null,
+        header: {
+          title: 'Benefits',
+          description: null
+        },
         body: {
           boxes: [
             {
               image: 'lock.svg',
-              title: 'Information Privacy',
-              description: 'Unlike Blockchain, information is not stored on every node but instead only on participating nodes.',
+              title: 'Complete Privacy',
+              description: 'Unlike traditional blockchains, only the sender and receiver know the complete details of the transactions.',
               delay: 0
             },
             {
               image: 'couple.svg',
-              title: 'Small Business First',
-              description: 'Practical and useful ledger system for transactional purposes.',
+              title: 'Immutable Records',
+              description: 'The nodes validating the transactions store immutable records through a one-way encryption key (Hash).',
               delay: 500
             },
             {
-              image: 'racing.svg',
-              title: 'Cutting Transaction Speed',
-              description: 'Parallel transaction happens between transactional nodes, so there is no centralized blockchain.',
+              image: 'flame.svg',
+              title: 'Blazing Speed',
+              description: 'Blockchain+ can complete a transaction in one second or less. Our closest competitor is Ripple at 4 seconds per transaction.',
               delay: 250
             }
           ]
@@ -209,15 +217,23 @@ class App extends Component {
         body: {
           panels: [
             {
-              question: 'In simple words, what are the benefits of Blockchain+ ?',
+              question: 'What is Blockchain+ ?',
               answer: 'This research paper exploits an opportunity to implement private transactions in public, open-based blockchain architecture without compromising security, transparency or trust. It tackles problems we are facing presently, such as public vs. private blockchains, information being stored on “every node,” and the speed of execution. BlockChain+ offers a solution to these problems with an open-source, ledger-based approach. Information is only stored in participating nodes.'
             },
             {
-              question: 'Why open BlockChains (Bitcoin, etc.) cannot perform ledger functions very well?',
+              question: 'How secure is Blockchain+ infrastructure?',
               answer: 'As discussed in detail in this research paper, open blockchain architecture performs transactions by appending information to one massive blockchain. This database get bulky with time thereby compromising speed and raising questions regarding its effectiveness to execute transactions faster.'
             },
             {
-              question: 'What is in it for investors ?',
+              question: 'How does one-way encryption (Hash) work?',
+              answer: 'Crypto ledger system are the reality of the future. It is expected that sooner or later, there will be a strong focus on operational aspects of blockchain, such as quick validation and execution. This is where BlockChain+ outshines and make itself useful for small businesses and individuals. As an investor, you get early access to the groundbreaking invention of Blockchain+. Reach out to us today by filling out the contact form to get updates or an answer to any question you might have.'
+            },
+            {
+              question: 'How is Blockchain+ different from Ethereum?',
+              answer: 'Crypto ledger system are the reality of the future. It is expected that sooner or later, there will be a strong focus on operational aspects of blockchain, such as quick validation and execution. This is where BlockChain+ outshines and make itself useful for small businesses and individuals. As an investor, you get early access to the groundbreaking invention of Blockchain+. Reach out to us today by filling out the contact form to get updates or an answer to any question you might have.'
+            },
+            {
+              question: 'How is Blockchain+ different from Ripple?',
               answer: 'Crypto ledger system are the reality of the future. It is expected that sooner or later, there will be a strong focus on operational aspects of blockchain, such as quick validation and execution. This is where BlockChain+ outshines and make itself useful for small businesses and individuals. As an investor, you get early access to the groundbreaking invention of Blockchain+. Reach out to us today by filling out the contact form to get updates or an answer to any question you might have.'
             }
           ]
