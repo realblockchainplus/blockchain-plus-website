@@ -47,6 +47,18 @@ class SectionBody extends Component {
             content={this.props.content.teamSections}
           />
         }
+        {this.props.content.partners &&
+          this.props.content.partners.map((partner, index) => {
+            const { name, image } = partner;
+            return <Box
+              key={index}
+              id={`partner-${index}`}
+              name={name}
+              image={image}
+              scrollReveal={this.props.scrollReveal}
+            />
+          })
+        }
       </div>
     );
   }

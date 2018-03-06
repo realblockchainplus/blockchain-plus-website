@@ -490,6 +490,42 @@ class App extends Component {
             }
           ]
         }
+      },
+      {
+        id: 'partners',
+        backgroundColor: 'rgba(242,254,254,1)',
+        header: {
+          title: 'Partners',
+          description: null
+        },
+        body: {
+          partners: [
+            {
+              name: 'Aircare',
+              image: 'aircare-logo-sm-grey.png'
+            },
+            {
+              name: 'Altus Group',
+              image: 'altus_group_icon.png'
+            },
+            {
+              name: 'Workhaus',
+              image: 'workhaus_icon.png'
+            },
+            {
+              name: 'Zighra',
+              image: 'zighra_icon.png'
+            },
+            {
+              name: 'Aird Berlis',
+              image: 'aird-berlis-logo.png'
+            },
+            {
+              name: 'The App Labb',
+              image: 'app_lab.png'
+            }
+          ]
+        }
       }
     ],
     footer: {
