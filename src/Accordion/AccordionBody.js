@@ -15,8 +15,10 @@ class AccordionBody extends Component {
   }
 
   getHeight() {
-    const height = this.accordionText.clientHeight;
-    this.setState({ height });
+    if (this.accordionText) {
+      const height = this.accordionText.clientHeight;
+      this.setState({ height });
+    }
   }
 
   render() {
