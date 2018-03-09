@@ -5,7 +5,7 @@ import MainPage from '../Pages/MainPage/MainPage';
 import Whitepaper from '../Pages/Whitepaper/Whitepaper';
 import Particles from 'react-particles-js';
 import { Parallax } from 'react-scroll-parallax';
-import diff from 'deep-diff';
+// import diff from 'deep-diff';
 import { AnimatedSwitch } from 'react-router-transition';
 // import Fade from '../Transitions/Fade';
 import classes from './Body.css';
@@ -33,13 +33,9 @@ const transitionStyles = {
 };
 
 class Body extends Component {
+  componentDidMount() {
+  }
   shouldComponentUpdate(nextProps, nextState) {
-    let differences = diff(this.props, nextProps);
-    if (differences) {
-      if (differences[0].path[1] === 'key') {
-        return false;
-      }
-    }
     return true;
   }
   render() {
