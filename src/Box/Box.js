@@ -18,8 +18,9 @@ class Box extends Component {
     });
   }
   render() {
+    const classList = this.props.index <= 2 ? 'col-md-6 col-lg-4' : 'col-md-6';
     return (
-      <div className='box-anim col-12 col-md-6 col-lg-4' id={`${this.props.category}-${this.props.id}`}>
+      <div className={`box-anim col-12 ${classList}`} id={`${this.props.category}-${this.props.id}`}>
         <div className={`${classes['box']}`}>
           <BoxImage
             title={this.props.title}
