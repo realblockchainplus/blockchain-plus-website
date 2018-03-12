@@ -1,1 +1,94 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="description" content="An Evolution in Blockchain. Solving The Problem of Private vs. Public Blockchain By Utilizing a Witness-Based Ledger System"><meta name="keywords" content="Blockchain, Cryptocurrency, Bitcoin, Ethereum, Hyperledger, ico"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><title>BlockChain+</title><link href="/blockchain-plus-website/static/css/main.a59e8d62.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/blockchain-plus-website/static/js/main.2f0590bc.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="description" content="An Evolution in Blockchain. Solving The Problem of Private vs. Public Blockchain By Utilizing a Witness-Based Ledger System"><meta name="keywords" content="Blockchain, Cryptocurrency, Bitcoin, Ethereum, Hyperledger, ico"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><script type="text/javascript" src="jellyfish/js/lib/jquery-1.4.2.min.js"></script><script type="text/javascript" src="jellyfish/js/lib/mjs.js"></script><script type="text/javascript" src="jellyfish/js/initWin.js"></script><script type="text/javascript" src="jellyfish/js/initUniforms.js"></script><script type="text/javascript" src="jellyfish/js/initTextures.js"></script><script type="text/javascript" src="jellyfish/js/initShaders.js"></script><script type="text/javascript" src="jellyfish/js/initBuffers.js"></script><script type="text/javascript" src="jellyfish/js/interact.js"></script><script type="text/javascript" src="jellyfish/js/debug.js"></script><script type="text/javascript" src="jellyfish/js/tick.js"></script><script type="text/javascript" src="jellyfish/js/simulator.js"></script><script type="text/javascript" src="jellyfish/js/drawJellyfish.js"></script><script type="text/javascript" src="jellyfish/js/drawScene.js"></script><script id="jellyfish-vs" type="x-shader/x-vertex">precision highp float;
+    
+    attribute vec3 aVertexPosition;
+    attribute vec3 aVertexNormal;
+    attribute vec3 aVertexColor;
+    attribute vec3 aTextureCoord;
+    attribute vec4 aSkinWeight;
+    
+    uniform mat4 uWorld;
+    uniform mat4 uViewInv;
+    uniform mat4 uWorldView;
+    uniform mat4 uWorldViewProj;
+    
+    uniform mat4 uJoint0;
+    uniform mat4 uJoint1;
+    uniform mat4 uJoint2;
+    uniform mat4 uJoint3;
+    uniform mat4 uJoint0InvTranspose;
+    
+    uniform float uCurrentJellyfishTime;
+    
+    varying mediump vec4 vWorld;
+    
+    varying mediump vec3 vTextureCoord;
+    varying mediump vec3 vDiffuse;
+    varying mediump vec3 vFresnel;
+    
+    
+    void main(void) {
+    
+      //Vertex Animation
+      float dpi = 6.2831853;
+      float pi = 3.14159265;
+      float hpi = 1.570796325;
+      float time = mod(uCurrentJellyfishTime+aVertexPosition.y, dpi);
+    
+      float offset = smoothstep(0.0,1.,max(0.,-aVertexPosition.y-0.8)/10.);
+    
+      highp vec3 anim = (vec3(aVertexColor.x,aVertexColor.y,aVertexColor.z)/8.0*sin(time) * (1.-offset));
+      highp vec3 pos = aVertexPosition + anim;
+    
+      //skinning
+      pos = vec3(uJoint0 * vec4(pos, 1.0))*aSkinWeight.x +
+            vec3(uJoint1 * vec4(pos, 1.0))*aSkinWeight.y +
+            vec3(uJoint2 * vec4(pos, 1.0))*aSkinWeight.z +
+            vec3(uJoint3 * vec4(pos, 1.0))*aSkinWeight.w;
+      vec3 nrm = vec3(uJoint0InvTranspose * vec4(aVertexNormal, 1.0));
+    
+      //matrices
+      vWorld =               uWorld * vec4(pos, 1.0);
+      highp vec4 WorldViewProj =       uWorldViewProj * vec4(pos, 1.0);
+    
+      //vertex normal
+      vec3 VertexNormal = normalize(nrm);
+    
+      //vertex eye vector
+      vec3 WorldEyeVec = normalize(vWorld.xyz - uViewInv[3].xyz);
+    
+      //diffuse
+      vec3 lightDir = vec3(0.0,1.0,0.0);
+      vec3 lightCol = vec3(0.6,0.4,0.1);
+      vec3 ambientCol = vec3(0,0,0.5);
+      float diffuseProduct = max(dot(normalize(VertexNormal.xyz), lightDir), 0.0);
+      vDiffuse = lightCol * vec3(diffuseProduct) + ambientCol;
+    
+      //fresnel
+      vec3 fresnelColor = vec3(0.2,0.5,0.6);
+      float fresnelProduct = pow(1.0-max(abs(dot(VertexNormal, -WorldEyeVec)), 0.0), 2.0);
+      vFresnel = fresnelColor * vec3(fresnelProduct);
+    
+      //texture coords
+      vTextureCoord = aTextureCoord;
+    
+      gl_Position = WorldViewProj;
+    }</script><script id="jellyfish-fs" type="x-shader/x-fragment">precision mediump float;
+    
+    uniform sampler2D uSampler0;
+    uniform sampler2D uSampler1;
+    uniform sampler2D uSampler2;
+    
+    uniform float uCurrentTime;
+    
+    varying vec4 vWorld;
+    
+    varying vec3 vTextureCoord;
+    varying vec3 vDiffuse;
+    varying vec3 vFresnel;
+    
+    void main(void) {
+      vec3 caustics = texture2D(uSampler1, vec2((vWorld.x)/48.+uCurrentTime/12., (vWorld.z-vWorld.y)/95.)).rgb;
+      vec4 colorMap = texture2D(uSampler0, vec2(vTextureCoord.s, vTextureCoord.t));
+    
+      gl_FragColor = vec4(((vDiffuse + caustics)*colorMap.rgb) + vFresnel, colorMap.a);
+    }</script><script type="text/javascript">$(document).ready(function(){webGLStart()})</script><script async>!function(){var t;if(!(t=window.driftt=window.drift=window.driftt||[]).init)t.invoked?window.console&&console.error&&console.error("Drift snippet included twice."):(t.invoked=!0,t.methods=["identify","config","track","reset","debug","show","ping","page","hide","off","on"],t.factory=function(e){return function(){var n;return(n=Array.prototype.slice.call(arguments)).unshift(e),t.push(n),t}},t.methods.forEach(function(e){t[e]=t.factory(e)}),t.load=function(t){var e,n,o;o=3e5*Math.ceil(new Date/3e5),(n=document.createElement("script")).type="text/javascript",n.async=!0,n.crossorigin="anonymous",n.src="https://js.driftt.com/include/"+o+"/"+t+".js",(e=document.getElementsByTagName("script")[0]).parentNode.insertBefore(n,e)})}(),drift.SNIPPET_VERSION="0.3.1",drift.load("kazbwumr8kup")</script><title>BlockChain+</title><link href="/blockchain-plus-website/static/css/main.a59e8d62.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/blockchain-plus-website/static/js/main.f2567d9e.js"></script></body></html>
