@@ -26,6 +26,8 @@ $(window).resize(function() {
 });
 
 function webGLStart() {
+  window.animLoad = new Event('animLoaded');
+  console.log('added event', window.animLoad);
   canvas = document.getElementById("webgl-canvas");
 
   initWin();
@@ -43,5 +45,5 @@ function webGLStart() {
   gl.depthFunc(gl.LEQUAL);
   
   interact();
-  animate();
+  animate();  
 }
