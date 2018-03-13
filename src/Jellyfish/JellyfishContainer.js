@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import JellyfishConsole from './JellyfishConsole';
+import classes from './Jellyfish.css';
 
 class JellyfishContainer extends Component {
   componentDidMount() {
-    window.addEventListener('animLoaded', () => {      
-      this.props.onAnimationLoad();
+    window.addEventListener('animFrame', (ev) => {
+      this.props.onNewAnimationFrame(ev.detail.frame);
     });
   }
   render() {
@@ -120,8 +121,9 @@ class JellyfishContainer extends Component {
       "retina_detect": true
     };
     return (
-      <div>
+      <div style={{ position: 'fixed', width: '100%', height: '100%' }}>
         <Particles
+          className={classes.Particles}
           params={params}
         />
         <JellyfishConsole />

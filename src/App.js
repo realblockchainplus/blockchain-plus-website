@@ -852,6 +852,7 @@ class App extends Component {
         'English'
       ]
     },
+    animationFrame: 0,
     animationLoaded: false
   }
 
@@ -864,16 +865,23 @@ class App extends Component {
     //   path: 'morph.json'
     // });
     setTimeout(() => {
-      window.drift.show();
-      this.setState({ animationLoaded: true });
+      this.killLoadingScreen();
     }, 5000);
   }
 
-  onAnimationLoad() {
-    if (this.state.animationLoaded === false) {
-      window.drift.show();
-      this.setState({ animationLoaded: true });
-    }
+  onNewAnimationFrame(frame) {
+    this.setState({ animationFrame: frame }, () => {
+      if (this.state.animationLoaded === false && this.state.animationFrame >= 195) {        
+        this.killLoadingScreen();
+      }
+    })
+  }
+
+  killLoadingScreen() {
+    document.documentElement.style.overflow = 'visible';
+    document.body.style.overflow = 'visible';
+    window.drift.show();
+    this.setState({ animationLoaded: true });
   }
 
   render() {

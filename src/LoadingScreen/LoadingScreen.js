@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 class LoadingScreen extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.frame === nextProps.frame) {
+      return false;
+    }
+    return true;
+  }
   render() {
+    const { frame } = this.props;
+    let loadPercent = Math.floor(frame / 2);
     return (
       <div style={{
         position: 'fixed',
@@ -18,7 +27,11 @@ class LoadingScreen extends Component {
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)'
-        }}><img style={{ maxWidth: '350px' }} src='logo_text_black.svg' />
+        }}>
+          <ProgressBar 
+            style={{ maxWidth: '350px' }}
+            loadPercent={loadPercent}
+          />
         </div>
       </div>
     );
