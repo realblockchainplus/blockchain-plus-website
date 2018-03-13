@@ -10,7 +10,7 @@ class Hero extends Component {
   }
   render() {
     return (
-      <div className={`${classes['hero-section']}`}>
+      <div className={`${classes['hero-section']} col-12`} style={{ ...this.props.style }}>
         <div style={{ color: 'white' }} className={`${classes['hero-container']} text-center`}>
           {/* <svg id='svgout' /> */}
           <img className={`${classes['hero-image']}`} src="logo_text.svg" alt='Blockchain Plus Text Logo' style={{ marginBottom: '10px' }} />

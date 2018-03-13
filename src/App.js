@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import Header from './Header/Header';
 import Body from './Body/Body';
 import Footer from './Footer/Footer';
+import LoadingScreen from './LoadingScreen/LoadingScreen';
+import JellyfishContainer from './Jellyfish/JellyfishContainer';
 import Particles from 'react-particles-js';
 import { Parallax } from 'react-scroll-parallax';
 import bodymovin from 'bodymovin';
+
 import classes from './App.css';
 
 class App extends Component {
@@ -22,11 +25,6 @@ class App extends Component {
         id: 'benefits'
       },
       {
-        name: 'Key Concepts',
-        page: '',
-        id: 'key-concepts'
-      },
-      {
         name: 'FAQ',
         page: '',
         id: 'faq'
@@ -42,22 +40,27 @@ class App extends Component {
         id: 'team'
       },
       {
+        name: 'Whitepaper',
+        page: '',
+        id: 'whitepaper'
+      },
+      {
+        name: 'Roadmap',
+        page: '',
+        id: 'roadmap'
+      },
+      {
         name: 'Partners',
         page: '',
         id: 'partners'
       },
-      {
-        name: 'Whitepaper',
-        page: 'whitepaper',
-        id: 'whitepaper'
-      }
+      // {
+      //   name: 'RNG',
+      //   page: '',
+      //   id: 'random-number'
+      // },
     ],
     sections: [
-      {
-        id: 'hero',
-        header: {},
-        body: {}
-      },
       {
         id: 'benefits',
         backgroundColor: 'rgba(242,254,254,1)',        
@@ -68,143 +71,41 @@ class App extends Component {
         body: {
           boxes: [
             {
-              image: 'lock.svg',
+              image: 'BankSAFEIcon.jpg',
               title: 'Complete Privacy',
-              description: 'Unlike traditional blockchains, only the sender and receiver know the complete details of the transactions.',
+              description: 'Unlike traditional blockchains, only the sender and receiver know the complete details of the transactions. Information is only stored on participat nodes not on every node.',
               delay: 0
             },
             {
-              image: 'couple.svg',
+              image: 'network-lock.svg',
               title: 'Immutable Records',
               description: 'The nodes validating the transactions store immutable records through a one-way encryption key (Hash).',
               delay: 500
             },
             {
               image: 'flame.svg',
-              title: 'Blazing Speed',
-              description: 'Blockchain+ can complete a transaction in one second or less. Our closest competitor is Ripple at 4 seconds per transaction.',
-              delay: 250
-            }
-          ]
-        }
-      },
-      {
-        id: 'carousel',
-        header: null,
-        body: {
-          slides: [
-            {
-              key: 0,
-              images: [
-                {
-                  src: '1.png',
-                  altText: 'Image 1'
-                },
-                {
-                  src: '2.png',
-                  altText: 'Image 2'
-                }
-              ],
-              title: 'Public Blockchain With Benefits',
-              description: 'Blockchain+ inherits the best from both public and private-based Blockchain architecture. The ledger function is easy to implement for small to enterprise-level firms and can provide security & transparency.'
-            },
-            {
-              key: 1,
-              images: [
-                {
-                  src: '3.png',
-                  altText: 'Image 3'
-                },
-                {
-                  src: '4.png',
-                  altText: 'Image 4'
-                }
-              ],
-              title: 'Open Source-Based Operation',
-              description: 'Avoiding centralized, traditional-based permissioned architecture. Blockchain+ has a backbone of small businesses, developers, BlockChain+ enthusiasts and even some end users to perform housekeeping tasks.'
-            },
-            {
-              key: 2,
-              images: [
-                {
-                  src: '5.png',
-                  altText: 'Image 5'
-                },
-                {
-                  src: '6.png',
-                  altText: 'Image 6'
-                }
-              ],
-              title: 'Witness & Guarantor-Based Ledger System',
-              description: 'Two randomly selected witness & guarantor node pairs participate in a typical transaction. An innovative concept of random number teleportation is used to generate the same random number on all nodes without transmitting to each other.'
-            },
-            {
-              key: 3,
-              images: [
-                {
-                  src: '7.png',
-                  altText: 'Image 7'
-                },
-                {
-                  src: '8.png',
-                  altText: 'Image 8'
-                }
-              ],
-              title: 'Risk Assessment & Mitigation',
-              description: 'Based on our risk assessment, even if BlockChain+ is used at the minimum configuration of 1,000 regular nodes, 100 guarantor nodes and assumed 5% hacker nodes, hackers have a minimum 50,000,000 to max 200,000,000 odds of succeeding. However as discussed in research paper, these risks are further mitigated to least level.'
-            }
-          ]
-        }
-      },
-      {
-        id: 'key-concepts',
-        header: {
-          title: 'Key Concepts',
-          description: 'Innovative concepts are what make BlockChain+ possible. Discussed in detail with a research paper, the following is an overview!'
-        },
-        body: {
-          boxes: [
-            {
-              image: 'connect.svg',
-              title: 'Information not stored "everywhere"',
-              description: 'Transactional information such as sender / receiver and amount is only stored on participating nodes, enabling both security and speed.',
-              delay: 0
-            },
-            {
-              image: 'creativity.svg',
-              title: 'Random Number Teleportation',
-              description: 'Innovative concept of random number teleportation is used to generate the same random number on all nodes without transmitting to each other.',
-              delay: 0
-            },
-            {
-              image: 'link.svg',
-              title: 'Witness and partner Nodes',
-              description: 'Randomly selected witness and partner nodes are used in typical transactions for validation and execution purposes.',
-              delay: 0
-            },
-            {
-              image: 'network-lock.svg',
-              title: 'Mitigated Risk and Security Considerations',
-              description: 'Discussed in detail, Blockchain+ made it very hard for hacker nodes to execute fraudulent transactions.',
+              title: 'Blazing Fast',
+              description: 'Blockchain+ can complete a transaction in one second or less. Our closest competitor is ripple at 4 seconds per transaction.',
               delay: 250
             },
             {
-              image: 'flame.svg',
-              title: 'Fast Transaction Execution Speed',
-              description: 'Parallel transactions happen on the Blockchain+ network, making execution speeds faster without compromising security concerns.',
-              delay: 250
+              image: 'swiss-army-knife.svg',
+              title: 'Absurdly Versatile',
+              description: 'Blockchain+ is the first functional distributed ledger system. The use cases range from disintermediating cash to a convenient ledger system for SMB’s.',
+              delay: 500
             },
             {
-              image: 'couple.svg',
-              title: 'Small Business-Focused Operation',
-              description: 'At its heart, BlockChain+ overcomes the problems faced by open blockchains (Bitcoin, etc.) to make it useful for businesses to use this technology for their ledger system.',
-              delay: 250
+              image: 'meeting.svg',
+              title: 'Open Source',
+              description: 'Blockchain+ operates on an open source architecture. Entrepreneurs, companies and dreamers around the world are the backbone of our community.',
+              delay: 500
             }
           ]
         }
       },
       {
         id: 'faq',
+        backgroundColor: 'rgb(9, 120, 172)',
         header: {
           title: 'Frequently Asked Questions',
           description: 'Some basic questions regarding Blockchain+'
@@ -213,188 +114,62 @@ class App extends Component {
           panels: [
             {
               question: 'What is Blockchain+ ?',
-              answer: 'This research paper exploits an opportunity to implement private transactions in public, open-based blockchain architecture without compromising security, transparency or trust. It tackles problems we are facing presently, such as public vs. private blockchains, information being stored on “every node,” and the speed of execution. BlockChain+ offers a solution to these problems with an open-source, ledger-based approach. Information is only stored in participating nodes.'
+              answer: 'Blockchain+ is a next-generation distributed database.'
             },
             {
-              question: 'How secure is Blockchain+ infrastructure?',
-              answer: 'As discussed in detail in this research paper, open blockchain architecture performs transactions by appending information to one massive blockchain. This database get bulky with time thereby compromising speed and raising questions regarding its effectiveness to execute transactions faster.'
+              question: 'Are you open source?',
+              answer: 'Yes. All of Blockchain+’s code is open source.'
             },
             {
-              question: 'How does one-way encryption (Hash) work?',
-              answer: 'Crypto ledger system are the reality of the future. It is expected that sooner or later, there will be a strong focus on operational aspects of blockchain, such as quick validation and execution. This is where BlockChain+ outshines and make itself useful for small businesses and individuals. As an investor, you get early access to the groundbreaking invention of Blockchain+. Reach out to us today by filling out the contact form to get updates or an answer to any question you might have.'
+              question: 'Are you a permissioned blockchain?',
+              answer: 'Blockchain+ is not a permissioned blockchain. In our opinion, permissioned blockchains (where a central authority controls the operation) go against the very fabric of blockchains. Blockchain’s should be distributed and open!'
+            },
+            {
+              question: 'Are you then a Consortium blockchain?',
+              answer: 'Blockchain+ can be defined as a consortium because we limit our membership numbers. However, unlike traditional consortiums where membership is closed to the general public, everyone has the opportunity to be part of our network. Our members can vote to change the parameters by which future members can join be part of our network.'
+            },
+            {
+              question: 'How hackable is Blockchain+’s infrastructure?',
+              answer: 'Assuming a very minimum Blockchain+ network configuration of 5000 regular and 5000 partner nodes the minimum odds required to perform fraudulent activity is 1 in 99,990,000. With this minimum configuration the odds of performing fraudulent transaction is 923 times more than getting stuck with lightning in a given year. These odds are further mitigated by the fact that (a) BlockChain+ will be open-source, meaning bugs and security breaches will be reported and fixed faster; (b) BlockChain+ will be operating on a global network, which means the number of nodes will be much higher than above assumed ones which means odds will increase exponentially; and (c) the BlockChain+ Partner node community will be performing extensive tasks regularly, such as bad node reporting, random algorithm generation, and certification issuing and revoking. Thus the risk can be further reduced much more.'
+            },
+            {
+              question: 'How does Blockchain+ validate transactions?',
+              answer: 'In blockchain at very least every block is joined with other blockchain using hash however in blockchain+ we use hash to store transaction details in validating nodes. So essentially if you validated someone else`s transaction you will store hash of data which cannot be decrypted but can be used later to validate that the transaction you validated is legitimate. The hashes are stored in redundancy to provide data integrity.'
             },
             {
               question: 'How is Blockchain+ different from Ethereum?',
-              answer: 'Crypto ledger system are the reality of the future. It is expected that sooner or later, there will be a strong focus on operational aspects of blockchain, such as quick validation and execution. This is where BlockChain+ outshines and make itself useful for small businesses and individuals. As an investor, you get early access to the groundbreaking invention of Blockchain+. Reach out to us today by filling out the contact form to get updates or an answer to any question you might have.'
+              answer: 'Blockchain+ is an attempt to create synergies by marrying public and private blockchains. Any public blockchain, including Ethereum, faces long term operational issues because transactions are settled by appending information to one massive blockchain. This architecture makes the database bulkier over time compromising speed and reducing the ability to effectively execute transactions long term. \n\nBlockchain+ will be implementing Ethereum’s smart contract feature long-term. Smart contracts are a genius concept!'
+              
             },
             {
               question: 'How is Blockchain+ different from Ripple?',
-              answer: 'Crypto ledger system are the reality of the future. It is expected that sooner or later, there will be a strong focus on operational aspects of blockchain, such as quick validation and execution. This is where BlockChain+ outshines and make itself useful for small businesses and individuals. As an investor, you get early access to the groundbreaking invention of Blockchain+. Reach out to us today by filling out the contact form to get updates or an answer to any question you might have.'
+              answer: 'Ripple is a permissioned blockchain which fundamentally goes against the grain of blockchains. Blockchain+ avoids the traditional permissioned based architecture by randomly selecting the nodes validating the transaction. Blockchain+ uses random number teleportation to generate a same random number on all nodes without transmitting to each other.'
+            },
+            {
+              question: 'What\'s up with Jellyfishes?',
+              answer: 'The core of Blockchain+’s random number generator relies on chaos theory. Chaotic behaviour occurs in natural systems like weather, climate and movements of jellyfish among many others. The wildly random jellyfish movements are just a start as Blockchain+ will be integrating many more chaotic elements to its random number generator.'
             }
           ]
         }
       },
       {
         id: 'random-number',
+        backgroundColor: 'rgba(242,254,254,1)',
         header: {
           title: 'Random Number Teleportation',
-          description: 'We generate our random numbers via the random movement of jellyfish.'
+          description: 'We generate random numbers via movements of jellyfishes in aquariums around the world. The number is then consumed by each and every node to generate another set of random number using ever changing algorithms and configuration data. The final random numbers are generated in such a way that they are impossible to predict, are purely random and same on all nodes without transmitting to each other.'
         },
         body: {}
       },
       {
         id: 'team',
+        backgroundColor: 'rgb(9, 120, 172)',
         header: {
           title: 'Blockchain+ Team',
           description: null
         },
         body: {
           teamSections: [
-            {
-              id: 'advisors',
-              title: 'Advisors',
-              description: null,
-              defaultImage: '',
-              defaultTitle: '',
-              members: [
-                {
-                  title: 'Dr',
-                  firstName: 'Mister',
-                  middleName: null,
-                  lastName: 'Bigshot',
-                  jobTitle: 'Past Head Business Development @ IBM',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci sagittis eu volutpat odio facilisis mauris sit amet. Elementum pulvinar etiam non quam lacus suspendisse faucibus.',
-                  image:  '009-doctor-1.svg',
-                  links: {
-                    github: 'villith',
-                    linkedin: null,
-                    facebook: null,
-                    googlePlus: null,
-                    bitbucket: 'sdonnelly',
-                    blog: null
-                  }
-                },
-                {
-                  title: null,
-                  firstName: 'Advisor',
-                  middleName: null,
-                  lastName: 'Two',
-                  jobTitle: 'Number Two',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae nunc sed velit dignissim sodales ut eu sem integer. Quis commodo odio aenean sed adipiscing diam donec.',
-                  image:  '001-diver.svg',
-                  links: {
-                    github: 'villith',
-                    linkedin: '',
-                    facebook: '',
-                    googlePlus: null,
-                    bitbucket: 'sdonnelly',
-                    blog: null
-                  }
-                },
-                {
-                  title: null,
-                  firstName: 'Advisor',
-                  middleName: null,
-                  lastName: 'Three',
-                  jobTitle: 'Number Three',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque.',
-                  image:  '002-nun.svg',
-                  links: {
-                    github: 'villith',
-                    linkedin: '',
-                    facebook: null,
-                    googlePlus: '',
-                    bitbucket: 'sdonnelly',
-                    blog: null
-                  }
-                },
-                {
-                  title: null,
-                  firstName: 'Advisor',
-                  middleName: null,
-                  lastName: 'Four',
-                  jobTitle: 'Number Four',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Orci phasellus egestas tellus rutrum tellus.',
-                  image:  '003-welder.svg',
-                  links: {
-                    github: 'villith',
-                    linkedin: null,
-                    facebook: null,
-                    googlePlus: null,
-                    bitbucket: 'sdonnelly',
-                    blog: ''
-                  }
-                },
-                {
-                  title: null,
-                  firstName: 'Advisor',
-                  middleName: null,
-                  lastName: 'Five',
-                  jobTitle: 'Number Five',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                  image:  '004-croupier.svg',
-                  links: {
-                    github: 'villith',
-                    linkedin: null,
-                    facebook: '',
-                    googlePlus: null,
-                    bitbucket: 'sdonnelly',
-                    blog: null
-                  }
-                },
-                {
-                  title: null,
-                  firstName: 'Advisor',
-                  middleName: null,
-                  lastName: 'Six',
-                  jobTitle: 'Number Six',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis.',
-                  image:  '005-firefighter.svg',
-                  links: {
-                    github: 'villith',
-                    linkedin: '',
-                    facebook: null,
-                    googlePlus: null,
-                    bitbucket: 'sdonnelly',
-                    blog: null
-                  }
-                },
-                {
-                  title: null,
-                  firstName: 'Advisor',
-                  middleName: null,
-                  lastName: 'Seven',
-                  jobTitle: 'Number Seven',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at consectetur lorem donec massa sapien. Mattis ullamcorper velit sed ullamcorper morbi.',
-                  image:  '006-stewardess.svg',
-                  links: {
-                    github: 'villith',
-                    linkedin: '',
-                    facebook: '',
-                    googlePlus: '',
-                    bitbucket: 'sdonnelly',
-                    blog: ''
-                  }
-                },
-                {
-                  title: null,
-                  firstName: 'Advisor',
-                  middleName: null,
-                  lastName: 'Eight',
-                  jobTitle: 'Number Eight',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Augue mauris augue neque gravida in. Mi in nulla posuere sollicitudin aliquam ultrices.',
-                  image:  '007-showman.svg',
-                  links: {
-                    github: 'villith',
-                    linkedin: null,
-                    facebook: null,
-                    googlePlus: null,
-                    bitbucket: 'sdonnelly',
-                    blog: null
-                  }
-                }
-              ]
-            },
             {
               id: 'employees',
               title: 'Team',
@@ -405,17 +180,34 @@ class App extends Component {
                 {
                   title: null,
                   firstName: 'Jeevan',
-                  middleName: null,
+                  middleName: 'J.',
                   lastName: 'Singh',
-                  jobTitle: 'CEO',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Ut eu sem integer vitae justo eget magna fermentum iaculis.',
-                  image: '008-farmer.svg',
+                  jobTitle: 'Chief Executive Officer',
+                  description: 'Jeevan is a consummate entrepreneur. Jeevan’s most recent venture, tugboat.cc, was a unique hyper-local printing marketplace that boasted multiple Fortune 500 clients.',
+                  image: 'jeevan_singh_headshot.jpg',
                   links: {
-                    github: 'villith',
-                    linkedin: null,
+                    github: null,
+                    linkedin: 'jeevan-j-singh-87a81725',
                     facebook: null,
                     googlePlus: null,
-                    bitbucket: 'sdonnelly',
+                    bitbucket: null,
+                    blog: null
+                  }
+                },
+                {
+                  title: null,
+                  firstName: 'Gabor',
+                  middleName: null,
+                  lastName: 'Levai',
+                  jobTitle: 'President and Chief Operations Officer',
+                  description: 'Gabor was the co-founder and COO of the largest private media company in Hungary. Their client list included top Fortune 500’s like Coca Cola and BMW, among many others.',
+                  image: 'gabor_levai_headshot.jpg',
+                  links: {
+                    github: null,
+                    linkedin: 'gaborlevai1972',
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: null,
                     blog: null
                   }
                 },
@@ -424,15 +216,66 @@ class App extends Component {
                   firstName: 'Jaswinder',
                   middleName: null,
                   lastName: 'Singh',
-                  jobTitle: 'CTO',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                  jobTitle: 'Chief Technology Officer',
+                  description: 'Jas is a super star engineer and has architected some of the largest E-Commerce applications in Canada. Jas has lead development teams for Canadian Tire, IBM & Presto.',
                   image: 'tugboat_jas_headshot.png',
-                  links: {
-                    github: 'mistletoe91',
-                    linkedin: '',
-                    facebook: '',
+                  links: {                    
+                    // github: 'mistletoe91',
+                    linkedin: 'jdsingh1',
+                    facebook: null,
                     googlePlus: null,
-                    bitbucket: 'mistletoe91',
+                    // bitbucket: 'mistletoe91',
+                    blog: null
+                  }
+                },
+                {
+                  title: null,
+                  firstName: 'David',
+                  middleName: null,
+                  lastName: 'Kiss',
+                  jobTitle: 'Engineer',
+                  description: 'David is a senior development veteran with extensive expertise in building Fintech products. David is currently leading RBC Reward’s server-side development team.',
+                  image: 'david_kiss_headshot.jpg',
+                  links: {
+                    github: null,
+                    linkedin: 'davidkiss',
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: null,
+                    blog: null
+                  }
+                },
+                {
+                  title: null,
+                  firstName: 'Gabor',
+                  middleName: null,
+                  lastName: 'Szokoli',
+                  jobTitle: 'Engineer',
+                  description: 'Gabor is a veteran engineer with over 10 years experience, building and managing software for some of the world’s top companies like Siemens and GE Healthcare.',
+                  image: 'gabor_szokoli_headshot.jpg',
+                  links: {
+                    github: null,
+                    linkedin: 'gabor-szokoli-25a16011',
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: null,
+                    blog: null
+                  }
+                },
+                {
+                  title: null,
+                  firstName: 'Lee',
+                  middleName: null,
+                  lastName: 'Stecklov',
+                  jobTitle: 'Engineer',
+                  description: 'Lee is a software development veteran with over 20 years experience. Lee has managed build-outs of many workload automation products currently used by numerous Fortune 500’s',
+                  image: 'lee_stecklov_headshot.jpg',
+                  links: {
+                    github: null,
+                    linkedin: 'leestecklov',
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: null,
                     blog: null
                   }
                 },
@@ -441,52 +284,344 @@ class App extends Component {
                   firstName: 'Scott',
                   middleName: null,
                   lastName: 'Donnelly',
-                  jobTitle: 'Developer',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                  jobTitle: 'Engineer',
+                  description: 'Scott is a full stack engineer with over 3 years experience in developing software solutions for several clients.',
                   image: '008-farmer.svg',
                   links: {
-                    github: 'villith',
+                    // github: 'villith',
                     linkedin: 'scott-donnelly-527418125',
-                    facebook: 'scott.donnelly.315',
-                    googlePlus: '116327139909718037058',
-                    bitbucket: 'sdonnelly',
-                    blog: 'https://medium.com/@scott.donnelly790'
+                    // facebook: 'scott.donnelly.315',
+                    // googlePlus: '116327139909718037058',
+                    // bitbucket: 'sdonnelly',
+                    // blog: 'https://medium.com/@scott.donnelly790'
+                  }
+                },
+                {
+                  title: null,
+                  firstName: 'Rajah',
+                  middleName: null,
+                  lastName: 'Vijeyarajah',
+                  jobTitle: 'Engineer',
+                  description: 'Rajah is an engineer with over 5 years architecting, developing and deploying a wide array of software solutions.',
+                  image: 'rajah_vijeyarajah_headshot.jpg',
+                  links: {
+                    // github: 'rajah19',
+                    linkedin: 'rajah19',
+                    facebook: null,
+                    googlePlus: null,
+                    // bitbucket: 'rajah19',
+                    blog: null
+                  }
+                },
+                {
+                  title: null,
+                  firstName: 'Sophia',
+                  middleName: null,
+                  lastName: 'Wall',
+                  jobTitle: 'Graphic Designer',
+                  description: 'Sophia is the soul behind all the current design at Blockchain+. Her ability to deliver on tight deadlines is uncanny.',
+                  image: '002-nun.svg',
+                  links: {
+                    github: null,
+                    linkedin: '',
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: null,
+                    blog: null
                   }
                 }
               ]
             },
             {
-              id: 'community-members',
-              title: 'Ambassadors',
+              id: 'advisors',
+              title: 'Advisors',
               description: null,
               defaultImage: '',
               defaultTitle: '',
               members: [
                 {
                   title: null,
-                  firstName: 'Joe',
+                  firstName: 'Kundan',
                   middleName: null,
-                  lastName: 'Schmoe',
-                  jobTitle: 'Contributor',
-                  description: 'This is the description of the community member.',
-                  image: '011-boss.svg',
+                  lastName: 'Joshi',
+                  jobTitle: 'Advisor',
+                  description: 'Kundan is the founder and CEO of TheAppLabb. Kundan has grown the company to over 150 employees worldwide, making it one of the fastest growing software development companies in Toronto.',
+                  image:  'kundan_joshi_headshot.jpg',
                   links: {
-                    github: 'villith',
-                    linkedin: null,
+                    github: null,
+                    linkedin: 'kundan',
                     facebook: null,
                     googlePlus: null,
-                    bitbucket: 'sdonnelly',
+                    bitbucket: null,
                     blog: null
                   }
-                }
+                },
+                {
+                  title: null,
+                  firstName: 'Tamas',
+                  middleName: null,
+                  lastName: 'Haiman',
+                  jobTitle: 'Advisor',
+                  description: 'Tamas is a senior banker with experience from tier-one banks like Barclays, CITI and Sberbank. Most recently Tamas was the Head of Global Markets for Sberbank (Switzerland) AG, where he brought the bank back into the black.',
+                  image:  'tamas_haiman_headshot.jpg',
+                  links: {
+                    github: null,
+                    linkedin: 'tamas-haiman-259620',
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: null,
+                    blog: null
+                  }
+                },
+                // {
+                //   title: null,
+                //   firstName: 'Norbert',
+                //   middleName: null,
+                //   lastName: 'Mocsai',
+                //   jobTitle: 'Advisor',
+                //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae nunc sed velit dignissim sodales ut eu sem integer. Quis commodo odio aenean sed adipiscing diam donec.',
+                //   image:  'norbert_mocsai_headshot.jpg',
+                //   links: {
+                //     github: null,
+                //     linkedin: 'norbert-mocsai-2113061b',
+                //     facebook: null,
+                //     googlePlus: null,
+                //     bitbucket: null,
+                //     blog: null
+                //   }
+                // },
+                // {
+                //   title: null,
+                //   firstName: 'Advisor',
+                //   middleName: null,
+                //   lastName: 'Three',
+                //   jobTitle: 'Number Three',
+                //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque.',
+                //   image:  '002-nun.svg',
+                //   links: {
+                //     github: 'villith',
+                //     linkedin: '',
+                //     facebook: null,
+                //     googlePlus: '',
+                //     bitbucket: 'sdonnelly',
+                //     blog: null
+                //   }
+                // },
+                // {
+                //   title: null,
+                //   firstName: 'Advisor',
+                //   middleName: null,
+                //   lastName: 'Four',
+                //   jobTitle: 'Number Four',
+                //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Orci phasellus egestas tellus rutrum tellus.',
+                //   image:  '003-welder.svg',
+                //   links: {
+                //     github: 'villith',
+                //     linkedin: null,
+                //     facebook: null,
+                //     googlePlus: null,
+                //     bitbucket: 'sdonnelly',
+                //     blog: ''
+                //   }
+                // },
+                // {
+                //   title: null,
+                //   firstName: 'Advisor',
+                //   middleName: null,
+                //   lastName: 'Five',
+                //   jobTitle: 'Number Five',
+                //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                //   image:  '004-croupier.svg',
+                //   links: {
+                //     github: 'villith',
+                //     linkedin: null,
+                //     facebook: '',
+                //     googlePlus: null,
+                //     bitbucket: 'sdonnelly',
+                //     blog: null
+                //   }
+                // },
+                // {
+                //   title: null,
+                //   firstName: 'Advisor',
+                //   middleName: null,
+                //   lastName: 'Six',
+                //   jobTitle: 'Number Six',
+                //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis.',
+                //   image:  '005-firefighter.svg',
+                //   links: {
+                //     github: 'villith',
+                //     linkedin: '',
+                //     facebook: null,
+                //     googlePlus: null,
+                //     bitbucket: 'sdonnelly',
+                //     blog: null
+                //   }
+                // },
+                // {
+                //   title: null,
+                //   firstName: 'Advisor',
+                //   middleName: null,
+                //   lastName: 'Seven',
+                //   jobTitle: 'Number Seven',
+                //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at consectetur lorem donec massa sapien. Mattis ullamcorper velit sed ullamcorper morbi.',
+                //   image:  '006-stewardess.svg',
+                //   links: {
+                //     github: 'villith',
+                //     linkedin: '',
+                //     facebook: '',
+                //     googlePlus: '',
+                //     bitbucket: 'sdonnelly',
+                //     blog: ''
+                //   }
+                // },
+                // {
+                //   title: null,
+                //   firstName: 'Advisor',
+                //   middleName: null,
+                //   lastName: 'Eight',
+                //   jobTitle: 'Number Eight',
+                //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Augue mauris augue neque gravida in. Mi in nulla posuere sollicitudin aliquam ultrices.',
+                //   image:  '007-showman.svg',
+                //   links: {
+                //     github: 'villith',
+                //     linkedin: null,
+                //     facebook: null,
+                //     googlePlus: null,
+                //     bitbucket: 'sdonnelly',
+                //     blog: null
+                //   }
+                // }
               ]
-            }
+            },
+            // {
+            //   id: 'community-members',
+            //   title: 'Ambassadors',
+            //   description: null,
+            //   defaultImage: '',
+            //   defaultTitle: '',
+            //   members: [
+            //     {
+            //       title: null,
+            //       firstName: 'Joe',
+            //       middleName: null,
+            //       lastName: 'Schmoe',
+            //       jobTitle: 'Contributor',
+            //       description: 'This is the description of the community member.',
+            //       image: '011-boss.svg',
+            //       links: {
+            //         github: 'villith',
+            //         linkedin: null,
+            //         facebook: null,
+            //         googlePlus: null,
+            //         bitbucket: 'sdonnelly',
+            //         blog: null
+            //       }
+            //     }
+            //   ]
+            // }
           ]
         }
       },
       {
+        id: 'whitepaper',
+        backgroundColor: 'rgba(245,254,254,1)',
+        header: {
+          title: null,
+          description: null
+        },
+        body: {}
+      },
+      // {
+      //   id: 'roadmap',
+      //   backgroundColor: 'rgb(9, 120, 172)',
+      //   header: {
+      //     title: 'Roadmap',
+      //     description: null
+      //   },
+      //   body: {
+      //     milestones: [
+      //       {
+      //         id: 'start',
+      //         title: 'Blockchain+ was founded',
+      //         description: 'This is the start of Blockchain+',
+      //         teamMember: {
+      //           title: null,
+      //           firstName: 'Jeevan',
+      //           middleName: null,
+      //           lastName: 'Singh',
+      //           jobTitle: 'CEO',
+      //           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Ut eu sem integer vitae justo eget magna fermentum iaculis.',
+      //           image: '008-farmer.svg',
+      //           links: {
+      //             github: 'villith',
+      //             linkedin: null,
+      //             facebook: null,
+      //             googlePlus: null,
+      //             bitbucket: 'sdonnelly',
+      //             blog: null
+      //           }
+      //         },
+      //         links: [
+      //           { type: 'github', profileId: 'villith/blockchain-plus-website/issues/1' }
+      //         ]
+      //       },
+      //       {
+      //         id: 'ico-one',
+      //         title: 'First ICO',
+      //         description: 'This is the start of Blockchain+',
+      //         teamMember: {
+      //           title: null,
+      //           firstName: 'Jeevan',
+      //           middleName: null,
+      //           lastName: 'Singh',
+      //           jobTitle: 'CEO',
+      //           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Ut eu sem integer vitae justo eget magna fermentum iaculis.',
+      //           image: '008-farmer.svg',
+      //           links: {
+      //             github: 'villith',
+      //             linkedin: null,
+      //             facebook: null,
+      //             googlePlus: null,
+      //             bitbucket: 'sdonnelly',
+      //             blog: null
+      //           }
+      //         },
+      //         links: [
+      //           { type: 'github', profileId: 'villith/blockchain-plus-website/issues/1' }
+      //         ]
+      //       },
+      //       {
+      //         id: 'ico-two',
+      //         title: 'Second ICO',
+      //         description: 'This is the start of Blockchain+',
+      //         teamMember: {
+      //           title: null,
+      //           firstName: 'Jeevan',
+      //           middleName: null,
+      //           lastName: 'Singh',
+      //           jobTitle: 'CEO',
+      //           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Ut eu sem integer vitae justo eget magna fermentum iaculis.',
+      //           image: '008-farmer.svg',
+      //           links: {
+      //             github: 'villith',
+      //             linkedin: null,
+      //             facebook: null,
+      //             googlePlus: null,
+      //             bitbucket: 'sdonnelly',
+      //             blog: null
+      //           }
+      //         },
+      //         links: [
+      //           { type: 'github', profileId: 'villith/blockchain-plus-website/issues/1' }
+      //         ]
+      //       }
+      //     ]
+      //   }
+      // },
+      {
         id: 'partners',
-        backgroundColor: 'rgba(242,254,254,1)',
+        backgroundColor: 'rgb(9, 120, 172)',
         header: {
           title: 'Partners',
           description: null
@@ -494,32 +629,139 @@ class App extends Component {
         body: {
           partners: [
             {
-              name: 'Aircare',
-              image: 'aircare-logo-sm-grey.png'
-            },
-            {
-              name: 'Altus Group',
-              image: 'altus_group_icon.png'
-            },
-            {
-              name: 'Workhaus',
-              image: 'workhaus_icon.png'
-            },
-            {
-              name: 'Zighra',
-              image: 'zighra_icon.png'
-            },
-            {
               name: 'Aird Berlis',
               image: 'aird-berlis-logo.png'
             },
             {
               name: 'The App Labb',
               image: 'app_lab.png'
-            }
+            },
+            // {
+            //   name: 'Trendency Online',
+            //   image: 'trendency_logo.png'
+            // }
           ]
         }
       }
+      // #region state
+      // {
+      //   id: 'carousel',
+      //   backgroundColor: 'rgba(32,86,107, 1)',
+      //   header: null,
+      //   body: {
+      //     slides: [
+      //       {
+      //         key: 0,
+      //         images: [
+      //           {
+      //             src: '1.png',
+      //             altText: 'Image 1'
+      //           },
+      //           {
+      //             src: '2.png',
+      //             altText: 'Image 2'
+      //           }
+      //         ],
+      //         title: 'Public Blockchain With Benefits',
+      //         description: 'Blockchain+ inherits the best from both public and private-based Blockchain architecture. The ledger function is easy to implement for small to enterprise-level firms and can provide security & transparency.'
+      //       },
+      //       {
+      //         key: 1,
+      //         images: [
+      //           {
+      //             src: '3.png',
+      //             altText: 'Image 3'
+      //           },
+      //           {
+      //             src: '4.png',
+      //             altText: 'Image 4'
+      //           }
+      //         ],
+      //         title: 'Open Source-Based Operation',
+      //         description: 'Avoiding centralized, traditional-based permissioned architecture. Blockchain+ has a backbone of small businesses, developers, BlockChain+ enthusiasts and even some end users to perform housekeeping tasks.'
+      //       },
+      //       {
+      //         key: 2,
+      //         images: [
+      //           {
+      //             src: '5.png',
+      //             altText: 'Image 5'
+      //           },
+      //           {
+      //             src: '6.png',
+      //             altText: 'Image 6'
+      //           }
+      //         ],
+      //         title: 'Witness & Guarantor-Based Ledger System',
+      //         description: 'Two randomly selected witness & guarantor node pairs participate in a typical transaction. An innovative concept of random number teleportation is used to generate the same random number on all nodes without transmitting to each other.'
+      //       },
+      //       {
+      //         key: 3,
+      //         images: [
+      //           {
+      //             src: '7.png',
+      //             altText: 'Image 7'
+      //           },
+      //           {
+      //             src: '8.png',
+      //             altText: 'Image 8'
+      //           }
+      //         ],
+      //         title: 'Risk Assessment & Mitigation',
+      //         description: 'Based on our risk assessment, even if BlockChain+ is used at the minimum configuration of 1,000 regular nodes, 100 guarantor nodes and assumed 5% hacker nodes, hackers have a minimum 50,000,000 to max 200,000,000 odds of succeeding. However as discussed in research paper, these risks are further mitigated to least level.'
+      //       }
+      //     ]
+      //   }
+      // },
+      // {
+      //   id: 'key-concepts',
+      //   backgroundColor: 'rgba(242,254,254,1)',
+      //   header: {
+      //     title: 'Key Concepts',
+      //     description: 'Innovative concepts are what make BlockChain+ possible. Discussed in detail with a research paper, the following is an overview!'
+      //   },
+      //   body: {
+      //     boxes: [
+      //       {
+      //         image: 'connect.svg',
+      //         title: 'Information not stored "everywhere"',
+      //         description: 'Transactional information such as sender / receiver and amount is only stored on participating nodes, enabling both security and speed.',
+      //         delay: 0
+      //       },
+      //       {
+      //         image: 'creativity.svg',
+      //         title: 'Random Number Teleportation',
+      //         description: 'Innovative concept of random number teleportation is used to generate the same random number on all nodes without transmitting to each other.',
+      //         delay: 0
+      //       },
+      //       {
+      //         image: 'link.svg',
+      //         title: 'Witness and partner Nodes',
+      //         description: 'Randomly selected witness and partner nodes are used in typical transactions for validation and execution purposes.',
+      //         delay: 0
+      //       },
+      //       {
+      //         image: 'network-lock.svg',
+      //         title: 'Mitigated Risk and Security Considerations',
+      //         description: 'Discussed in detail, Blockchain+ made it very hard for hacker nodes to execute fraudulent transactions.',
+      //         delay: 250
+      //       },
+      //       {
+      //         image: 'flame.svg',
+      //         title: 'Fast Transaction Execution Speed',
+      //         description: 'Parallel transactions happen on the Blockchain+ network, making execution speeds faster without compromising security concerns.',
+      //         delay: 250
+      //       },
+      //       {
+      //         image: 'couple.svg',
+      //         title: 'Small Business-Focused Operation',
+      //         description: 'At its heart, BlockChain+ overcomes the problems faced by open blockchains (Bitcoin, etc.) to make it useful for businesses to use this technology for their ledger system.',
+      //         delay: 250
+      //       }
+      //     ]
+      //   }
+      // },
+      // #endregion
     ],
     footer: {
       brand: 'blockchainplus_logo.png',
@@ -609,7 +851,8 @@ class App extends Component {
       languages: [
         'English'
       ]
-    }
+    },
+    animationLoaded: false
   }
 
   componentDidMount() {
@@ -618,125 +861,30 @@ class App extends Component {
     //   renderer: 'svg',
     //   loop: true,
     //   autoplay: true,
-    //   path: 'data3.json'
+    //   path: 'morph.json'
     // });
+    setTimeout(() => {
+      window.drift.show();
+      this.setState({ animationLoaded: true });
+    }, 5000);
+  }
+
+  onAnimationLoad() {
+    if (this.state.animationLoaded === false) {
+      window.drift.show();
+      this.setState({ animationLoaded: true });
+    }
   }
 
   render() {
     let width = window.innerWidth;
-    let numValue = Math.floor(width / 50);
-    let height = document.documentElement.scrollHeight;
-    console.log(height);
-    const params = {
-      "particles": {
-        "number": {
-          "value": numValue,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#ffffff"
-        },
-        "shape": {
-          "type": "image",
-          "stroke": {
-            "width": 0,
-            "color": "#ffffff"
-          },
-          "polygon": {
-            "nb_sides": 5
-          },
-          "image": {
-            "src": "blockchainplus_logo.png"
-          }
-        },
-        "opacity": {
-          "value": 1,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 5,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 0.1,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 160.3412060865523,
-          "color": "#ffffff",
-          "opacity": 0.46,
-          "width": 1.763753266952075
-        },
-        "move": {
-          "enable": true,
-          "speed": 1.5,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": false,
-            "mode": "bubble"
-          },
-          "onclick": {
-            "enable": false,
-            "mode": "repulse"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 400,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 350,
-            "size": 10,
-            "duration": 0,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
-      },
-      "retina_detect": true
-    };
+    let numValue = Math.floor(width / 30);
+    let height = document.documentElement.scrollHeight + 1000;
+    let loadingStyle = this.state.animationLoaded ? {} : { overflow: 'hidden' };
+
     return (
       <div id='app' className={classes.App}>
+        { this.state.animationLoaded === false && <LoadingScreen /> }
         <Parallax
           className={classes.parallax}
           offsetYMax={height}
@@ -744,11 +892,9 @@ class App extends Component {
           slowerScrollRate={true}
           tag="div"
         >
-          <Particles
-            params={params}
+          <JellyfishContainer 
+            onAnimationLoad={this.onAnimationLoad.bind(this)}
           />
-          {/* <div id='bm' className={classes.bodymovin}></div> */}
-          {/* <img src='jellyfish_constellation.png' alt='jellyfish constellation'/> */}
         </Parallax>
         <Header
           content={this.state.navItems}

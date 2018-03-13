@@ -9,9 +9,10 @@ class SectionContainer extends Component {
     const { id, header, body } = content;
     const overflowStyle = id === 'faq' ? { overflowY: 'hidden' } : {}
     return (
-      <div className={`${classes['section-container']} container my-auto`} style={overflowStyle}>
-        {header !== null &&
+      <div className={`${classes['section-container']} container`} style={overflowStyle}>
+        {header.title !== null &&
           <SectionHeader
+            id={id}
             content={header}
           />
         }

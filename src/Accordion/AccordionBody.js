@@ -16,7 +16,8 @@ class AccordionBody extends Component {
 
   getHeight() {
     if (this.accordionText) {
-      const height = this.accordionText.clientHeight;
+      let height = this.accordionText.offsetHeight;
+      height += 20 + height * 0.115;
       this.setState({ height });
     }
   }

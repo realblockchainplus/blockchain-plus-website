@@ -6,6 +6,8 @@ import Accordion from '../Accordion/Accordion';
 import RandomNumberContainer from '../RandomNumber/RandomNumberContainer';
 import TeamContainer from '../Team/TeamContainer';
 import classes from './Section.css';
+import WhitepaperSection from '../Pages/Whitepaper/WhitepaperSection';
+import RoadMap from '../Roadmap/Roadmap';
 
 class SectionBody extends Component {
   render() {
@@ -19,6 +21,7 @@ class SectionBody extends Component {
             const { image, title, description, delay } = box;
             return <Box
               key={index}
+              index={index}
               id={`box-${index}`}
               category={this.props.id}
               image={image}
@@ -29,11 +32,11 @@ class SectionBody extends Component {
             />
           })
         }
-        {this.props.content.slides &&
+        {/* {this.props.content.slides &&
           <CarouselContainer
             content={this.props.content.slides}
           />
-        }
+        } */}
         {this.props.content.panels &&
           <Accordion
             content={this.props.content.panels}
@@ -58,6 +61,14 @@ class SectionBody extends Component {
               scrollReveal={this.props.scrollReveal}
             />
           })
+        }
+        {this.props.id === 'whitepaper' &&
+          <WhitepaperSection />
+        }
+        {this.props.id === 'roadmap' &&
+          <RoadMap
+            content={this.props.content.milestones}
+          />
         }
       </div>
     );

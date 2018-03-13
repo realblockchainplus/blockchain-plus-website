@@ -19,10 +19,10 @@
 .accordion > svg {
   position: absolute;
   color: rgba(242,254,254,1);
-  z-index: -1;
 }
 .accordion-body {
   height: 0px;
   transition: all 0.2s ease-out;
   overflow: hidden;
+  text-align: justify;
 }

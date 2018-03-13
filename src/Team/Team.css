@@ -28,7 +28,7 @@
 .team-portrait-img-container {
   max-height: 125px;
   max-width: 125px;
-  background-color: rgba(32,86,107, 0.95);
+  background-color: rgba(9,120,172,0.95);
   border: 1px solid rgba(0,0,0,0.15);
   box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.75);
   border-radius: 50%;
@@ -39,13 +39,14 @@
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
 }
-.team-portrait-img-container img:hover {
+/* .team-portrait-img-container img:hover {
   transform: scale(1.15);
   border-radius: 0%;
-}
+} */
 
 .team-description p {
   font-size: 14px;
+  text-align: justify;
 }
 .team-links {
   display: flex;

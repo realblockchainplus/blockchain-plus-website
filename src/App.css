@@ -1,6 +1,8 @@
 .App {
   height: 100%;
-  background-color: rgba(63, 171, 214, 1);
+  /* background-color: rgba(32,86,107,1); */
+  /* background-color: rgba(64,168,205,1); */
+  background-color: rgb(9, 120, 172);
 }
 
 .parallax {
@@ -11,10 +13,4 @@
 
 .parallax div {
   height: 100%;
-}
-
-.parallax img {
-  top: 25%;
-  position: absolute;
-  width: 25%;
 }

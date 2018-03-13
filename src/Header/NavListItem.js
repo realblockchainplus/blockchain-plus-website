@@ -10,7 +10,8 @@ class NavListItem extends Component {
     const pagePath = `/${this.props.page}`;
     return (
       <li className={`${classes['white']} ${classes['nav-item']}`}>
-        <NavLink activeClassName='active' className={`btn nav-link ${classes['nav-link']}`} to={pagePath} onClick={(ev) => { this.addDelay(ev) }}>{this.props.name}</NavLink>
+        {/* <NavLink activeClassName='active' className={`btn nav-link ${classes['nav-link']}`} to={pagePath} onClick={(ev) => { this.addDelay(ev) }}>{this.props.name}</NavLink> */}
+        <a className={`btn nav-link ${classes['nav-link']}`} onClick={(ev) => { this.props.scrollToId(ev, this.props.id)}}>{this.props.name}</a>
       </li>
     );
   }

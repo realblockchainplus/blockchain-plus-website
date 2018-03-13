@@ -95,9 +95,7 @@ class Header extends Component {
             <NavbarBrand href="/">
               <img src="blockchainplus_header_brand.png" alt="Blockchain Logo" style={{ height: '50px' }}/>
             </NavbarBrand>
-            <div style={{ display: 'inline', position: 'fixed', right: 0 }} className="mr-2">
-              <NavbarToggler style={{ color: 'white' }} onClick={this.toggleNavbar} />
-            </div>
+            <NavbarToggler style={{ position: 'absolute', color: 'white' }} onClick={this.toggleNavbar} />
             <Collapse isOpen={!this.state.collapsed} navbar>
               <Nav className='ml-auto' navbar>
                 <NavList
@@ -108,19 +106,6 @@ class Header extends Component {
             </Collapse>
           </div>
         </Navbar>
-        {/* <nav className={`navbar fixed-top navbar-toggleable-md navbar-light ${classes[navStyle]}`}>
-          <div className="container">
-            <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <a className="navbar-brand" href="#">
-              <img src="blockchainplus_header_brand.png" style={{ height: '50px' }}/>
-            </a>        
-            <NavList
-              content={this.props.content} 
-            />
-          </div>
-        </nav> */}
       </div>
     )
   }

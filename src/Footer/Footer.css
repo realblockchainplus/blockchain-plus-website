@@ -1,4 +1,5 @@
 .footer {
+  perspective: 900px;
   background-color: rgba(242,254,254,1);
 }
 .footer-container {

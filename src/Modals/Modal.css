@@ -1,0 +1,33 @@
+.modal-container {
+  background-color: rgba(245,254,254,1);
+  position: fixed;
+  border: 1px solid rgba(204,204,204,1);
+  overflow: hidden;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  z-index: 1031;
+}
+
+.modal-background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.1;
+  max-height: 500px;
+  filter: blur(1px);
+}
+
+.textarea {
+  width: 100%;
+}
+
+@media(min-width: 576px) {
+  .modal-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
