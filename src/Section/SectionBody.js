@@ -7,6 +7,7 @@ import RandomNumberContainer from '../RandomNumber/RandomNumberContainer';
 import TeamContainer from '../Team/TeamContainer';
 import classes from './Section.css';
 import WhitepaperSection from '../Pages/Whitepaper/WhitepaperSection';
+import RoadMap from '../Roadmap/Roadmap';
 
 class SectionBody extends Component {
   render() {
@@ -62,6 +63,11 @@ class SectionBody extends Component {
         }
         {this.props.id === 'whitepaper' &&
           <WhitepaperSection />
+        }
+        {this.props.id === 'roadmap' &&
+          <RoadMap
+            content={this.props.content.milestones}
+          />
         }
       </div>
     );
