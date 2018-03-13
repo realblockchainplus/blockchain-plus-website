@@ -16,8 +16,8 @@ class Body extends Component {
   }
   render() {
     return (
-      <div className={`${classes['body']}`}>
-        <Switch
+      <div className={`${classes['body']}`} style={this.props.style}>
+        {/* <Switch
           key={this.props.location.key}
           location={this.props.location}
         >
@@ -37,10 +37,14 @@ class Body extends Component {
               />
             }}
           />
-        </Switch>
+        </Switch> */}
+        <MainPage
+          id='main-page'
+          content={this.props.content}
+        />
       </div>
     );
   }
 }
 
-export default withRouter(Body);
+export default Body;

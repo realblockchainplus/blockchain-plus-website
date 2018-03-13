@@ -892,18 +892,18 @@ class App extends Component {
 
     return (
       <div id='app' className={classes.App}>
-        { this.state.animationLoaded === false && <LoadingScreen /> }
-        <Parallax
+        { this.state.animationLoaded === false && <LoadingScreen frame={this.state.animationFrame} /> }
+        <JellyfishContainer 
+          onNewAnimationFrame={this.onNewAnimationFrame.bind(this)}
+        />
+        {/* <Parallax
           className={classes.parallax}
           offsetYMax={height}
           offsetYMin={-height}
           slowerScrollRate={true}
           tag="div"
-        >
-          <JellyfishContainer 
-            onAnimationLoad={this.onAnimationLoad.bind(this)}
-          />
-        </Parallax>
+        
+        </Parallax> */}
         <Header
           content={this.state.navItems}
         />

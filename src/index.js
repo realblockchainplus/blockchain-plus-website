@@ -8,11 +8,11 @@ import { BrowserRouter } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
 const app = (
-  <ParallaxProvider>
-    <BrowserRouter>
-      <AppContainer />
-    </BrowserRouter>
-  </ParallaxProvider>
+  <AppContainer />
+  // <ParallaxProvider>
+  //   <BrowserRouter basename='blockchain-plus-website'>
+  //   </BrowserRouter>
+  // </ParallaxProvider>
 );
 
 ReactDOM.render(app, document.getElementById('root'));
