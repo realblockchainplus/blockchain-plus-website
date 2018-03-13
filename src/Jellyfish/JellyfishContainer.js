@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import JellyfishConsole from './JellyfishConsole';
 
-class JellyfishContainer extends Component {  
+class JellyfishContainer extends Component {
+  componentDidMount() {
+    window.addEventListener('animLoaded', () => {      
+      this.props.onAnimationLoad();
+    });
+  }
   render() {
     let width = window.innerWidth;
     let numValue = Math.floor(width / 30);

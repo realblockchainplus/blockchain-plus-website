@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header/Header';
 import Body from './Body/Body';
 import Footer from './Footer/Footer';
+import LoadingScreen from './LoadingScreen/LoadingScreen';
 import JellyfishContainer from './Jellyfish/JellyfishContainer';
 import Particles from 'react-particles-js';
 import { Parallax } from 'react-scroll-parallax';

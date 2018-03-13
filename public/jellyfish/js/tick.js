@@ -20,7 +20,10 @@ function tick(){
 }
 
 function animate(){
-        requestAnimFrame( animate );
+        var frame = requestAnimFrame( animate );
+        if (frame < 200 && frame > 190) {
+          window.dispatchEvent(window.animLoad);
+        }
         tick();
         drawScene();
 }
