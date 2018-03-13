@@ -10,8 +10,8 @@ class TeamPortrait extends Component {
           <div className={`${classes['team-portrait-img-container']} my-3 mx-auto`}>
             <img src={image} alt='profile' />
           </div>
-          <h4>{name}</h4>
-          <small>{jobTitle}</small>
+          {name && <h4>{name}</h4>}
+          {jobTitle && <small>{jobTitle}</small>}
         {/* </a> */}
       </div>
     );
