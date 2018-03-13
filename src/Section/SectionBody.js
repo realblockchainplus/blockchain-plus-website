@@ -21,6 +21,7 @@ class SectionBody extends Component {
             const { image, title, description, delay } = box;
             return <Box
               key={index}
+              index={index}
               id={`box-${index}`}
               category={this.props.id}
               image={image}
