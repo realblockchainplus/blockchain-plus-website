@@ -27,7 +27,6 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="jellyfish/js/lib/jquery-1.4.2.min.js"></script>
   <script type="text/javascript" src="jellyfish/js/lib/mjs.js"></script>
 
@@ -107,7 +106,7 @@
       //diffuse
       vec3 lightDir = vec3(0.0,1.0,0.0);
       vec3 lightCol = vec3(0.6,0.4,0.1);
-      vec3 ambientCol = vec3(0,0,0.5);
+      vec3 ambientCol = vec3(0.1,0,1);
       float diffuseProduct = max(dot(normalize(VertexNormal.xyz), lightDir), 0.0);
       vDiffuse = lightCol * vec3(diffuseProduct) + ambientCol;
     
