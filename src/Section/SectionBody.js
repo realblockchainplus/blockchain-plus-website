@@ -30,11 +30,11 @@ class SectionBody extends Component {
             />
           })
         }
-        {this.props.content.slides &&
+        {/* {this.props.content.slides &&
           <CarouselContainer
             content={this.props.content.slides}
           />
-        }
+        } */}
         {this.props.content.panels &&
           <Accordion
             content={this.props.content.panels}
