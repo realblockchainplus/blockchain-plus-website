@@ -11,11 +11,23 @@ class MainPage extends Component {
     super();
     window.sr = ScrollReveal({ duration: 1000 });
   }
+  componentDidMount() {
+    // const element = document.getElementById(this.props.id);
+    // window.sr.reveal(element, {
+    //   reset: true,
+    //   mobile: false,
+    //   delay: 100,
+    //   viewFactor: 0
+    // });
+  }
+
   render() {
     let width = window.innerWidth;
+    let height = window.innerHeight;
     let numValue = width < 992 ? 10 : 60;
     return (
       <div id={this.props.id} className={`${classes[this.props.id]}`}>
+        <Hero style={{ height, width }}/>
         {this.props.content.map((section, index) => {
           return <Section
             key={index}

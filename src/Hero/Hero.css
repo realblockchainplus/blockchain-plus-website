@@ -1,10 +1,15 @@
-.hero-section {
+/* .hero-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.hero-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.hero-container {}
 .hero-image {
   max-width: 350px;
 }
