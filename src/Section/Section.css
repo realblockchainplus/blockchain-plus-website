@@ -1,25 +1,29 @@
 .section {
   min-height: 70%;
 }
-.section-hero {
-  height: 100vh;
+.section:nth-child(even) {
+  perspective: 900px;
 }
-.section-hero .section-body {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.section-hero {
+  height: 100%;
 }
 .section-container {
   height: 100%;
 }
-.section-header {
+.section-header-title {
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 15px;
 }
 .section-header h1 {
   text-transform: uppercase;
 }
+.section-header p {
+}
 .section-body {}
-
 
 @media(min-width: 992px) {
   .section-header p {
