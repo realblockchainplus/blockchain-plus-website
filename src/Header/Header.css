@@ -5,8 +5,8 @@
 
 .nav-opaque {
   transition: background-color 0.35s ease-out;
-  background-color: rgba(32,86,107, 1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(9, 120, 172, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .white a {

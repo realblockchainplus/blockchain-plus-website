@@ -3,6 +3,16 @@
 }
 .section:nth-child(even) {
   perspective: 900px;
+  background-color: rgba(245,254,254,1);
+}
+.section:nth-child(even) .section-header {
+  color: #292b2c;
+}
+.section:nth-child(odd) {
+  background-color: rgba(9,120,172,1);
+}
+.section:nth-child(odd) .section-header {
+  color: rgba(245,254,254,1);
 }
 .section-hero {
   height: 100%;
