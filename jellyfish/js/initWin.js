@@ -26,8 +26,7 @@ $(window).resize(function() {
 });
 
 function webGLStart() {
-  window.animLoad = new Event('animLoaded');
-  console.log('added event', window.animLoad);
+  window.animFrame = new Event('animFrame');
   canvas = document.getElementById("webgl-canvas");
 
   initWin();
