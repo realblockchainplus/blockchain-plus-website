@@ -7,7 +7,7 @@ import RoadmapSection from './RoadmapSection';
 class RoadMap extends Component {
   render() {
     return (
-      <div className={`${classes['roadmap']}`}>
+      <div className={`${classes['roadmap']} col-12`}>
         {this.props.content.map((milestone, index) => {
           const direction = index % 2 === 0 ? 'right' : 'left';
           return <RoadmapSection
