@@ -40,7 +40,7 @@ class RandomNumberText extends Component {
 
   render() {
     return (
-      <div className={`${classes['random-number-text']} col-4`}>
+      <div className={`${classes['random-number-text']} col-12 col-md-4`}>
         {/* <button className='btn btn-primary' onClick={() => this.generateRandomString((testString) => this.sha256(testString))}>Generate a Random Number</button> */}
         <div className='card bg-faded'>
           <div className='card-block'>{this.state.hashResult}</div>

@@ -1,8 +1,5 @@
 .random-number-container {
 }
-.random-number-image img {
-  max-height: 200px;
-}
 .random-number-text {
   word-wrap: break-word;
 }

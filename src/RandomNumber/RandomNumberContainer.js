@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RandomNumberImage from './RandomNumberImage';
+import RandomNumberImageContainer from './RandomNumberImageContainer';
 import RandomNumberText from './RandomNumberText';
 import classes from './RandomNumber.css';
 
@@ -8,7 +8,7 @@ class RandomNumberContainer extends Component {
     return (
       <div className={`${classes['random-number-container']} col-12`}>
         <div className='row'>
-          <RandomNumberImage />
+          <RandomNumberImageContainer />
           <RandomNumberText />
         </div>
       </div>
