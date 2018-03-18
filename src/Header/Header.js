@@ -90,7 +90,7 @@ class Header extends Component {
     const scrollStyle = this.state.scrollTop !== 0 || (this.state.collapsed === false && isMobile === true) ? 'nav-opaque' : 'nav-transparent';
     return (
       <div>
-        <Navbar light className={`navbar fixed-top navbar-toggleable-md ${classes[scrollStyle]}`}>
+        <Navbar light className={`navbar fixed-top navbar-expand-md ${classes[scrollStyle]}`}>
           <div className='container'>
             <NavbarBrand href="/">
               <img src="blockchainplus_header_brand.png" alt="Blockchain Logo" style={{ height: '50px' }}/>

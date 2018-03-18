@@ -25,6 +25,7 @@ class Box extends Component {
           <BoxImage
             title={this.props.title}
             image={this.props.image}
+            imageType={this.props.imageType}
           />
           <BoxTitle
             title={this.props.title}

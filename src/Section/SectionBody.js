@@ -18,13 +18,14 @@ class SectionBody extends Component {
         }
         {this.props.content.boxes && 
           this.props.content.boxes.map((box, index) => {
-            const { image, title, description, delay } = box;
+            const { image, imageType, title, description, delay } = box;
             return <Box
               key={index}
               index={index}
               id={`box-${index}`}
               category={this.props.id}
               image={image}
+              imageType={imageType}
               title={title}
               description={description}
               delay={delay}

@@ -71,7 +71,7 @@ class App extends Component {
         body: {
           boxes: [
             {
-              image: 'BankSAFEIcon.jpg',
+              image: 'Eyeprivacy02.gif',
               title: 'Complete Privacy',
               description: 'Unlike traditional blockchains, only the sender and receiver know the complete details of the transactions. Information is only stored on participat nodes not on every node.',
               delay: 0
@@ -532,93 +532,81 @@ class App extends Component {
         },
         body: {}
       },
-      // {
-      //   id: 'roadmap',
-      //   backgroundColor: 'rgb(9, 120, 172)',
-      //   header: {
-      //     title: 'Roadmap',
-      //     description: null
-      //   },
-      //   body: {
-      //     milestones: [
-      //       {
-      //         id: 'start',
-      //         title: 'Blockchain+ was founded',
-      //         description: 'This is the start of Blockchain+',
-      //         teamMember: {
-      //           title: null,
-      //           firstName: 'Jeevan',
-      //           middleName: null,
-      //           lastName: 'Singh',
-      //           jobTitle: 'CEO',
-      //           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Ut eu sem integer vitae justo eget magna fermentum iaculis.',
-      //           image: '008-farmer.svg',
-      //           links: {
-      //             github: 'villith',
-      //             linkedin: null,
-      //             facebook: null,
-      //             googlePlus: null,
-      //             bitbucket: 'sdonnelly',
-      //             blog: null
-      //           }
-      //         },
-      //         links: [
-      //           { type: 'github', profileId: 'villith/blockchain-plus-website/issues/1' }
-      //         ]
-      //       },
-      //       {
-      //         id: 'ico-one',
-      //         title: 'First ICO',
-      //         description: 'This is the start of Blockchain+',
-      //         teamMember: {
-      //           title: null,
-      //           firstName: 'Jeevan',
-      //           middleName: null,
-      //           lastName: 'Singh',
-      //           jobTitle: 'CEO',
-      //           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Ut eu sem integer vitae justo eget magna fermentum iaculis.',
-      //           image: '008-farmer.svg',
-      //           links: {
-      //             github: 'villith',
-      //             linkedin: null,
-      //             facebook: null,
-      //             googlePlus: null,
-      //             bitbucket: 'sdonnelly',
-      //             blog: null
-      //           }
-      //         },
-      //         links: [
-      //           { type: 'github', profileId: 'villith/blockchain-plus-website/issues/1' }
-      //         ]
-      //       },
-      //       {
-      //         id: 'ico-two',
-      //         title: 'Second ICO',
-      //         description: 'This is the start of Blockchain+',
-      //         teamMember: {
-      //           title: null,
-      //           firstName: 'Jeevan',
-      //           middleName: null,
-      //           lastName: 'Singh',
-      //           jobTitle: 'CEO',
-      //           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Ut eu sem integer vitae justo eget magna fermentum iaculis.',
-      //           image: '008-farmer.svg',
-      //           links: {
-      //             github: 'villith',
-      //             linkedin: null,
-      //             facebook: null,
-      //             googlePlus: null,
-      //             bitbucket: 'sdonnelly',
-      //             blog: null
-      //           }
-      //         },
-      //         links: [
-      //           { type: 'github', profileId: 'villith/blockchain-plus-website/issues/1' }
-      //         ]
-      //       }
-      //     ]
-      //   }
-      // },
+      {
+        id: 'roadmap',
+        backgroundColor: 'rgb(9, 120, 172)',
+        header: {
+          title: 'Roadmap',
+          description: null
+        },
+        body: {
+          milestones: [
+            {
+              id: 'start',
+              title: 'Blockchain+ was founded',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+              percentComplete: 100,
+              quarter: 0,
+              year: 2018
+            },
+            {
+              id: 'ico-one',
+              title: 'Step One',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Bibendum ut tristique et egestas quis ipsum suspendisse ultrices.',
+              percentComplete: 100,
+              quarter: 0,
+              year: 2018
+            },
+            {
+              id: 'ico-two',
+              title: 'Step Two',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt dui ut ornare lectus. Purus sit amet luctus venenatis lectus magna fringilla urna.',
+              percentComplete: 100,
+              quarter: 0,
+              year: 2018
+            },
+            {
+              id: 'ico-two',
+              title: 'Step Three',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Consequat semper viverra nam libero justo laoreet sit amet cursus. Lectus proin nibh nisl condimentum id venenatis. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Morbi tristique senectus et netus et.',
+              percentComplete: 90,
+              quarter: 0,
+              year: 2018
+            },
+            {
+              id: 'ico-two',
+              title: 'Step Four',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor.',
+              percentComplete: 30,
+              quarter: 0,
+              year: 2018
+            },{
+              id: 'ico-two',
+              title: 'Step Five',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Nec ullamcorper sit amet risus nullam eget felis eget nunc.',
+              percentComplete: 70,
+              quarter: 0,
+              year: 2018
+            }
+            ,{
+              id: 'ico-two',
+              title: 'Step Six',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at consectetur lorem. Ac turpis egestas maecenas pharetra. Adipiscing tristique risus nec feugiat.',
+              percentComplete: 80,
+              quarter: 0,
+              year: 2018
+            }
+            ,{
+              id: 'ico-two',
+              title: 'Step Seven',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna sit amet purus gravida. Lectus sit amet est placerat in egestas erat imperdiet sed.',
+              percentComplete: 0,
+              quarter: 0,
+              year: 2018
+            }
+          ]
+        }
+      },
       {
         id: 'partners',
         backgroundColor: 'rgb(9, 120, 172)',
@@ -851,9 +839,7 @@ class App extends Component {
       languages: [
         'English'
       ]
-    },
-    animationFrame: 0,
-    animationLoaded: false
+    }
   }
 
   componentDidMount() {
@@ -865,36 +851,19 @@ class App extends Component {
     //   path: 'morph.json'
     // });
     setTimeout(() => {
-      this.killLoadingScreen();
+      this.props.killLoadingScreen();
     }, 5000);
-  }
-
-  onNewAnimationFrame(frame) {
-    this.setState({ animationFrame: frame }, () => {
-      if (this.state.animationLoaded === false && this.state.animationFrame >= 195) {        
-        this.killLoadingScreen();
-      }
-    })
-  }
-
-  killLoadingScreen() {
-    document.documentElement.style.overflow = 'visible';
-    document.body.style.overflow = 'visible';
-    window.drift.show();
-    this.setState({ animationLoaded: true });
   }
 
   render() {
     let width = window.innerWidth;
     let numValue = Math.floor(width / 30);
     let height = document.documentElement.scrollHeight + 1000;
-    let loadingStyle = this.state.animationLoaded ? {} : { overflow: 'hidden' };
 
     return (
       <div id='app' className={classes.App}>
-        { this.state.animationLoaded === false && <LoadingScreen frame={this.state.animationFrame} /> }
         <JellyfishContainer 
-          onNewAnimationFrame={this.onNewAnimationFrame.bind(this)}
+          onNewAnimationFrame={this.props.onNewAnimationFrame}
         />
         {/* <Parallax
           className={classes.parallax}
