@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FooterHeader from './FooterHeader';
+import FooterSelect from './FooterSelect';
 
 class FooterLanguage extends Component {
   render() {
@@ -7,6 +8,10 @@ class FooterLanguage extends Component {
       <div>
         <FooterHeader
           title={'Language'}
+        />
+        <FooterSelect
+          content={this.props.content}
+          lang={this.props.lang}
         />
       </div>
     );

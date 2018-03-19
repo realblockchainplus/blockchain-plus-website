@@ -3,8 +3,7 @@ import classes from './Section.css';
 
 class SectionHeader extends Component {
   render() {
-    const { id, content, backgroundColor } = this.props;
-    const { title, description } = content;
+    const { id, title, description } = this.props;
     const pAlign = id === 'random-number' ? 'text-justify' : '';
     return (
       <div className={`${classes['section-header']} text-center`}>

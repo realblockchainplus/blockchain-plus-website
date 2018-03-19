@@ -58,13 +58,14 @@ class Accordion extends Component {
             style={{ top: y, left: x - (intSize * 35), transform: `rotate(${rotation}deg)` }}
           />
         })} */}
-        {this.props.content.map((panel, index) => {
+        {this.props.content.map((id, index) => {
           const isActive = this.state.activePanel === index;
           return <AccordionPanel
             key={index}
             index={index}
-            content={panel}
+            id={id}
             isActive={isActive}
+            lang={this.props.lang[id]}
             handleToggle={(panelId) => this.handleToggle(panelId)}
           />
         })}

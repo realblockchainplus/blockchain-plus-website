@@ -7,12 +7,14 @@ class NavList extends Component {
   render() {
     return (
       this.props.content.map((navItem, index) => {
-        const { name, page, id } = navItem;
+        const { id, page } = navItem;
+        console.log(id, this.props.lang);
+        console.log(this.props.lang[id]);
         return <NavListItem
           key={index}
-          name={name}
           page={page}
           id={id}
+          label={this.props.lang[id]}
           scrollToId={this.props.scrollToId}
         />
       })

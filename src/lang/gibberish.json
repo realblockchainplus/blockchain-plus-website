@@ -1,0 +1,265 @@
+{
+  "hero": "aNext-generation distributed ledger system",
+  "header": {
+    "home": "aHome",
+    "benefits": "Benaaaaefits",
+    "faq": "aFAQ",
+    "random-number": "aRNG",
+    "team": "Teama",
+    "whitepaper": "aWhitepaper",
+    "roadmap": "aRoadmap",
+    "partners": "aPartners"
+  },
+  "body": {
+    "benefits": {
+      "headerTitle": "aBenefits",
+      "headerDescription": null,
+      "sectionLang": {
+        "network-privacy": {
+          "title": "aComplete Privacy",
+          "description": "aUnlike traditional blockchains, only the sender and receiver know the complete details of the transactions. Information is only stored on participat nodes not on every node."
+        },
+        "immutable-records": {
+          "title": "aImmutable Records",
+          "description": "aThe nodes validating the transactions store immutable records through a one-way encryption key (Hash)."
+        },
+        "network-speed": {
+          "title": "aBlazing Fast",
+          "description": "aBlockchain+ can complete a transaction in one second or less. Our closest competitor is ripple at 4 seconds per transaction."
+        },
+        "network-versatility": {
+          "title": "aAbsurdly Versatile",
+          "description": "aBlockchain+ is the first functional distributed ledger system. The use cases range from disintermediating cash to a convenient ledger system for SMB’s."
+        },
+        "open-source": {
+          "title": "aOpen Source",
+          "description": "aBlockchain+ operates on an open source architecture. Entrepreneurs, companies and dreamers around the world are the backbone of our community."
+        }
+      }
+    },
+    "faq": {
+      "headerTitle": "aFrequently Asked Questions",
+      "headerDescription": "aSome basic questions regarding Blockchain+",
+      "sectionLang": {
+        "what-is-blockchain-plus": {
+          "question": "aWhat is Blockchain+ ?",
+          "answer": "aBlockchain+ is a next-generation distributed database."
+        },
+        "open-source": {
+          "question": "aAre you open source?",
+          "answer": "aYes. All of Blockchain+’s code is open source."
+        },
+        "permissioned": {
+          "question": "aAre you a permissioned blockchain?",
+          "answer": "aBlockchain+ is not a permissioned blockchain. In our opinion, permissioned blockchains (where a central authority controls the operation) go against the very fabric of blockchains. Blockchain’s should be distributed and open!"
+        },
+        "consortium": {
+          "question": "aAre you then a Consortium blockchain?",
+          "answer": "aBlockchain+ can be defined as a consortium because we limit our membership numbers. However, unlike traditional consortiums where membership is closed to the general public, everyone has the opportunity to be part of our network. Our members can vote to change the parameters by which future members can join be part of our network."
+        },
+        "infrastructure": {
+          "question": "aHow hackable is Blockchain+’s infrastructure?",
+          "answer": "aAssuming a very minimum Blockchain+ network configuration of 5000 regular and 5000 partner nodes the minimum odds required to perform fraudulent activity is 1 in 99,990,000. With this minimum configuration the odds of performing fraudulent transaction is 923 times more than getting stuck with lightning in a given year. These odds are further mitigated by the fact that (a) BlockChain+ will be open-source, meaning bugs and security breaches will be reported and fixed faster; (b) BlockChain+ will be operating on a global network, which means the number of nodes will be much higher than above assumed ones which means odds will increase exponentially; and (c) the BlockChain+ Partner node community will be performing extensive tasks regularly, such as bad node reporting, random algorithm generation, and certification issuing and revoking. Thus the risk can be further reduced much more."
+        },
+        "validation": {
+          "question": "aHow does Blockchain+ validate transactions?",
+          "answer": "aIn blockchain at very least every block is joined with other blockchain using hash however in blockchain+ we use hash to store transaction details in validating nodes. So essentially if you validated someone else`s transaction you will store hash of data which cannot be decrypted but can be used later to validate that the transaction you validated is legitimate. The hashes are stored in redundancy to provide data integrity."
+        },
+        "different-ethereum": {
+          "question": "aHow is Blockchain+ different from Ethereum?",
+          "answer": "aBlockchain+ is an attempt to create synergies by marrying public and private blockchains. Any public blockchain, including Ethereum, faces long term operational issues because transactions are settled by appending information to one massive blockchain. This architecture makes the database bulkier over time compromising speed and reducing the ability to effectively execute transactions long term. Blockchain+ will be implementing Ethereum’s smart contract feature long-term. Smart contracts are a genius concept!"
+        },
+        "different-ripple": {
+          "question": "aHow is Blockchain+ different from Ripple?",
+          "answer": "aRipple is a permissioned blockchain which fundamentally goes against the grain of blockchains. Blockchain+ avoids the traditional permissioned based architecture by randomly selecting the nodes validating the transaction. Blockchain+ uses random number teleportation to generate a same random number on all nodes without transmitting to each other."
+        },
+        "jellyfishes": {
+          "question": "aWhat'aaas up with Jellyfishes?",
+          "answer": "aThe core of Blockchain+’s random number generator relies on chaos theory. Chaotic behaviour occurs in natural systems like weather, climate and movements of jellyfish among many others. The wildly random jellyfish movements are just a start as Blockchain+ will be integrating many more chaotic elements to its random number generator."
+        }
+      }
+    },
+    "random-number": {
+      "headerTitle": "aRanddfom Number Teleportation",
+      "headerDescription": "aWe generataae random numbers via movements of jellyfishes in aquariums around the world. The number is then consumed by each and every node to generate another set of random number using ever changing algorithms and configuration data. The final random numbers are generated in such a way that they are impossible to predict, are purely random and same on all nodes without transmitting to each other.",
+      "sectionLang": {}
+    },
+    "team": {
+      "headerTitle": "aBlaaockchain+ Team",
+      "headerDescription": null,
+      "sectionLang": {
+        "employees": {
+          "title": "aTeam",
+          "description": null,
+          "defaultTitle": "",
+          "jeevan-singh": {
+            "firstName": "aJeevan",
+            "middleName": "aJ.",
+            "lastName": "aSingh",
+            "jobTitle": "aChief Executive Officer",
+            "description": "aJeevan is a consummate entrepreneur. Jeevan’s most recent venture, tugboat.cc, was a unique hyper-local printing marketplace that boasted multiple Fortune 500 clients."            
+          },
+          "gabor-levai": {
+            "firstName": "aGabor",
+            "middleName": null,
+            "lastName": "aLevai",
+            "jobTitle": "aPresident and Chief Operations Officer",
+            "description": "aGabor was the co-founder and COO of the largest private media company in Hungary. Their client list included top Fortune 500’s like Coca Cola and BMW, among many others."
+          },
+          "jaswinder-singh": {
+            "firstName": "aJaswinder",
+            "middleName": null,
+            "lastName": "aSingh",
+            "jobTitle": "aChief Technology Officer",
+            "description": "aJas is a super star engineer and has architected some of the largest E-Commerce applications in Canada. Jas has lead development teams for Canadian Tire, IBM & Presto."
+          },
+          "david-kiss": {
+            "firstName": "aDavid",
+            "middleName": null,
+            "lastName": "aKiss",
+            "jobTitle": "aEngineer",
+            "description": "aDavid is a senior development veteran with extensive expertise in building Fintech products. David is currently leading RBC Reward’s server-side development team."
+          },
+          "gabor-szokoli": {
+            "firstName": "aGabor",
+            "middleName": null,
+            "lastName": "aSzokoli",
+            "jobTitle": "aEngineer",
+            "description": "aGabor is a veteran engineer with over 10 years experience, building and managing software for some of the world’s top companies like Siemens and GE Healthcare."
+          },
+          "lee-stecklov": {
+            "firstName": "aLee",
+            "middleName": null,
+            "lastName": "aStecklov",
+            "jobTitle": "aEngineer",
+            "description": "aLee is a software development veteran with over 20 years experience. Lee has managed build-outs of many workload automation products currently used by numerous Fortune 500’s"
+          },
+          "scott-donnelly": {
+            "firstName": "aScott",
+            "middleName": null,
+            "lastName": "aDonnelly",
+            "jobTitle": "aEngineer",
+            "description": "aScott is a full stack engineer with over 3 years experience in developing software solutions for several clients."
+          },
+          "rajah-vijeyarajah": {
+            "firstName": "aRajah",
+            "middleName": null,
+            "lastName": "aVijeyarajah",
+            "jobTitle": "aEngineer",
+            "description": "aRajah is an engineer with over 5 years architecting, developing and deploying a wide array of software solutions."
+          },
+          "sophia-wall": {
+            "firstName": "aSophia",
+            "middleName": null,
+            "lastName": "aWall",
+            "jobTitle": "aGraphic Designer",
+            "description": "aSophia is the soul behind all the current design at Blockchain+. Her ability to deliver on tight deadlines is uncanny."
+          }
+        },
+        "advisors": {
+          "title": "aAdvisors",
+          "description": null,
+          "defaultTitle": "",
+          "kundan-joshi": {
+            "firstName": "aKundan",
+            "middleName": null,
+            "lastName": "aJoshi",
+            "jobTitle": "aAdvisor",
+            "description": "aKundan is the founder and CEO of TheAppLabb. Kundan has grown the company to over 150 employees worldwide, making it one of the fastest growing software development companies in Toronto."          
+          },
+          "tamas-haiman": {
+            "firstName": "aTamas",
+            "middleName": null,
+            "lastName": "aHaiman",
+            "jobTitle": "aAdvisor",
+            "description": "aTamas is a senior banker with experience from tier-one banks like Barclays, CITI and Sberbank. Most recently Tamas was the Head of Global Markets for Sberbank (Switzerland) AG, where he brought the bank back into the black."
+          }
+        }
+      }
+    },
+    "whitepaper": {
+      "headerTitle": null,
+      "headerDescription": null,
+      "sectionLang": {}
+    },
+    "roadmap": {
+      "headerTitle": "aRoaaadmap",
+      "headerDescription": null,
+      "sectionLang": {
+        "step-one": {
+          "title": "aBlockchain+ was founded",
+          "description": "aLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "step-two": {
+          "title": "",
+          "description": ""
+        },
+        "step-three": {
+          "title": "",
+          "description": ""
+        },
+        "step-four": {
+          "title": "",
+          "description": ""
+        },
+        "step-five": {
+          "title": "",
+          "description": ""
+        },
+        "step-six": {
+          "title": "",
+          "description": ""
+        },
+        "step-seven": {
+          "title": "",
+          "description": ""
+        },
+        "step-eight": {
+          "title": "",
+          "description": ""
+        }
+      }
+    },
+    "partners":  {
+      "headerTitle": "aPartners",
+      "headerDescription": null,
+      "sectionLang": {}
+    }
+  },
+  "footer": {
+    "columns": {
+      "learn": {
+        "title": "aLaaearn",
+        "items": {
+          "whitepaper": "aWhitepaper",
+          "roadmap": "aRoadmap",
+          "github": "aGithub"
+        }
+      },
+      "company": {
+        "title": "aComaaapany",
+        "items": {
+          "about": "aAbout",
+          "careers": "aCareers",
+          "press": "aPress",
+          "legal-privacy": "aLegal & Privacy",
+          "support": "aSupport"
+        }
+      },
+      "social": {
+        "title": "aSocial",
+        "items": {
+          "blog": "aBlog",
+          "twitter": "aTwitter",
+          "facebook": "aFacebook"
+        }
+      }
+    },
+    "languages": {
+      "en": "aEnglish (US)",
+      "en-gb": "English (GB)",
+      "fr-fr": "French (FR)",
+      "gibberish": "aGibberish"
+    }
+  }
+}

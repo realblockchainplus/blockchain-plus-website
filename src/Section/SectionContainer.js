@@ -5,20 +5,23 @@ import classes from './Section.css';
 
 class SectionContainer extends Component {
   render() {
-    const { content } = this.props;
-    const { id, header, body } = content;
+    const { content, lang } = this.props;
+    const { id } = content;
+    const { headerTitle, headerDescription, sectionLang } = lang;
     const overflowStyle = id === 'faq' ? { overflowY: 'hidden' } : {}
     return (
       <div className={`${classes['section-container']} container`} style={overflowStyle}>
-        {header.title !== null &&
+        {headerTitle !== null &&
           <SectionHeader
             id={id}
-            content={header}
+            title={headerTitle}
+            description={headerDescription}
           />
         }
         <SectionBody 
           id={id}
-          content={body}
+          content={content.body}
+          lang={sectionLang}
           scrollReveal={this.props.scrollReveal}
         />
     </div>

@@ -41,6 +41,7 @@ class Body extends Component {
         <MainPage
           id='main-page'
           content={this.props.content}
+          lang={this.props.lang}
         />
       </div>
     );

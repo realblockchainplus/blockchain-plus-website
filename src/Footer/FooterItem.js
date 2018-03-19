@@ -3,10 +3,11 @@ import classes from './Footer.css';
 
 class FooterItem extends Component {
   render() {
-    const { text, link } = this.props.content;
+    const { label, link } = this.props.content;
+    console.log(label);
     return (
       <div className={`${classes['footer-item']}`}>
-        <a href={link}>{text}</a>
+        <a href={link}>{label}</a>
       </div>
     );
   }

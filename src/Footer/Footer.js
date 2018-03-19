@@ -6,20 +6,25 @@ import classes from './Footer.css';
 
 class Footer extends Component {
   render() {
-    const { columns } = this.props.content;
+    const { content, lang } = this.props;
+    const { brand, columns, languages } = content;
     return (
       <div className={`${classes['footer']}`}>
         <div className={`${classes['footer-container']} container py-3`}>
           <div className='row'>
-            <FooterBrand />
+            <FooterBrand brand={brand} />
             {columns.map((column, index) => {
+              const { id, items } = column;
+              console.log(id);
               return <FooterColumn
                 key={index}
-                content={column}
-                index={index}
+                content={items}
+                lang={lang.columns[id]}
               />
             })}
-            <FooterLanguage />
+            <FooterLanguage 
+              content={languages}
+              lang={lang.languages} />
           </div>
         </div>
       </div>

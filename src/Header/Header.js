@@ -43,9 +43,14 @@ class Header extends Component {
     else if (this.state.collapsed !== nextState.collapsed) {
       return true
     }
+    else if (this.props.lang !== nextProps.lang) {
+      return true;
+    }
     else {
+      console.log(this.props, nextProps);
       return false;
     }
+    return true;
   }
 
   toggleNavbar() {
@@ -100,7 +105,8 @@ class Header extends Component {
               <Nav className='ml-auto' navbar>
                 <NavList
                   scrollToId={(ev, id) => {this.scrollToId(ev, id)}}
-                  content={this.props.content} 
+                  content={this.props.content}
+                  lang={this.props.lang}
                 />
               </Nav>
             </Collapse>

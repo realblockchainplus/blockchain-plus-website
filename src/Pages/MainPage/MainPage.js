@@ -29,9 +29,11 @@ class MainPage extends Component {
       <div id={this.props.id} className={`${classes[this.props.id]}`}>
         <Hero style={{ height, width }}/>
         {this.props.content.map((section, index) => {
+          const lang = this.props.lang[section.id];
           return <Section
             key={index}
             content={section}
+            lang={lang}        
           />
         })}
       </div>

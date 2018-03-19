@@ -5,8 +5,8 @@ import classes from './Accordion.css';
 
 class AccordionPanel extends Component {
   render() {
-    const { index, content, isActive, handleToggle } = this.props;
-    const { question, answer } = content;
+    const { index, isActive, handleToggle, lang } = this.props;
+    const { question, answer } = lang;
     return (
       <div className={`${classes['accordion-panel']} col-12`}>
         <AccordionHeader

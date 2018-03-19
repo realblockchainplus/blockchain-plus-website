@@ -7,6 +7,7 @@ import JellyfishContainer from './Jellyfish/JellyfishContainer';
 import Particles from 'react-particles-js';
 import { Parallax } from 'react-scroll-parallax';
 import bodymovin from 'bodymovin';
+import { translate } from 'react-i18next';
 
 import classes from './App.css';
 
@@ -15,89 +16,67 @@ class App extends Component {
     bodyHeight: null,
     navItems: [
       {
-        name: 'Home',
         page: '',
         id: 'home'
       },
       {
-        name: 'Benefits',
         page: '',
         id: 'benefits'
       },
       {
-        name: 'FAQ',
         page: '',
         id: 'faq'
       },
       {
-        name: 'RNG',
         page: '',
         id: 'random-number'
       },
       {
-        name: 'Team',
         page: '',
         id: 'team'
       },
       {
-        name: 'Whitepaper',
         page: '',
         id: 'whitepaper'
       },
       {
-        name: 'Roadmap',
         page: '',
         id: 'roadmap'
       },
       {
-        name: 'Partners',
         page: '',
         id: 'partners'
-      },
-      // {
-      //   name: 'RNG',
-      //   page: '',
-      //   id: 'random-number'
-      // },
+      }
     ],
     sections: [
       {
         id: 'benefits',
         backgroundColor: 'rgba(242,254,254,1)',        
-        header: {
-          title: 'Benefits',
-          description: null
-        },
         body: {
           boxes: [
             {
-              image: 'Eyeprivacy02.gif',
-              title: 'Complete Privacy',
-              description: 'Unlike traditional blockchains, only the sender and receiver know the complete details of the transactions. Information is only stored on participat nodes not on every node.',
+              id: 'network-privacy',
+              image: 'Eyeprivacy02.gif',           
               delay: 0
             },
             {
-              image: 'network-lock.svg',
-              title: 'Immutable Records',
-              description: 'The nodes validating the transactions store immutable records through a one-way encryption key (Hash).',
+              id: 'immutable-records',
+              image: 'network-lock.svg',            
               delay: 500
             },
             {
-              image: 'flame.svg',
-              title: 'Blazing Fast',
-              description: 'Blockchain+ can complete a transaction in one second or less. Our closest competitor is ripple at 4 seconds per transaction.',
+              id: 'network-speed',
+              image: 'flame.svg',          
               delay: 250
             },
             {
-              image: 'swiss-army-knife.svg',
-              title: 'Absurdly Versatile',
-              description: 'Blockchain+ is the first functional distributed ledger system. The use cases range from disintermediating cash to a convenient ledger system for SMB’s.',
+              id: 'network-versatility',
+              image: 'swiss-army-knife.svg',           
               delay: 500
             },
             {
-              image: 'meeting.svg',
-              title: 'Open Source',
-              description: 'Blockchain+ operates on an open source architecture. Entrepreneurs, companies and dreamers around the world are the backbone of our community.',
+              id: 'open-source',
+              image: 'meeting.svg',            
               delay: 500
             }
           ]
@@ -106,85 +85,36 @@ class App extends Component {
       {
         id: 'faq',
         backgroundColor: 'rgb(9, 120, 172)',
-        header: {
-          title: 'Frequently Asked Questions',
-          description: 'Some basic questions regarding Blockchain+'
-        },
         body: {
           panels: [
-            {
-              question: 'What is Blockchain+ ?',
-              answer: 'Blockchain+ is a next-generation distributed database.'
-            },
-            {
-              question: 'Are you open source?',
-              answer: 'Yes. All of Blockchain+’s code is open source.'
-            },
-            {
-              question: 'Are you a permissioned blockchain?',
-              answer: 'Blockchain+ is not a permissioned blockchain. In our opinion, permissioned blockchains (where a central authority controls the operation) go against the very fabric of blockchains. Blockchain’s should be distributed and open!'
-            },
-            {
-              question: 'Are you then a Consortium blockchain?',
-              answer: 'Blockchain+ can be defined as a consortium because we limit our membership numbers. However, unlike traditional consortiums where membership is closed to the general public, everyone has the opportunity to be part of our network. Our members can vote to change the parameters by which future members can join be part of our network.'
-            },
-            {
-              question: 'How hackable is Blockchain+’s infrastructure?',
-              answer: 'Assuming a very minimum Blockchain+ network configuration of 5000 regular and 5000 partner nodes the minimum odds required to perform fraudulent activity is 1 in 99,990,000. With this minimum configuration the odds of performing fraudulent transaction is 923 times more than getting stuck with lightning in a given year. These odds are further mitigated by the fact that (a) BlockChain+ will be open-source, meaning bugs and security breaches will be reported and fixed faster; (b) BlockChain+ will be operating on a global network, which means the number of nodes will be much higher than above assumed ones which means odds will increase exponentially; and (c) the BlockChain+ Partner node community will be performing extensive tasks regularly, such as bad node reporting, random algorithm generation, and certification issuing and revoking. Thus the risk can be further reduced much more.'
-            },
-            {
-              question: 'How does Blockchain+ validate transactions?',
-              answer: 'In blockchain at very least every block is joined with other blockchain using hash however in blockchain+ we use hash to store transaction details in validating nodes. So essentially if you validated someone else`s transaction you will store hash of data which cannot be decrypted but can be used later to validate that the transaction you validated is legitimate. The hashes are stored in redundancy to provide data integrity.'
-            },
-            {
-              question: 'How is Blockchain+ different from Ethereum?',
-              answer: 'Blockchain+ is an attempt to create synergies by marrying public and private blockchains. Any public blockchain, including Ethereum, faces long term operational issues because transactions are settled by appending information to one massive blockchain. This architecture makes the database bulkier over time compromising speed and reducing the ability to effectively execute transactions long term. \n\nBlockchain+ will be implementing Ethereum’s smart contract feature long-term. Smart contracts are a genius concept!'
-              
-            },
-            {
-              question: 'How is Blockchain+ different from Ripple?',
-              answer: 'Ripple is a permissioned blockchain which fundamentally goes against the grain of blockchains. Blockchain+ avoids the traditional permissioned based architecture by randomly selecting the nodes validating the transaction. Blockchain+ uses random number teleportation to generate a same random number on all nodes without transmitting to each other.'
-            },
-            {
-              question: 'What\'s up with Jellyfishes?',
-              answer: 'The core of Blockchain+’s random number generator relies on chaos theory. Chaotic behaviour occurs in natural systems like weather, climate and movements of jellyfish among many others. The wildly random jellyfish movements are just a start as Blockchain+ will be integrating many more chaotic elements to its random number generator.'
-            }
+            'what-is-blockchain-plus',
+            'open-source',
+            'permissioned',
+            'consortium',
+            'infrastructure',
+            'validation',
+            'different-ethereum',
+            'different-ripple',
+            'jellyfishes'
           ]
         }
       },
       {
         id: 'random-number',
         backgroundColor: 'rgba(242,254,254,1)',
-        header: {
-          title: 'Random Number Teleportation',
-          description: 'We generate random numbers via movements of jellyfishes in aquariums around the world. The number is then consumed by each and every node to generate another set of random number using ever changing algorithms and configuration data. The final random numbers are generated in such a way that they are impossible to predict, are purely random and same on all nodes without transmitting to each other.'
-        },
         body: {}
       },
       {
         id: 'team',
         backgroundColor: 'rgb(9, 120, 172)',
-        header: {
-          title: 'Blockchain+ Team',
-          description: null
-        },
         body: {
           teamSections: [
             {
               id: 'employees',
-              title: 'Team',
-              description: null,
               defaultImage: '',
-              defaultTitle: '',
               members: [
                 {
-                  title: null,
-                  firstName: 'Jeevan',
-                  middleName: 'J.',
-                  lastName: 'Singh',
-                  jobTitle: 'Chief Executive Officer',
-                  description: 'Jeevan is a consummate entrepreneur. Jeevan’s most recent venture, tugboat.cc, was a unique hyper-local printing marketplace that boasted multiple Fortune 500 clients.',
-                  image: 'jeevan_singh_headshot.jpg',
+                  id: 'jeevan-singh',
                   links: {
                     github: null,
                     linkedin: 'jeevan-j-singh-87a81725',
@@ -195,13 +125,7 @@ class App extends Component {
                   }
                 },
                 {
-                  title: null,
-                  firstName: 'Gabor',
-                  middleName: null,
-                  lastName: 'Levai',
-                  jobTitle: 'President and Chief Operations Officer',
-                  description: 'Gabor was the co-founder and COO of the largest private media company in Hungary. Their client list included top Fortune 500’s like Coca Cola and BMW, among many others.',
-                  image: 'gabor_levai_headshot.jpg',
+                  id: 'gabor-levai',
                   links: {
                     github: null,
                     linkedin: 'gaborlevai1972',
@@ -212,13 +136,7 @@ class App extends Component {
                   }
                 },
                 {
-                  title: null,
-                  firstName: 'Jaswinder',
-                  middleName: null,
-                  lastName: 'Singh',
-                  jobTitle: 'Chief Technology Officer',
-                  description: 'Jas is a super star engineer and has architected some of the largest E-Commerce applications in Canada. Jas has lead development teams for Canadian Tire, IBM & Presto.',
-                  image: 'tugboat_jas_headshot.png',
+                  id: 'jaswinder-singh',
                   links: {                    
                     // github: 'mistletoe91',
                     linkedin: 'jdsingh1',
@@ -229,13 +147,7 @@ class App extends Component {
                   }
                 },
                 {
-                  title: null,
-                  firstName: 'David',
-                  middleName: null,
-                  lastName: 'Kiss',
-                  jobTitle: 'Engineer',
-                  description: 'David is a senior development veteran with extensive expertise in building Fintech products. David is currently leading RBC Reward’s server-side development team.',
-                  image: 'david_kiss_headshot.jpg',
+                  id: 'david-kiss',
                   links: {
                     github: null,
                     linkedin: 'davidkiss',
@@ -246,13 +158,7 @@ class App extends Component {
                   }
                 },
                 {
-                  title: null,
-                  firstName: 'Gabor',
-                  middleName: null,
-                  lastName: 'Szokoli',
-                  jobTitle: 'Engineer',
-                  description: 'Gabor is a veteran engineer with over 10 years experience, building and managing software for some of the world’s top companies like Siemens and GE Healthcare.',
-                  image: 'gabor_szokoli_headshot.jpg',
+                  id: 'gabor-szokoli',
                   links: {
                     github: null,
                     linkedin: 'gabor-szokoli-25a16011',
@@ -263,13 +169,7 @@ class App extends Component {
                   }
                 },
                 {
-                  title: null,
-                  firstName: 'Lee',
-                  middleName: null,
-                  lastName: 'Stecklov',
-                  jobTitle: 'Engineer',
-                  description: 'Lee is a software development veteran with over 20 years experience. Lee has managed build-outs of many workload automation products currently used by numerous Fortune 500’s',
-                  image: 'lee_stecklov_headshot.jpg',
+                  id: 'lee-stecklov',
                   links: {
                     github: null,
                     linkedin: 'leestecklov',
@@ -280,13 +180,7 @@ class App extends Component {
                   }
                 },
                 {
-                  title: null,
-                  firstName: 'Scott',
-                  middleName: null,
-                  lastName: 'Donnelly',
-                  jobTitle: 'Engineer',
-                  description: 'Scott is a full stack engineer with over 3 years experience in developing software solutions for several clients.',
-                  image: '008-farmer.svg',
+                  id: 'scott-donnelly',
                   links: {
                     // github: 'villith',
                     linkedin: 'scott-donnelly-527418125',
@@ -297,13 +191,7 @@ class App extends Component {
                   }
                 },
                 {
-                  title: null,
-                  firstName: 'Rajah',
-                  middleName: null,
-                  lastName: 'Vijeyarajah',
-                  jobTitle: 'Engineer',
-                  description: 'Rajah is an engineer with over 5 years architecting, developing and deploying a wide array of software solutions.',
-                  image: 'rajah_vijeyarajah_headshot.jpg',
+                  id: 'rajah-vijeyarajah',
                   links: {
                     // github: 'rajah19',
                     linkedin: 'rajah19',
@@ -314,13 +202,7 @@ class App extends Component {
                   }
                 },
                 {
-                  title: null,
-                  firstName: 'Sophia',
-                  middleName: null,
-                  lastName: 'Wall',
-                  jobTitle: 'Graphic Designer',
-                  description: 'Sophia is the soul behind all the current design at Blockchain+. Her ability to deliver on tight deadlines is uncanny.',
-                  image: '002-nun.svg',
+                  id: 'sophia-wall',
                   links: {
                     github: null,
                     linkedin: '',
@@ -340,13 +222,7 @@ class App extends Component {
               defaultTitle: '',
               members: [
                 {
-                  title: null,
-                  firstName: 'Kundan',
-                  middleName: null,
-                  lastName: 'Joshi',
-                  jobTitle: 'Advisor',
-                  description: 'Kundan is the founder and CEO of TheAppLabb. Kundan has grown the company to over 150 employees worldwide, making it one of the fastest growing software development companies in Toronto.',
-                  image:  'kundan_joshi_headshot.jpg',
+                  id: 'kundan-joshi',
                   links: {
                     github: null,
                     linkedin: 'kundan',
@@ -357,13 +233,7 @@ class App extends Component {
                   }
                 },
                 {
-                  title: null,
-                  firstName: 'Tamas',
-                  middleName: null,
-                  lastName: 'Haiman',
-                  jobTitle: 'Advisor',
-                  description: 'Tamas is a senior banker with experience from tier-one banks like Barclays, CITI and Sberbank. Most recently Tamas was the Head of Global Markets for Sberbank (Switzerland) AG, where he brought the bank back into the black.',
-                  image:  'tamas_haiman_headshot.jpg',
+                  id: 'tamas-haiman',
                   links: {
                     github: null,
                     linkedin: 'tamas-haiman-259620',
@@ -615,14 +485,18 @@ class App extends Component {
           description: null
         },
         body: {
-          partners: [
+          boxes: [
             {
-              name: 'Aird Berlis',
-              image: 'aird-berlis-logo.png'
+              id: 'aird-berlis',
+              title: 'Aird Berlis',
+              image: 'aird-berlis-logo.png',
+              delay: null
             },
             {
-              name: 'The App Labb',
-              image: 'app_lab.png'
+              id: 'app-lab',
+              title: 'The App Labb',
+              image: 'app_lab.png',
+              delay: null
             },
             // {
             //   name: 'Trendency Online',
@@ -755,89 +629,79 @@ class App extends Component {
       brand: 'blockchainplus_logo.png',
       columns: [
         {
-          title: 'Column',
+          id: 'learn',
           items: [
             {
-              text: 'These',
+              id: 'whitepaper',
+              page: '',
               link: '#'
             },
             {
-              text: 'Are',
+              id: 'roadmap',
+              page: '',
               link: '#'
             },
             {
-              text: 'Example',
-              link: '#'
-            },
-            {
-              text: 'Items',
+              id: 'github',
+              page: '',
               link: '#'
             }
           ]
         },
         {
-          title: 'Learn',
+          id: 'company',
           items: [
             {
-              text: 'Whitepaper',
-              page: 'whitepaper',
+              id: 'about',
+              page: '',
               link: '#'
             },
             {
-              text: 'Roadmap',
+              id: 'careers',
+              page: '',
               link: '#'
             },
             {
-              text: 'Github',
+              id: 'press',
+              page: '',
+              link: '#'
+            },
+            {
+              id: 'legal-privacy',
+              page: '',
+              link: '#'
+            },
+            {
+              id: 'support',
+              page: '',
               link: '#'
             }
           ]
         },
         {
-          title: 'Company',
+          id: 'social',
           items: [
             {
-              text: 'About',
+              id: 'blog',
+              page: '',
               link: '#'
             },
             {
-              text: 'Careers',
+              id: 'twitter',
+              page: '',
               link: '#'
             },
             {
-              text: 'Press',
-              link: '#'
-            },
-            {
-              text: 'Legal & Privacy',
-              link: '#'
-            },
-            {
-              text: 'Support',
-              link: '#'
-            }
-          ]
-        },
-        {
-          title: 'Social',
-          items: [
-            {
-              text: 'Blog',
-              link: '#'
-            },
-            {
-              text: 'Twitter',
-              link: '#'
-            },
-            {
-              text: 'Facebook',
+              id: 'facebook',
+              page: '',
               link: '#'
             }
           ]
         }
       ],
       languages: [
-        'English'
+        'en',
+        'gibberish'
       ]
     }
   }
@@ -860,11 +724,15 @@ class App extends Component {
     let numValue = Math.floor(width / 30);
     let height = document.documentElement.scrollHeight + 1000;
 
+    const { t } = this.props;
+    let translatedHeader = t('header');
+    let translatedBody = t('body');
+    let translatedFooter = t('footer');
     return (
       <div id='app' className={classes.App}>
-        <JellyfishContainer 
+        {/* <JellyfishContainer 
           onNewAnimationFrame={this.props.onNewAnimationFrame}
-        />
+        /> */}
         {/* <Parallax
           className={classes.parallax}
           offsetYMax={height}
@@ -875,16 +743,19 @@ class App extends Component {
         </Parallax> */}
         <Header
           content={this.state.navItems}
+          lang={translatedHeader}
         />
         <Body
           content={this.state.sections}
+          lang={translatedBody}
         />
         <Footer
           content={this.state.footer}
+          lang={translatedFooter}
         />
       </div>
     );
   }
 }
 
-export default App;
+export default translate()(App);

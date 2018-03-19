@@ -5,17 +5,22 @@ import FooterItem from './FooterItem';
 
 class FooterColumn extends Component {
   render() {
-    const { title, items } = this.props.content;
+    const { content, lang } = this.props;
+    const { title, items } = lang;
     return (
       <div className={`${classes['footer-column']} col-12 col-md-2`}>
         <FooterHeader 
           title={title}
         />
-        {items.map((item, index) => {
+        {content.map((item, index) => {
+          const { id, link } = item;
+          console.log(id);
           return <FooterItem
             key={index}
-            content={item}
-            index={index}
+            content={item}            
+            id={id}
+            link={link}
+            label={items[id]}
           />
         })}        
       </div>
