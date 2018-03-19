@@ -16,8 +16,7 @@ class FooterColumn extends Component {
           const { id, link } = item;
           console.log(id);
           return <FooterItem
-            key={index}
-            content={item}            
+            key={index}         
             id={id}
             link={link}
             label={items[id]}

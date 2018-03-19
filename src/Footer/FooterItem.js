@@ -3,8 +3,7 @@ import classes from './Footer.css';
 
 class FooterItem extends Component {
   render() {
-    const { label, link } = this.props.content;
-    console.log(label);
+    const { link, label } = this.props;
     return (
       <div className={`${classes['footer-item']}`}>
         <a href={link}>{label}</a>

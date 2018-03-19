@@ -9,7 +9,6 @@ class FooterSelect extends Component {
   handleChange(i18n, event) {
     this.setState({ currentValue: event.target.value }, () => {
       i18n.changeLanguage(this.state.currentValue);
-      console.log(this.state.currentValue);
     });
   }
   render() {
