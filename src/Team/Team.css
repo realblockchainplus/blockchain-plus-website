@@ -13,6 +13,7 @@
   flex-wrap: wrap;
 }
 .team-box {
+  position: relative;
   width: 325px;
 }
 .team-portrait {

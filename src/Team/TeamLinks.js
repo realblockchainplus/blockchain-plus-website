@@ -7,19 +7,17 @@ class TeamLinks extends Component {
     const { links, size } = this.props;
     return (
       <div className={`${classes['team-links']}`}>
-        {Object.keys(links).map((key, index) => {
+        {Object.keys(links).filter(key => links[key] !== null).map((key, index) => {
           const link = {
             type: key,
             profileId: links[key]
           };
-          if (link.profileId !== null) {
-            return <TeamLink
-              key={index}
-              index={index}
-              content={link}
-              size={size}
-            />
-          }
+          return <TeamLink
+            key={index}
+            index={index}
+            content={link}
+            size={size}
+          />
         })}
       </div>
     );

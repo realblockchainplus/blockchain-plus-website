@@ -29,14 +29,12 @@ class TeamContainer extends Component {
             />
           })}
           {this.state.view === 'single' &&
-            this.props.content.map((section, index) => {
-              if (section.id === this.state.sectionId) {
-                const member = section.members[this.state.memberId];
-                return <TeamSingle
-                  content={member}
-                  setView={(view) => this.setView(view)}
-                />
-              }
+            this.props.content.filter(section => section.id === this.state.sectionId).map((section, index) => {
+              const member = section.members[this.state.memberId];
+              return <TeamSingle
+                content={member}
+                setView={(view) => this.setView(view)}
+              />
             })
           }
       </div>
