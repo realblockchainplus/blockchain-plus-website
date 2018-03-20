@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import ModalContainer from '../../Modals/ModalContainer';
 import classes from './Whitepaper.css';
-
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
 
 class WhitepaperSection extends Component {
   constructor() {
@@ -32,7 +21,7 @@ class WhitepaperSection extends Component {
     return (
       <div className={`${classes['whitepaper-section']} row py-5`}>
         <div className='col-12 col-md-6 py-5'>
-          <img src='text-lines.svg'/>
+          <img src='text-lines.svg' alt='whitepaper icon'/>
         </div>
         <div className='col-12 col-md-6 py-5 text-center'>
           <h2>Want to get more details?</h2>

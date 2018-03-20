@@ -5,7 +5,7 @@ import classes from './Modal.css';
 
 class ModalContainer extends Component {
   render() {
-    const { formName, title, submitText, isOpen, onRequestClose } = this.props;
+    const { formName, title, isOpen, onRequestClose } = this.props;
     const opacity = isOpen ? 1 : 0;
     const ModalStyle = {
       overlay: {
