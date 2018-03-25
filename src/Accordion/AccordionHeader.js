@@ -11,7 +11,7 @@ class AccordionHeader extends Component {
         className={`${classes['accordion-header']} py-2`} 
         onClick={() => this.props.handleToggle(this.props.index)}
       >
-        <h5>{this.props.question}</h5><FontAwesomeIcon icon={expandIcon} pull='right' />
+        <h5>{this.props.question}</h5><FontAwesomeIcon icon={expandIcon} className='float-right'/>
       </div>
     );
   }
