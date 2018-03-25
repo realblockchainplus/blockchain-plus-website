@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import classes from './RandomNumber.css';
+import webCrypto from 'webcrypto-shim';
+import encoding from 'text-encoding';
 
 class RandomNumberText extends Component {
   state = {
@@ -12,7 +14,7 @@ class RandomNumberText extends Component {
   hex(buffer) {
     const hexCodes = [];
     const view = new DataView(buffer);
-    for (var i = 0; i < view.byteLength; i += 4) {
+    for (let i = 0; i < view.byteLength; i += 4) {
       const value = view.getUint32(i);
       const stringValue = value.toString(16);
       const padding = '00000000';
@@ -24,7 +26,7 @@ class RandomNumberText extends Component {
     this.setState({ hashResult });
   }
   sha256(str) {
-    const buffer = new TextEncoder("utf-8").encode(str);
+    const buffer = new encoding.TextEncoder("utf-8").encode(str);
     return crypto.subtle.digest("SHA-256", buffer).then((hash) => {
       return this.hex(hash);
     });
@@ -43,7 +45,7 @@ class RandomNumberText extends Component {
       <div className={`${classes['random-number-text']} col-12 col-md-4`}>
         {/* <button className='btn btn-primary' onClick={() => this.generateRandomString((testString) => this.sha256(testString))}>Generate a Random Number</button> */}
         <div className='card bg-faded'>
-          <div className='card-block'>{this.state.hashResult}</div>
+          <div className='card-body'>{this.state.hashResult}</div>
         </div>
       </div>
     );
