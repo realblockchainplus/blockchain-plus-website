@@ -9,11 +9,11 @@ class ModalContainer extends Component {
     const opacity = isOpen ? 1 : 0;
     const ModalStyle = {
       overlay: {
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        zIndex: '1031'
+        backgroundColor: 'rgba(0, 0, 0, 0.5)'      
       },
       content: {
         transition: 'opacity 150ms',
+        overflow: 'scroll',
         opacity
       }
     };
