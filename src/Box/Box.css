@@ -39,7 +39,7 @@
 
 @media(min-width: 992px) {
   .box-image img {
-    filter: grayscale(100%);
+    filter: grayscale(0);
   }
   .box:hover .box-image img {
     filter: grayscale(0);
