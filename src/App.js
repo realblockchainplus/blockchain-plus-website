@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Header from './Header/Header';
 import Body from './Body/Body';
 import Footer from './Footer/Footer';
-import LoadingScreen from './LoadingScreen/LoadingScreen';
 import JellyfishContainer from './Jellyfish/JellyfishContainer';
-import Particles from 'react-particles-js';
-import { Parallax } from 'react-scroll-parallax';
-import bodymovin from 'bodymovin';
+// import { Parallax } from 'react-scroll-parallax';
+// import bodymovin from 'bodymovin';
+import diff from 'deep-diff';
 import { translate } from 'react-i18next';
+import enUS from './lang/en-us.json';
 
 import classes from './App.css';
 
-class App extends Component {
+class App extends PureComponent {
   state = {
     bodyHeight: null,
     navItems: [
@@ -682,20 +682,32 @@ class App extends Component {
     //   autoplay: true,
     //   path: 'morph.json'
     // });
-    setTimeout(() => {
-      this.props.killLoadingScreen();
-    }, 5000);
   }
 
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (diff(this.props, nextProps)) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
+
+  componentDidUpdate() {
+    console.log('it fucking updated');
+  }
+  
   render() {
-    let width = window.innerWidth;
-    let numValue = Math.floor(width / 30);
-    let height = document.documentElement.scrollHeight + 1000;
+    // let width = window.innerWidth;
+    // let numValue = Math.floor(width / 30);
+    // let height = document.documentElement.scrollHeight + 1000;
 
     const { t } = this.props;
     let translatedHeader = t('header');
     let translatedBody = t('body');
     let translatedFooter = t('footer');
+
+    // let translatedHeader = enUS.header;
+    // let translatedBody = enUS.body;
+    // let translatedFooter = enUS.footer;
     return (
       <div id='app' className={classes.App}>
         {/* <JellyfishContainer 
