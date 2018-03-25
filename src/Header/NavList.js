@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import NavListItem from './NavListItem';
-import { Link } from 'react-router-dom';
-import classes from './Header.css';
+// import { Link } from 'react-router-dom';
+// import classes from './Header.css';
 
 class NavList extends Component {
   render() {
     return (
       this.props.content.map((navItem, index) => {
         const { id, page } = navItem;
-        console.log(id, this.props.lang);
-        console.log(this.props.lang[id]);
         return <NavListItem
           key={index}
           page={page}

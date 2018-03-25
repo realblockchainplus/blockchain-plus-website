@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom';
+// import { Route, Switch, withRouter } from 'react-router-dom';
 import MainPage from '../Pages/MainPage/MainPage';
-import Whitepaper from '../Pages/Whitepaper/Whitepaper';
+// import Whitepaper from '../Pages/Whitepaper/Whitepaper';
 // import diff from 'deep-diff';
 // import Fade from '../Transitions/Fade';
 import classes from './Body.css';
 
-const duration = 300;
+// const duration = 300;
 
 class Body extends Component {
   componentDidMount() {
@@ -15,6 +15,7 @@ class Body extends Component {
     return true;
   }
   render() {
+    console.log('[Body] render called');
     return (
       <div className={`${classes['body']}`} style={this.props.style}>
         {/* <Switch

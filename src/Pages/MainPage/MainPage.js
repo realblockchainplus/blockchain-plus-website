@@ -3,7 +3,7 @@ import Section from '../../Section/Section';
 import Hero from '../../Hero/Hero';
 import Particles from 'react-particles-js';
 import ScrollReveal from 'scrollreveal';
-import { Parallax } from 'react-scroll-parallax';
+// import { Parallax } from 'react-scroll-parallax';
 import classes from './MainPage.css';
 
 class MainPage extends Component {
@@ -24,10 +24,13 @@ class MainPage extends Component {
   render() {
     let width = window.innerWidth;
     let height = window.innerHeight;
-    let numValue = width < 992 ? 10 : 60;
+    // let numValue = width < 992 ? 10 : 60;
     return (
       <div id={this.props.id} className={`${classes[this.props.id]}`}>
-        <Hero style={{ height, width }}/>
+        <Hero 
+          lang={this.props.lang.hero}
+          style={{ height, width }}
+        />
         {this.props.content.map((section, index) => {
           const lang = this.props.lang[section.id];
           return <Section

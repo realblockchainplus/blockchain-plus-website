@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import BoxImage from './BoxImage';
 import BoxTitle from './BoxTitle';
 import BoxDescription from './BoxDescription';
-import { translate } from 'react-i18next';
 import classes from './Box.css';
 
 class Box extends Component {

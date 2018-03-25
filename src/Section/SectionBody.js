@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Hero from '../Hero/Hero';
 import Box from '../Box/Box';
-import CarouselContainer from '../Carousel/CarouselContainer';
 import Accordion from '../Accordion/Accordion';
 import RandomNumberContainer from '../RandomNumber/RandomNumberContainer';
 import TeamContainer from '../Team/TeamContainer';
@@ -11,8 +10,6 @@ import RoadMap from '../Roadmap/Roadmap';
 
 class SectionBody extends Component {
   render() {
-    console.log(`[SectionBody Props]`);
-    console.log(this.props);
     const { id, content, lang, scrollReveal } = this.props;
     const sectionId = id;
     return (
@@ -37,11 +34,6 @@ class SectionBody extends Component {
             />
           })
         }
-        {/* {this.props.content.slides &&
-          <CarouselContainer
-            content={this.props.content.slides}
-          />
-        } */}
         {content.panels &&
           <Accordion
             content={content.panels}
