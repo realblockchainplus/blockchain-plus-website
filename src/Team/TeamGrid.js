@@ -4,7 +4,7 @@ import classes from './Team.css';
 
 class TeamGrid extends Component {
   render() {
-    const { content, handleMemberSelect } = this.props;
+    const { content, handleMemberSelect, lang } = this.props;
     const { id, title, description, members } = content;
     return (
       <div className={`${classes['team-section']} my-5 container`}>
@@ -16,9 +16,10 @@ class TeamGrid extends Component {
           {members.map((member, index) => {
             return <TeamBox
               key={index}
+              category={id}
               content={member}
               index={index}
-              id={id}
+              lang={lang}
               handleMemberSelect={handleMemberSelect}
             />
           })}

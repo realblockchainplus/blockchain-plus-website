@@ -25,6 +25,7 @@ class TeamContainer extends Component {
               key={index}
               content={section}
               index={index}
+              lang={this.props.lang}
               handleMemberSelect={(sectionId, memberId) => this.setSingleId(sectionId, memberId)}
             />
           })}

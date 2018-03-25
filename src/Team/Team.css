@@ -20,6 +20,7 @@
 }
 .team-portrait {
   color: white;
+  position: relative;
   outline: none;
 }
 

@@ -24,16 +24,16 @@ class TeamBox extends Component {
     // });
   }
   render() {
-    const { content, index, id, handleMemberSelect } = this.props;
-    const { firstName, middleName, lastName, title, jobTitle, description, image, links } = content;
-    const fullName = [title, firstName, middleName, lastName].filter(name => name !== null).join(' ');
+    const { content, lang, index, handleMemberSelect, category } = this.props;
+    const { id, links } = content;
+    const { firstName, middleName, lastName, jobTitle, description } = lang[category][id];
+    const fullName = [firstName, middleName, lastName].filter(name => name !== null).join(' ');
     return (
       <div className={`${classes['team-box']} px-2 my-3 text-center`}>
         <TeamPortrait
           id={id}
           index={index}
-          name={fullName}
-          image={image}
+          name={fullName}          
           jobTitle={jobTitle}
           handleMemberSelect={handleMemberSelect}
         />

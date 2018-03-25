@@ -1,5 +1,4 @@
 {
-  "hero": "Next-generation distributed ledger system",
   "header": {
     "home": "Home",
     "benefits": "Benefits",
@@ -11,6 +10,7 @@
     "partners": "Partners"
   },
   "body": {
+    "hero": "Next-generation distributed ledger system",
     "benefits": {
       "headerTitle": "Benefits",
       "headerDescription": null,
@@ -97,7 +97,7 @@
             "middleName": "J.",
             "lastName": "Singh",
             "jobTitle": "Chief Executive Officer",
-            "description": "Jeevan is a consummate entrepreneur. Jeevan’s most recent venture, tugboat.cc, was a unique hyper-local printing marketplace that boasted multiple Fortune 500 clients."            
+            "description": "Jeevan is a consummate entrepreneur. Jeevan’s most recent venture, tugboat.cc, was a unique hyper-local printing marketplace that boasted multiple Fortune 500 clients."
           },
           "gabor-levai": {
             "firstName": "Gabor",
@@ -165,7 +165,7 @@
             "middleName": null,
             "lastName": "Joshi",
             "jobTitle": "Advisor",
-            "description": "Kundan is the founder and CEO of TheAppLabb. Kundan has grown the company to over 150 employees worldwide, making it one of the fastest growing software development companies in Toronto."          
+            "description": "Kundan is the founder and CEO of TheAppLabb. Kundan has grown the company to over 150 employees worldwide, making it one of the fastest growing software development companies in Toronto."
           },
           "tamas-haiman": {
             "firstName": "Tamas",
@@ -173,6 +173,13 @@
             "lastName": "Haiman",
             "jobTitle": "Advisor",
             "description": "Tamas is a senior banker with experience from tier-one banks like Barclays, CITI and Sberbank. Most recently Tamas was the Head of Global Markets for Sberbank (Switzerland) AG, where he brought the bank back into the black."
+          },
+          "david-drake": {
+            "firstName": "David",
+            "middleName": null,
+            "lastName": "Drake",
+            "jobTitle": "Advisor",
+            "description": "David Drake is the founder and chairman of LDJ Capital a multi-family office with access to over $1.5 trillion in assets. David is also a pioneer and a thought leader in the blockchain space."
           }
         }
       }
@@ -186,41 +193,42 @@
       "headerTitle": "Roadmap",
       "headerDescription": null,
       "sectionLang": {
-        "step-one": {
-          "title": "Blockchain+ was founded",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "projectionText": "Estimated Completion Time",
+        "0": {
+          "title": "Whitepaper Started",
+          "description": "The whitepaper was started"
         },
-        "step-two": {
-          "title": "",
-          "description": ""
+        "1": {
+          "title": "Whitepaper v1 Complete",
+          "description": "Version 1 of the whitepaper was completed"
         },
-        "step-three": {
-          "title": "",
-          "description": ""
+        "2": {
+          "title": "Market Research Business Plan Started",
+          "description": "The market research business plan was started"
         },
-        "step-four": {
-          "title": "",
-          "description": ""
+        "3": {
+          "title": "Website Launched",
+          "description": "The website was launched"
         },
-        "step-five": {
-          "title": "",
-          "description": ""
+        "4": {
+          "title": "Whitepaper v2 Complete",
+          "description": "Version 2 of the whitepaper was completed"
         },
-        "step-six": {
-          "title": "",
-          "description": ""
+        "5": {
+          "title": "Market Research & Business Plan v1 Complete",
+          "description": "The market research business plan version 1 was completed"
         },
-        "step-seven": {
-          "title": "",
-          "description": ""
+        "6": {
+          "title": "Core Products Pre-Project Activities Identified",
+          "description": "All core products pre-project activities identified"
         },
-        "step-eight": {
-          "title": "",
-          "description": ""
+        "7": {
+          "title": "N/A",
+          "description": "This is not available"
         }
       }
     },
-    "partners":  {
+    "partners": {
       "headerTitle": "Partners",
       "headerDescription": null,
       "sectionLang": {}
@@ -260,6 +268,56 @@
       "en-gb": "English (GB)",
       "fr-fr": "French (FR)",
       "gibberish": "Gibberish"
+    }
+  },
+  "months": {
+    "1": {
+      "full": "January",
+      "short": "Jan"
+    },
+    "2": {
+      "full": "February",
+      "short": "Feb"
+    },
+    "3": {
+      "full": "March",
+      "short": "March"
+    },
+    "4": {
+      "full": "April",
+      "short": "April"
+    },
+    "5": {
+      "full": "May",
+      "short": "May"
+    },
+    "6": {
+      "full": "June",
+      "short": "June"
+    },
+    "7": {
+      "full": "July",
+      "short": "July"
+    },
+    "8": {
+      "full": "August",
+      "short": "Aug"
+    },
+    "9": {
+      "full": "September",
+      "short": "Sept"
+    },
+    "10": {
+      "full": "October",
+      "short": "Oct"
+    },
+    "11": {
+      "full": "November",
+      "short": "Nov"
+    },    
+    "12": {
+      "full": "December",
+      "short": "Dec"
     }
   }
 }

@@ -50,33 +50,32 @@ class App extends Component {
     ],
     sections: [
       {
-        id: 'benefits',
-        backgroundColor: 'rgba(242,254,254,1)',        
+        id: 'benefits',       
         body: {
           boxes: [
             {
               id: 'network-privacy',
-              image: 'Eyeprivacy02.gif',           
+              image: 'privacy.svg',           
               delay: 0
             },
             {
               id: 'immutable-records',
-              image: 'network-lock.svg',            
+              image: 'immutable-records.svg',            
               delay: 500
             },
             {
               id: 'network-speed',
-              image: 'flame.svg',          
+              image: 'flame_new.svg',          
               delay: 250
             },
             {
               id: 'network-versatility',
-              image: 'swiss-army-knife.svg',           
+              image: 'versatile_icon.svg',           
               delay: 500
             },
             {
               id: 'open-source',
-              image: 'meeting.svg',            
+              image: 'open_source_new.svg',            
               delay: 500
             }
           ]
@@ -84,7 +83,6 @@ class App extends Component {
       },
       {
         id: 'faq',
-        backgroundColor: 'rgb(9, 120, 172)',
         body: {
           panels: [
             'what-is-blockchain-plus',
@@ -101,16 +99,15 @@ class App extends Component {
       },
       {
         id: 'random-number',
-        backgroundColor: 'rgba(242,254,254,1)',
         body: {}
       },
       {
         id: 'team',
-        backgroundColor: 'rgb(9, 120, 172)',
         body: {
           teamSections: [
             {
               id: 'employees',
+              title: 'Team',
               defaultImage: '',
               members: [
                 {
@@ -146,39 +143,39 @@ class App extends Component {
                     blog: null
                   }
                 },
-                {
-                  id: 'david-kiss',
-                  links: {
-                    github: null,
-                    linkedin: 'davidkiss',
-                    facebook: null,
-                    googlePlus: null,
-                    bitbucket: null,
-                    blog: null
-                  }
-                },
-                {
-                  id: 'gabor-szokoli',
-                  links: {
-                    github: null,
-                    linkedin: 'gabor-szokoli-25a16011',
-                    facebook: null,
-                    googlePlus: null,
-                    bitbucket: null,
-                    blog: null
-                  }
-                },
-                {
-                  id: 'lee-stecklov',
-                  links: {
-                    github: null,
-                    linkedin: 'leestecklov',
-                    facebook: null,
-                    googlePlus: null,
-                    bitbucket: null,
-                    blog: null
-                  }
-                },
+                // {
+                //   id: 'david-kiss',
+                //   links: {
+                //     github: null,
+                //     linkedin: 'davidkiss',
+                //     facebook: null,
+                //     googlePlus: null,
+                //     bitbucket: null,
+                //     blog: null
+                //   }
+                // },
+                // {
+                //   id: 'gabor-szokoli',
+                //   links: {
+                //     github: null,
+                //     linkedin: 'gabor-szokoli-25a16011',
+                //     facebook: null,
+                //     googlePlus: null,
+                //     bitbucket: null,
+                //     blog: null
+                //   }
+                // },
+                // {
+                //   id: 'lee-stecklov',
+                //   links: {
+                //     github: null,
+                //     linkedin: 'leestecklov',
+                //     facebook: null,
+                //     googlePlus: null,
+                //     bitbucket: null,
+                //     blog: null
+                //   }
+                // },
                 {
                   id: 'scott-donnelly',
                   links: {
@@ -217,9 +214,7 @@ class App extends Component {
             {
               id: 'advisors',
               title: 'Advisors',
-              description: null,
               defaultImage: '',
-              defaultTitle: '',
               members: [
                 {
                   id: 'kundan-joshi',
@@ -232,17 +227,28 @@ class App extends Component {
                     blog: null
                   }
                 },
-                {
-                  id: 'tamas-haiman',
-                  links: {
-                    github: null,
-                    linkedin: 'tamas-haiman-259620',
-                    facebook: null,
-                    googlePlus: null,
-                    bitbucket: null,
-                    blog: null
-                  }
-                },
+                // {
+                //   id: 'tamas-haiman',
+                //   links: {
+                //     github: null,
+                //     linkedin: 'tamas-haiman-259620',
+                //     facebook: null,
+                //     googlePlus: null,
+                //     bitbucket: null,
+                //     blog: null
+                //   }
+                // },
+                // {
+                //   id: 'david-drake',
+                //   links: {
+                //     github: null,
+                //     linkedin: 'ldjcaptial',
+                //     facebook: null,
+                //     googlePlus: null,
+                //     bitbucket: null,
+                //     blog: null
+                //   }
+                // },
                 // {
                 //   title: null,
                 //   firstName: 'Norbert',
@@ -395,11 +401,6 @@ class App extends Component {
       },
       {
         id: 'whitepaper',
-        backgroundColor: 'rgba(245,254,254,1)',
-        header: {
-          title: null,
-          description: null
-        },
         body: {}
       },
       {
@@ -451,11 +452,6 @@ class App extends Component {
       },
       {
         id: 'partners',
-        backgroundColor: 'rgb(9, 120, 172)',
-        header: {
-          title: 'Partners',
-          description: null
-        },
         body: {
           boxes: [
             {
@@ -467,7 +463,7 @@ class App extends Component {
             {
               id: 'app-lab',
               title: 'The App Labb',
-              image: 'app_lab.png',
+              image: 'app_lab.jpg',
               delay: null
             },
             // {
