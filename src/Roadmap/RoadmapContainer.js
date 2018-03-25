@@ -13,7 +13,7 @@ class RoadmapContainer extends Component {
       mobile: false,
       delay: 0,
       opacity: 0,
-      scale: 1.2
+      scale: 0.9
     });
   }
   getPercentColor(percent) {
@@ -23,9 +23,10 @@ class RoadmapContainer extends Component {
     let hsl = `hsl(${h}, ${s}%, ${l}%)`;
     return hsl;
   }
-  getAlertClass(percent, quarter, year) {
-    const quarters = [3, 6, 9, 12];
-    const quarterMonth = quarters[quarter];
+  getAvgPercent() {
+    return Math.floor(this.props.content.reduce((a, cv) => { return a + cv.percentComplete; }, 0) / this.props.content.length);
+  }
+  getAlertClass(percent, month, year) {
     const currentDate = new Date().getTime();
     if ( percent === 100 ) {
       return 'success';
@@ -33,19 +34,19 @@ class RoadmapContainer extends Component {
     else if ( currentDate > new Date(year, 1, 1).getTime() ) {
       return 'danger';
     }
-    else if ( currentDate < new Date(year, quarterMonth, 1).getTime()) {
+    else if ( currentDate < new Date(year, month, 1).getTime()) {
       return 'warning';
     }
   }
   render() {
-    const { content, direction } = this.props;
-    const { id, title, description, percentComplete, quarter, year } = content;
+    const { content, direction, lang, id } = this.props;
+    const percentComplete = this.getAvgPercent();
     const percentColor = this.getPercentColor(percentComplete);
     const percentStyle = {
       color: percentColor,
       textShadow: `0 0 4px ${percentColor}`
     };
-    const alertClass = this.getAlertClass(percentComplete, quarter, year);
+    // const alertClass = this.getAlertClass(percentComplete, month, year);
     const order = direction === 'left' ? 1 : 3;  
     return (
       <div className={`${classes['roadmap-container']} row no-gutters`} id={`roadmap-${id}`}>
@@ -56,13 +57,12 @@ class RoadmapContainer extends Component {
           order={order}
         />
         <RoadmapSectionContainer
+          content={this.props.content}
+          lang={lang}
+          index={this.props.index}
           direction={direction}
-          title={title}
-          description={description}
-          quarter={quarter}
-          year={year}
           order={order}
-          alertClass={alertClass}
+          id={id}
         />
       </div>
     );

@@ -7,7 +7,7 @@ class RoadmapDotContainer extends Component {
   render() {
     const { percentStyle, percentComplete, direction } = this.props;
     return (
-      <div className={`${classes['roadmap-dot-container']} col-2 order-md-2`}>
+      <div className={`${classes['roadmap-dot-container']} col-2 order-lg-2`}>
         <RoadmapDot
           percentStyle={percentStyle}
           percentComplete={percentComplete}

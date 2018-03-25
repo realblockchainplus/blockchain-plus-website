@@ -3,10 +3,10 @@ import classes from './Roadmap.css';
 
 class RoadmapProjection extends Component {
   render() {
-    const { alertClass, quarter, year } = this.props;
+    const { projectionText, alertClass, quarter, year } = this.props;
     return (
       <div className={`${classes['projection']} alert alert-${alertClass}`}>
-        {`Estimated Completion Time: Q${quarter} ${year}`}
+        {`${projectionText}: Q${quarter} ${year}`}
       </div>
     );
   }
