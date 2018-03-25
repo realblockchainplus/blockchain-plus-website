@@ -22,7 +22,7 @@ const options = [
   value: 'dreamer'
  }
 ];
-// Might benefit from refactoring, seems to work ok though
+
 class ContactForm extends Component {
   state = {
     isLoading: false,
@@ -41,18 +41,19 @@ class ContactForm extends Component {
       else {
       }
     }
-    xhr.send(`name=${mail.name}&email=${mail.email}&message=${mail.message}`);
+    xhr.send(`name=${mail.name}&email=${mail.email}&company=${mail.company}&category=${mail.category}&message=${mail.message}`);
   }
   buildMail(values) {
     const mailObj = {
       name: values.userName,
       email: values.userEmail,
+      company: values.userCompany,
+      category: values.userCategory,
       message: values.userMessage
     };
     return mailObj;
   }
   render() {
-    const visibility = this.state.isLoading ? 'visible' : 'hidden';
     const btnClass = this.state.isSent ? 'btn-success' : 'btn-primary';
     return (
       <div className='p-3'>
@@ -62,7 +63,7 @@ class ContactForm extends Component {
             this.handleFormSubmit(valueArray);
           }}
           validate={values => {
-            const { userName, userEmail, userComment } = values;
+            const { userName, userEmail } = values;
             return {
               userName: !userName ? 'Please enter your name' : undefined,
               userEmail: !userEmail ? 'Please enter your email' : undefined
@@ -72,7 +73,7 @@ class ContactForm extends Component {
             return (
               <form onSubmit={submitForm}>
                 <div className='row'>
-                  <div className={`${classes['form-field']} col-12 col-md-6 my-2`}>
+                  <div className={`${classes['form-field']} col-12 col-lg-6 my-2`}>
                     <h5><strong>NAME</strong></h5>
                     <Text
                       field='userName'
@@ -81,7 +82,7 @@ class ContactForm extends Component {
                       className='form-control'
                     />
                   </div>
-                  <div className={`${classes['form-field']} col-12 col-md-6 my-2`}>
+                  <div className={`${classes['form-field']} col-12 col-lg-6 my-2`}>
                     <h5><strong>EMAIL</strong></h5>                    
                     <Text
                       field='userEmail'
@@ -90,7 +91,7 @@ class ContactForm extends Component {
                       className='form-control'
                     />
                   </div>
-                  <div className={`${classes['form-field']} col-12 col-md-6 my-2`}>
+                  <div className={`${classes['form-field']} col-12 col-lg-6 my-2`}>
                     <h5><strong>COMPANY</strong></h5>                    
                     <Text
                       field='userCompany'
@@ -99,7 +100,7 @@ class ContactForm extends Component {
                       className='form-control'
                     />
                   </div>
-                  <div className='col-12 col-md-6 my-2'>
+                  <div className='col-12 col-lg-6 my-2'>
                     <h5><strong>CATEGORY</strong></h5>
                     <Select
                       field='userCategory'
