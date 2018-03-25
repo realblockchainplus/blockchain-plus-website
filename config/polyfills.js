@@ -20,3 +20,9 @@ Object.assign = require('object-assign');
 if (process.env.NODE_ENV === 'test') {
   require('raf').polyfill(global);
 }
+
+// babel-polyfill
+require('babel-polyfill');
+
+// text-encoder polyfill
+require('text-encoding');
