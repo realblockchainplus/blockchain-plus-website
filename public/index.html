@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
   <meta name="description" content="An Evolution in Blockchain. Solving The Problem of Private vs. Public Blockchain By Utilizing a Witness-Based Ledger System">
@@ -45,6 +45,19 @@
   <script type="text/javascript" src="jellyfish/js/drawJellyfish.js"></script>
   <script type="text/javascript" src="jellyfish/js/drawScene.js"></script>
 
+  <!-- <script type="text/javascript">
+    (function () {
+      if ( typeof window.CustomEvent === "function" ) return false;
+      function CustomEvent ( event, params ) {
+        params = params || { bubbles: false, cancelable: false, detail: undefined };
+        var evt = document.createEvent( 'CustomEvent' );
+        evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+        return evt;
+      }
+      CustomEvent.prototype = window.Event.prototype;
+      window.Event = CustomEvent;
+    })();
+  </script> -->
   <script id="jellyfish-vs" type="x-shader/x-vertex">
     precision highp float;
     
@@ -152,7 +165,7 @@
     });
   </script>
   <!-- Start of Async Drift Code -->
-  <script async>
+  <!-- <script async>
     !function () {
       var t;
       if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
@@ -174,7 +187,7 @@
     drift.SNIPPET_VERSION = '0.3.1';
     drift.load('kazbwumr8kup');
     drift.hide();
-  </script>
+  </script> -->
   <title>BlockChain+</title>
 </head>
 
