@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
 import classes from './Header.css';
 import NavList from './NavList';
+import wdyu from 'why-did-you-update';
 
 class Header extends Component {
   constructor(props) {
@@ -33,6 +34,9 @@ class Header extends Component {
     });
   }
 
+  componentDidUpate() {
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     if (this.state.scrollTop === 0 && nextState.scrollTop !== 0) {
       return true;
@@ -47,10 +51,8 @@ class Header extends Component {
       return true;
     }
     else {
-      console.log(this.props, nextProps);
       return false;
     }
-    return true;
   }
 
   toggleNavbar() {
@@ -62,7 +64,7 @@ class Header extends Component {
   }
 
   scrollToId(ev, id) {
-    const offSet = 74;
+    const offSet = 63;
     const target = document.getElementById(id)
     const targetOffset = target ? target.offsetTop - offSet : 0;
     let start = null;
@@ -91,16 +93,18 @@ class Header extends Component {
   };
 
   render() {
+    console.log('[Header] render called');
+    // wdyu(React);
     const isMobile = window.innerWidth < 992;
     const scrollStyle = this.state.scrollTop !== 0 || (this.state.collapsed === false && isMobile === true) ? 'nav-opaque' : 'nav-transparent';
     return (
       <div>
-        <Navbar light className={`navbar fixed-top navbar-expand-md ${classes[scrollStyle]}`}>
+        <Navbar light className={`navbar navbar-dark fixed-top navbar-expand-lg ${classes[scrollStyle]}`}>
           <div className='container'>
-            <NavbarBrand href="/">
-              <img src="blockchainplus_header_brand.png" alt="Blockchain Logo" style={{ height: '50px' }}/>
+            <NavbarBrand style={{ paddingTop: '0px', paddingBottom: '0px' }} href="/">
+              <img src="blockchainplus_header_brand.png" alt="Blockchain Logo" style={{ height: '46px' }}/>
             </NavbarBrand>
-            <NavbarToggler style={{ position: 'absolute', color: 'white' }} onClick={this.toggleNavbar} />
+            <NavbarToggler style={{ position: 'absolute', color: 'white', right: '2rem', top: '0.5rem' }} onClick={this.toggleNavbar} />
             <Collapse isOpen={!this.state.collapsed} navbar>
               <Nav className='ml-auto' navbar>
                 <NavList
