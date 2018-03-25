@@ -25,7 +25,7 @@ function LocalParam(){
 function Param(){
 
   //jellyfish
-  this.jCount = 7;
+  this.jCount = 5;
   this.jScale = 3;
   this.jScaleRandom = 5;
   this.jTurb = 0.05;
