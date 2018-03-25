@@ -20,10 +20,10 @@ class WhitepaperSection extends Component {
   render() {
     return (
       <div className={`${classes['whitepaper-section']} row py-5`}>
-        <div className='col-12 col-md-6 py-5'>
-          <img src='text-lines.svg' alt='whitepaper icon'/>
+        <div className='col-12 col-md-6 py-3 text-center'>
+          <img src='whitepaper-icon.svg' alt='whitepaper icon'/>
         </div>
-        <div className='col-12 col-md-6 py-5 text-center'>
+        <div className='col-12 col-md-6 py-3 text-center m-auto'>
           <h2>Want to get more details?</h2>
           <p>Read our whitepaper</p>
           {/* <a download href='/pdf.pdf' target='_blank'><button className='btn btn-primary p-3'>Request our Whitepaper</button></a> */}
