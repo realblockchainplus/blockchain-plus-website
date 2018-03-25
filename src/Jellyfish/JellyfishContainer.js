@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import JellyfishConsole from './JellyfishConsole';
 import classes from './Jellyfish.css';
+import wdyu from 'why-did-you-update';
 
 class JellyfishContainer extends Component {
   componentDidMount() {
@@ -25,7 +26,7 @@ class JellyfishContainer extends Component {
           "value": "#ffffff"
         },
         "shape": {
-          "type": "circle",
+          "type": "image",
           "stroke": {
             "width": 1,
             "color": "#ffffff"
@@ -34,7 +35,7 @@ class JellyfishContainer extends Component {
             "nb_sides": 5
           },
           "image": {
-            "src": "blockchainplus_logo.png"
+            "src": "white_plus.png"
           }
         },
         "opacity": {
@@ -48,7 +49,7 @@ class JellyfishContainer extends Component {
           }
         },
         "size": {
-          "value": 2,
+          "value": 6,
           "random": true,
           "anim": {
             "enable": false,
@@ -66,12 +67,12 @@ class JellyfishContainer extends Component {
         },
         "move": {
           "enable": true,
-          "speed": 1.5,
-          "direction": "top",
-          "random": false,
+          "speed": 3,
+          "direction": "random",
+          "random": true,
           "straight": false,
           "out_mode": "out",
-          "bounce": false,
+          "bounce": true,
           "attract": {
             "enable": false,
             "rotateX": 600,
