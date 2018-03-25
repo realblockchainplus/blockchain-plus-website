@@ -14,7 +14,6 @@ class FooterColumn extends Component {
         />
         {content.map((item, index) => {
           const { id, link } = item;
-          console.log(id);
           return <FooterItem
             key={index}         
             id={id}
