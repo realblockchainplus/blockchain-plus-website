@@ -537,14 +537,12 @@ wrap = function(content){
       img.addEventListener('load', function(){
         var ret, size;
         if (config["img-size"]) {
-          console.log(config["img-size"]);
           ret = config["img-size"].split(',');
           size = {
             width: +ret[0],
             height: +ret[1]
           };
         } else if (img.width && img.height) {
-          console.log(img.width, img.height);
           size = {
             width: img.width,
             height: img.height
