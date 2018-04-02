@@ -187,7 +187,11 @@
     "whitepaper": {
       "headerTitle": null,
       "headerDescription": null,
-      "sectionLang": {}
+      "sectionLang": {
+        "callToAction": "Want to get more details?",
+        "smallText": "Read our Whitepaper",
+        "buttonText": "Request our Whitepaper"
+      }
     },
     "roadmap": {
       "headerTitle": "Roadmap",
