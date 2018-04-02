@@ -411,9 +411,19 @@ class App extends PureComponent {
               month: 6,
               year: 2017
             },
+            {
+              percentComplete: 100,
+              month: 8,
+              year: 2017
+            },
             {           
               percentComplete: 100,
-              month: 12,
+              month: 10,
+              year: 2017
+            },
+            {           
+              percentComplete: 100,
+              month: 10,
               year: 2017
             },
             {           
@@ -421,31 +431,46 @@ class App extends PureComponent {
               month: 12,
               year: 2017
             },
-            {            
+            {           
               percentComplete: 100,
-              month: 1,
-              year: 2018
+              month: 12,
+              year: 2017
             },
             {             
-              percentComplete: 90,
+              percentComplete: 100,
               month: 2,
               year: 2018
             },
             {             
-              percentComplete: 30,
+              percentComplete: 100,
               month: 2,
               year: 2018
             },
             {          
-              percentComplete: 70,
+              percentComplete: 100,
               month: 2,
               year: 2018
             },
             {             
-              percentComplete: 80,
-              month: 2,
+              percentComplete: 100,
+              month: 3,
               year: 2018
             },
+            {
+              percentComplete: 0,
+              month: 11,
+              year: 2018
+            },
+            {
+              percentComplete: 0,
+              month: 12,
+              year: 2018
+            },
+            {
+              percentComplete: 0,
+              month: 1,
+              year: 2019
+            }  
           ]
         }
       },

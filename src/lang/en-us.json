@@ -194,38 +194,60 @@
       "headerDescription": null,
       "sectionLang": {
         "projectionText": "Estimated Completion Time",
-        "0": {
-          "title": "Whitepaper Started",
-          "description": "The whitepaper was started"
-        },
-        "1": {
-          "title": "Whitepaper v1 Complete",
-          "description": "Version 1 of the whitepaper was completed"
-        },
-        "2": {
-          "title": "Market Research Business Plan Started",
-          "description": "The market research business plan was started"
-        },
-        "3": {
-          "title": "Website Launched",
-          "description": "The website was launched"
-        },
-        "4": {
-          "title": "Whitepaper v2 Complete",
-          "description": "Version 2 of the whitepaper was completed"
-        },
-        "5": {
-          "title": "Market Research & Business Plan v1 Complete",
-          "description": "The market research business plan version 1 was completed"
-        },
-        "6": {
-          "title": "Core Products Pre-Project Activities Identified",
-          "description": "All core products pre-project activities identified"
-        },
-        "7": {
-          "title": "N/A",
-          "description": "This is not available"
-        }
+        "milestones": [
+          {
+            "title": "Started thinking about the potential of blockchain technology",
+            "description": null
+          },
+          {
+            "title": "Completed research on current blockchain infrastructures",
+            "description": null
+          },
+          {
+            "title": "Scrapped original idea of optimizing blockchains",
+            "description": null
+          },
+          {
+            "title": "Started thinking about new infrastructure",
+            "description": null
+          },
+          {
+            "title": "Completed first version of the whitepaper",
+            "description": "We created the whitepaper and did this and did that. Here is some more text."
+          },
+          {
+            "title": "Market Research Business Plan Started",
+            "description": null
+          },
+          {
+            "title": "Completed second version of the whitepaper",
+            "description": null
+          },
+          {
+            "title": "Completed first version of our Market Research & Business Plan",
+            "description": null
+          },
+          {
+            "title": "Core Products Pre-Project Activities Identified",
+            "description": null
+          },
+          {
+            "title": "Incorporated Blockchain+ (finally)",
+            "description": null
+          },
+          {
+            "title": "Build the Core Application",
+            "description": null
+          },
+          {
+            "title": "Build the Jellyfish Random Number Generator",
+            "description": null
+          },
+          {
+            "title": "Build the Partner Network Housekeeping Application",
+            "description": null
+          }
+        ]
       }
     },
     "partners": {

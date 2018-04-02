@@ -25,13 +25,13 @@ class RoadMap extends Component {
     return (
       <div className={`${classes['roadmap']} col-12`}>
         {Object.keys(dates).map((date, index) => {
-          const milestones = dates[date];          
+          const milestones = dates[date];
+          console.log(milestones);        
           const direction = index % 2 === 0 ? 'left' : 'right';
           return <RoadmapContainer
             key={index}
             id={date}
             content={milestones}
-            index={index}
             direction={direction}
             lang={this.props.lang}            
           />

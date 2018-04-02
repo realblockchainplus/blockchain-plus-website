@@ -12,7 +12,7 @@ class RoadmapDate extends Component {
     const [ month, year ] = this.getMonthYear();
     return (
       <div className={`${classes['roadmap-date']} ${classes[`roadmap-date-${direction}`]}`}>
-        <h4 className={`p-2 float-${direction}`}>{t(`months.${month}.full`)} {year}</h4>
+        <h4 className={`p-2`}>{t(`months.${month}.full`)} {year}</h4>
       </div>
     );
   }

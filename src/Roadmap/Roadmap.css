@@ -1,6 +1,9 @@
 .roadmap {
 	margin: auto;
 }
+.roadmap h4 {
+	font-size: 1.15rem;
+}
 .roadmap-container {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -12,18 +15,20 @@
 }
 .roadmap-date h4 {
 	color: rgba(245, 254, 254, 1);
+	background-color: rgb(36, 78, 144);
 	letter-spacing: 2px;
-	background-color: rgba(9, 120, 172, 1);
 	text-transform: uppercase;
 	margin-bottom: 0px;
 }
 
 .roadmap-date-left h4 {
-	border-radius: 0px 0px 10px 0px;
+	float: left;
+	border-radius: 0px 10px 0px 0px;
 }
 
 .roadmap-date-right h4 {
-	border-radius: 0px 0px 10px 0px;
+	float: left;
+	border-radius: 0px 10px 0px 0px;
 }
 
 .roadmap-section {
@@ -31,7 +36,6 @@
 }
 
 .roadmap-section h4 {
-	font-size: 1.35rem;
 	text-transform: uppercase;
 }
 .roadmap-section p {
@@ -46,11 +50,10 @@
 }
 
 .roadmap-section-container {
-	margin-top: 22.5px;
 	background-color: rgba(245, 254, 254, 1);
   box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.75);
 	position: relative;
-	z-index: 1;
+	z-index: 0;
 }
 .roadmap-section-container-right {
 	border-radius: 0px 15px 15px 15px;
@@ -58,6 +61,7 @@
 .roadmap-section-container-left {
 	border-radius: 0px 15px 15px 15px;
 }
+
 .roadmap-text {}
 .date-container {
 }
@@ -86,7 +90,7 @@
   border-radius: 50%;
   background-color: rgba(9, 120, 172, 1);
   box-shadow: 0 0 8px rgba(245, 254, 254, 1), inset 0 0 2px rgba(245, 254, 254, 1);
-	z-index: 1;
+	z-index: 0;
 }
 .roadmap-dot-left::after {
 	content: "";
@@ -145,17 +149,18 @@
 	}
 
 	.roadmap-date-right h4 {
-		border-radius: 0px 0px 0px 10px;
+		float: right;
+		border-radius: 10px 0px 0px 0px;
 	}
 
 	.roadmap {
-		margin: 6rem auto;
+		margin: 4rem auto;
 	}
 	.roadmap-container {
-		margin-top: -6rem;
-		margin-bottom: -6rem;
+		margin-top: -4rem;
+		margin-bottom: -4rem;
 	}
 	.roadmap-dot-container {
-		margin-bottom: 9rem;
+		margin-bottom: 6rem;
 	}
 }

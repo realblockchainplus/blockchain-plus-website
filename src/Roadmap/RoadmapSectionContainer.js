@@ -12,18 +12,21 @@ class RoadmapSectionContainer extends Component {
     const spacingOrder = order === 1 ? 3 : 1;
     return (
       <Aux>
-        <div className={`${classes['roadmap-section-container']} ${classes[`roadmap-section-container-${direction}`]} col-10 col-lg-5 order-lg-${order}`}>
+        <div style={{ marginTop: '22.5px' }} className={`col-10 col-lg-5 order-lg-${order}`}>
           <RoadmapDate
             id={id}
             direction={oppositeDirection}
           />
-          {this.props.content.map((milestone, index) => {
-            return <RoadmapSection
-              key={index}
-              content={milestone}
-              lang={lang[this.props.index + index]}
-            />
-          })}
+          <div className={`${classes['roadmap-section-container']} ${classes[`roadmap-section-container-${direction}`]}`}> 
+            {this.props.content.map((milestone, index) => {
+              console.log(this.props.index, index);            
+              return <RoadmapSection
+                key={index}
+                content={milestone}
+                lang={lang.milestones[milestone.id]}
+              />
+            })}
+          </div>
         </div>
         <div className={`order-lg-${spacingOrder} col-lg-5 d-none d-sm-none d-md-none d-lg-block`}></div>
       </Aux>

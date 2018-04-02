@@ -11,13 +11,13 @@ class RoadmapSection extends Component {
     const { title, description } = lang;
     return (
       <Aux>
-        <div className={`${classes['roadmap-section']} mx-5 py-4`}>      
+        <div className={`${classes['roadmap-section']} mx-5 py-2`}>      
           <RoadmapSectionHeader
             title={title}
           />
-          <RoadmapSectionDescription
+          { description && <RoadmapSectionDescription
             description={description}
-          />          
+          /> }
           {/* <RoadmapProjection
             alertClass={alertClass}
             quarter={quarter}
