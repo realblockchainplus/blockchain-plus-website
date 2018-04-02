@@ -13,7 +13,6 @@ class ModalContainer extends Component {
       },
       content: {
         transition: 'opacity 150ms',
-        overflow: 'scroll',
         opacity
       }
     };

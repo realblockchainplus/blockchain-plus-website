@@ -10,6 +10,10 @@
   z-index: 1031;
 }
 
+.modal-container h2 {
+  font-size: 1.35rem;
+}
+
 .modal-background-image {
   position: absolute;
   top: 50%;
@@ -21,19 +25,24 @@
   filter: blur(1px);
 }
 .modal-container {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 5%;
+  width: 90%;
 }
 
 .textarea {
   width: 100%;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 992px) {
   .modal-container {
     top: 50%;
     left: 50%;
+    height: auto;
+    width: auto;
     transform: translate(-50%, -50%);
+  }
+  .modal-container h2 {
+    font-size: 2rem;
   }
 }
