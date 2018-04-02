@@ -5,7 +5,7 @@ import Accordion from '../Accordion/Accordion';
 import RandomNumberContainer from '../RandomNumber/RandomNumberContainer';
 import TeamContainer from '../Team/TeamContainer';
 import classes from './Section.css';
-import WhitepaperSection from '../Pages/Whitepaper/WhitepaperSection';
+import WhitepaperSection from '../Whitepaper/WhitepaperSection';
 import RoadMap from '../Roadmap/Roadmap';
 
 class SectionBody extends Component {

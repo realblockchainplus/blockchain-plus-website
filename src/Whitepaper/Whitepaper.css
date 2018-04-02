@@ -12,9 +12,15 @@
   margin-bottom: 2rem;
 }
 .whitepaper-section img {
-  max-height: 150px;
+  height: 200px;
 }
 .whitepaper-section button {
   border-radius: 0px;
   cursor: pointer;
+}
+
+@media(min-width: 768px) {
+  .whitepaper-section img {
+    height: 250px;
+  }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
-import ModalContainer from '../../Modals/ModalContainer';
+import ModalContainer from '../Modals/ModalContainer';
 import classes from './Whitepaper.css';
 
 class WhitepaperSection extends Component {
