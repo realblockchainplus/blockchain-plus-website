@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
 import classes from './Header.css';
 import NavList from './NavList';
-import wdyu from 'why-did-you-update';
 
 class Header extends Component {
   constructor(props) {
@@ -102,7 +101,7 @@ class Header extends Component {
         <Navbar light className={`navbar navbar-dark fixed-top navbar-expand-lg ${classes[scrollStyle]}`}>
           <div className='container'>
             <NavbarBrand style={{ paddingTop: '0px', paddingBottom: '0px' }} href="/">
-              <img src="blockchainplus_header_brand.png" alt="Blockchain Logo" style={{ height: '46px' }}/>
+              <img src="blockchainplus_header_brand_new.svg" alt="Blockchain Logo" style={{ height: '46px' }}/>
             </NavbarBrand>
             <NavbarToggler style={{ position: 'absolute', color: 'white', right: '2rem', top: '0.5rem' }} onClick={this.toggleNavbar} />
             <Collapse isOpen={!this.state.collapsed} navbar>
