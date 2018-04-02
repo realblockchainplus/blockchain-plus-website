@@ -18,29 +18,32 @@ class AppContainer extends Component {
   }
 
   componentDidMount() {
-    this.killLoadingScreen();
+    // document.documentElement.style.overflow = 'visible';
+    // document.body.style.overflow = 'visible';
+    // if (process.env.NODE_ENV === 'development') { this.killLoadingScreen(); }
     // setTimeout(() => {
     //   this.killLoadingScreen();
-    // }, 5000);
+    // }, 2000);
   }
   
   onNewAnimationFrame(frame) {   
-    this.setState({ animationFrame: frame }, () => {
-      if (this.state.animationLoaded === false && this.state.animationFrame >= 130) {        
-        this.killLoadingScreen();
-      }
-    });
+    // this.setState({ animationFrame: frame }, () => {
+    //   if (this.state.animationLoaded === false && this.state.animationFrame >= 130) {        
+    //     this.killLoadingScreen();
+    //   }
+    // });
   }
   killLoadingScreen() {
-    document.documentElement.style.overflow = 'visible';
-    document.body.style.overflow = 'visible';
+    // document.getElementById('loading-screen').style.display = 'none';
+    // document.documentElement.style.overflow = 'visible';
+    // document.body.style.overflow = 'visible';
     // window.drift.show();
-    this.setState({ animationLoaded: true });
+    // this.setState({ animationLoaded: true });
   }
   render() {
     return (
       <Aux>
-        { this.state.animationLoaded === false && <LoadingScreen frame={this.state.animationFrame} /> }
+        {/* { this.state.animationLoaded === false && <LoadingScreen frame={this.state.animationFrame} /> } */}
         <I18nextProvider i18n={ i18n } initialLanguage='en'>
           <App             
             animationLoaded={this.state.animationLoaded}

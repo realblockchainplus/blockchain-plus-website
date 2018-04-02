@@ -7,11 +7,11 @@ function initTextures() {
   loadTexture('luminescence', 'images/luminescence.png');
 
   for (var i=1; i <= 32; i++) {
-    loadTexture('caustics'+i, 'images/caustics/caustics7.'+pad2(i-1)+'.jpg');
+    loadTexture('caustics'+i, 'images/caustics/caustics7.'+pad2(i-1)+'.jpg', i);
   }
 }
 
-function loadTexture(label, path) {
+function loadTexture(label, path, num) {
   textureOK[label] = 0;
   var imageFile = new Image();
   imageFile.src = path;
@@ -19,6 +19,12 @@ function loadTexture(label, path) {
   texture[label].image = imageFile;
   imageFile.onload = function() {
     handleLoadedTexture(texture[label], label);
+    if (num === 32) {
+      console.log('last texture loaded');
+      document.getElementById('loading-screen').style.display = 'none';
+      document.documentElement.style.overflow = 'visible';
+      document.body.style.overflow = 'visible';
+    }
   }
 }
 

@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import JellyfishConsole from './JellyfishConsole';
 import classes from './Jellyfish.css';
-import wdyu from 'why-did-you-update';
+// import wdyu from 'why-did-you-update';
 
 class JellyfishContainer extends Component {
   componentDidMount() {
-    window.addEventListener('animFrame', (ev) => {
-      this.props.onNewAnimationFrame(ev.detail.frame);
-    });
+    // window.addEventListener('animFrame', (ev) => {
+    //   this.props.onNewAnimationFrame(ev.detail.frame);
+    // });
   }
   render() {
     let width = window.innerWidth;

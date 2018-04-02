@@ -5,7 +5,6 @@ import Footer from './Footer/Footer';
 import JellyfishContainer from './Jellyfish/JellyfishContainer';
 // import { Parallax } from 'react-scroll-parallax';
 // import bodymovin from 'bodymovin';
-import diff from 'deep-diff';
 import { translate } from 'react-i18next';
 import enUS from './lang/en-us.json';
 
@@ -684,15 +683,7 @@ class App extends PureComponent {
     // });
   }
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   if (diff(this.props, nextProps)) {
-  //     return true;
-  //   }
-  //   return false;
-  // }
-
   componentDidUpdate() {
-    console.log('it fucking updated');
   }
   
   render() {
