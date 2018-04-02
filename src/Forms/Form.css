@@ -1,3 +1,30 @@
 button {
   cursor: pointer;
 }
+
+.form-field h5 {
+  font-size: 1rem;
+  margin-bottom: 0px;
+  display: inline-block;
+}
+
+.form-field input,select,textarea {
+  font-size: 0.75rem;
+  display: block !important;
+  width: 100%;
+}
+
+.form-field option {
+  font-size: 0.75rem;
+  min-height: 0.75rem;
+}
+
+@media(min-width: 992px) {
+  .form-field h5 {
+    font-size: 1.35rem;
+    display: block;
+  }
+  .form-field input,select,textarea {
+    font-size: 1rem;
+  }
+}

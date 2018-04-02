@@ -26,8 +26,22 @@ const options = [
 
 class ContactForm extends Component {
   state = {
+    height: 0,
+    width: 0,
     isLoading: false,
     isSent: false
+  }
+  componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener('resize', () => {
+      this.updateDimensions();
+    });
+  }
+  updateDimensions() {
+    this.setState({
+      height: window.innerHeight,
+      width: window.innerWidth
+    });
   }
   handleFormSubmit(values) {
     const mail = this.buildMail(values[0]);
@@ -56,14 +70,17 @@ class ContactForm extends Component {
   }
   render() {
     const btnClass = this.state.isSent ? 'btn-success' : 'btn-primary';
+    const formControlClass = window.matchMedia('(min-width: 992px)').matches ? 'form-control' : 'form-control-sm';
+    const numRows = window.matchMedia('(min-width: 992px)').matches ? 4 : 2;
+    console.log(formControlClass);
     return (
-      <div className='p-3'>
+      <div className='p-sm-3'>
         <Form
           onSubmit={(values) => {
             const valueArray = [ values ];
             this.handleFormSubmit(valueArray);
           }}
-          validate={values => {
+          validate={(values) => {
             const { userName, userEmail } = values;
             return {
               userName: !userName ? 'Please enter your name' : undefined,
@@ -74,49 +91,55 @@ class ContactForm extends Component {
             return (
               <form onSubmit={submitForm}>
                 <div className='row'>
-                  <div className={`${classes['form-field']} col-12 col-lg-6 my-2`}>
-                    <h5><strong>NAME</strong></h5>
+                  <div className={`${classes['form-field']} col-12 col-sm-6 my-2 form-group`}>
+                    <label htmlFor='name'><h5><strong>NAME</strong></h5></label>
                     <Text
                       field='userName'
                       name='name'
+                      id='name'
                       placeholder='Your Name'
-                      className='form-control'
+                      className={`${formControlClass}`}
                     />
                   </div>
-                  <div className={`${classes['form-field']} col-12 col-lg-6 my-2`}>
-                    <h5><strong>EMAIL</strong></h5>                    
+                  <div className={`${classes['form-field']} col-12 col-sm-6 my-2`}>
+                    <label htmlFor='email'><h5><strong>EMAIL</strong></h5></label>
                     <Text
                       field='userEmail'
                       name='email'
+                      id='email'
                       placeholder='example@email.com'
-                      className='form-control'
+                      className={`${formControlClass}`}
                     />
                   </div>
-                  <div className={`${classes['form-field']} col-12 col-lg-6 my-2`}>
-                    <h5><strong>COMPANY</strong></h5>                    
+                  <div className={`${classes['form-field']} col-12 col-sm-6 my-2`}>
+                    <label htmlFor='company'><h5><strong>COMPANY</strong></h5></label>
                     <Text
                       field='userCompany'
                       name='company'
+                      id='company'
                       placeholder='Company Name'
-                      className='form-control'
+                      className={`${formControlClass}`}
                     />
                   </div>
-                  <div className='col-12 col-lg-6 my-2'>
-                    <h5><strong>CATEGORY</strong></h5>
+                  <div className={`${classes['form-field']} col-12 col-sm-6 my-2`}>
+                    <label htmlFor='category'><h5><strong>CATEGORY</strong></h5></label>
                     <Select
                       field='userCategory'
+                      name='category'
+                      id='category'
                       options={options}
-                      className='form-control'
+                      className={`${formControlClass}`}
                     />
                   </div>
                   <div className={`${classes['form-field']} col-12`}>
-                    <h5><strong>MESSAGE</strong></h5>
+                    <label style={{ display: 'inline-block' }} htmlFor='message'><h5><strong>MESSAGE</strong></h5></label>
                     <TextArea
                       field='userMessage'
                       name='message'
+                      id='message'
                       placeholder='Enter your message here...'
-                      className='form-control'
-                      rows={4}
+                      className={`${formControlClass}`}
+                      rows={numRows}
                     />
                   </div>
                 </div>
