@@ -20,25 +20,37 @@ class Box extends Component {
     }
   }
   render() {
-    const { image, lang, sectionId  } = this.props;
+    const { image, lang, sectionId, link  } = this.props;
     const { title, description } = lang;
     const benefitBoxClasses = this.props.index <= 2 ? 'col-md-6 col-lg-4' : 'col-md-6';
     const partnerBoxClasses = 'col-md-6';
     const classList = sectionId === 'partners' ? partnerBoxClasses : benefitBoxClasses;
+    const box = (
+      <div className={`${classes['box']}`}>
+        <BoxImage
+          title={title}
+          image={image}
+        />
+        <BoxTitle
+          title={title}
+        />
+        <BoxDescription
+          description={description}
+        />
+      </div>
+    );
+    if (link) {
+      return (
+        <div className={`box-anim col-12 ${classList}`} id={this.props.id}>
+          <a href={link} target='_blank'>
+            {box}
+          </a>
+        </div>
+      );
+    }
     return (
       <div className={`box-anim col-12 ${classList}`} id={this.props.id}>
-        <div className={`${classes['box']}`}>
-          <BoxImage
-            title={title}
-            image={image}
-          />
-          <BoxTitle
-            title={title}
-          />
-          <BoxDescription
-            description={description}
-          />
-        </div>
+        {box}
       </div>
     );
   }

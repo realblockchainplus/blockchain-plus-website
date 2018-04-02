@@ -482,14 +482,30 @@ class App extends PureComponent {
               id: 'aird-berlis',
               title: 'Aird Berlis',
               image: 'aird-berlis-logo.png',
+              link: 'http://www.airdberlis.com',
               delay: null
             },
             {
               id: 'app-lab',
               title: 'The App Labb',
-              image: 'app_lab.jpg',
+              image: 'app_lab.png',
+              link: 'http://theapplabb.com/',
               delay: null
             },
+            {
+              id: 'ldj-captial',
+              title: 'LDJ Capital',
+              image: 'ldj_capital_small_transparent.png',
+              link: 'http://www.ldjcapital.com/',
+              delay: null
+            },
+            {
+              id: 'the-soho-loft',
+              title: 'The Soho Loft',
+              image: 'the_soho_loft.png',
+              link: 'https://www.thesoholoft.com/',
+              delay: null
+            }
             // {
             //   name: 'Trendency Online',
             //   image: 'trendency_logo.png'

@@ -20,7 +20,7 @@ class SectionBody extends Component {
         }
         {content.boxes && 
           content.boxes.map((box, index) => {
-            const { id, image, title, delay } = box;
+            const { id, image, title, link, delay } = box;
             return <Box
               key={index}
               index={index}
@@ -29,6 +29,7 @@ class SectionBody extends Component {
               id={id}
               image={image}              
               title={title}              
+              link={link}
               delay={delay}
               scrollReveal={scrollReveal}
             />
