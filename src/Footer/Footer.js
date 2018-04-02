@@ -12,7 +12,7 @@ class Footer extends Component {
     const { brand, columns, languages } = content;
     return (
       <div className={`${classes['footer']}`}>
-        <div className={`${classes['footer-container']} container py-3`}>
+        <div className={`${classes['footer-container']} container`}>
           <div className='row'>
             <FooterBrand brand={brand} />
             {/* {columns.map((column, index) => {
@@ -23,9 +23,9 @@ class Footer extends Component {
                 lang={lang.columns[id]}
               />
             })} */}
-            <FooterLanguage 
+            {/* <FooterLanguage 
               content={languages}
-              lang={lang.languages} />
+              lang={lang.languages} /> */}
           </div>
         </div>
       </div>
