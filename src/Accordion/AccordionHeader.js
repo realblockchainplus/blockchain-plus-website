@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faAngleDoubleDown, faAngleDoubleLeft } from '@fortawesome/fontawesome-free-solid';
+import faAngleDoubleDown from '@fortawesome/fontawesome-free-solid/faAngleDoubleDown';
+import faAngleDoubleLeft from '@fortawesome/fontawesome-free-solid/faAngleDoubleLeft';
 import classes from './Accordion.css';
 
 class AccordionHeader extends Component {

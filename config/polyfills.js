@@ -23,6 +23,3 @@ if (process.env.NODE_ENV === 'test') {
 
 // babel-polyfill
 require('babel-polyfill');
-
-// text-encoder polyfill
-require('text-encoding');

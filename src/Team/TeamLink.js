@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faPenSquare } from '@fortawesome/fontawesome-free-solid';
-import { faLinkedin, faFacebook, faGithubSquare, faGooglePlusSquare, faBitbucket } from '@fortawesome/fontawesome-free-brands';
+import faPenSquare from '@fortawesome/fontawesome-free-solid/faPenSquare';
+import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin';
+import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook';
+import faGithubSquare from '@fortawesome/fontawesome-free-brands/faGithubSquare';
+import faGooglePlusSquare from '@fortawesome/fontawesome-free-brands/faGooglePlusSquare';
+import faBitbucket from '@fortawesome/fontawesome-free-brands/faBitbucket';
 import classes from './Team.css';
 
 const typeMap = {

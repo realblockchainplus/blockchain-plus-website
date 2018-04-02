@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-// import { faQuestion } from '@fortawesome/fontawesome-free-solid';
 import AccordionPanel from './AccordionPanel';
 import classes from './Accordion.css';
 

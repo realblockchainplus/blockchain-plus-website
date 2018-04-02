@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 // import Aux from '../Aux';
 import RoadmapDotContainer from './RoadmapDotContainer';
-// import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-// import { faSpinner, faCheck } from '@fortawesome/fontawesome-free-solid';
 import classes from './Roadmap.css';
 import RoadmapSectionContainer from './RoadmapSectionContainer';
 

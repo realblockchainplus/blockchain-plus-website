@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Text, TextArea, Select } from 'react-form';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faSpinner, faCheck } from '@fortawesome/fontawesome-free-solid';
+import faSpinner from '@fortawesome/fontawesome-free-solid/faSpinner';
+import faCheck from '@fortawesome/fontawesome-free-solid/faCheck';
 import classes from './Form.css';
 
 const options = [
