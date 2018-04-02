@@ -22,14 +22,10 @@ class MainPage extends Component {
   }
 
   render() {
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-    // let numValue = width < 992 ? 10 : 60;
     return (
       <div id={this.props.id} className={`${classes[this.props.id]}`}>
         <Hero 
           lang={this.props.lang.hero}
-          style={{ height, width }}
         />
         {this.props.content.map((section, index) => {
           const lang = this.props.lang[section.id];
