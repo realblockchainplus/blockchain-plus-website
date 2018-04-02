@@ -237,17 +237,17 @@ class App extends PureComponent {
                 //     blog: null
                 //   }
                 // },
-                // {
-                //   id: 'david-drake',
-                //   links: {
-                //     github: null,
-                //     linkedin: 'ldjcaptial',
-                //     facebook: null,
-                //     googlePlus: null,
-                //     bitbucket: null,
-                //     blog: null
-                //   }
-                // },
+                {
+                  id: 'david-drake',
+                  links: {
+                    github: null,
+                    linkedin: 'ldjcaptial',
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: null,
+                    blog: null
+                  }
+                }
                 // {
                 //   title: null,
                 //   firstName: 'Norbert',
