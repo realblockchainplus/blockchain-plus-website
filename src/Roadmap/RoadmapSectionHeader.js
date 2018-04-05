@@ -4,7 +4,7 @@ class RoadmapSectionHeader extends Component {
   render() {
     const { title } = this.props;
     return (
-      <h4>{title}</h4>
+      <h4 className='text-center'>{title}</h4>
     );
   }
 }
