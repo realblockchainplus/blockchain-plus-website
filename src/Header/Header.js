@@ -101,7 +101,7 @@ class Header extends Component {
         <Navbar light className={`navbar navbar-dark fixed-top navbar-expand-lg ${classes[scrollStyle]}`}>
           <div className='container'>
             <NavbarBrand style={{ paddingTop: '0px', paddingBottom: '0px' }} href="/">
-              <img src="blockchainplus_header_brand_new.svg" alt="Blockchain Logo" style={{ height: '46px' }}/>
+              <img src="blockchain_logo_header.svg" alt="Blockchain Logo" style={{ height: '34px' }}/>
             </NavbarBrand>
             <NavbarToggler style={{ position: 'absolute', color: 'white', right: '2rem', top: '0.5rem' }} onClick={this.toggleNavbar} />
             <Collapse isOpen={!this.state.collapsed} navbar>
