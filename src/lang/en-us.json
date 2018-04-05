@@ -6,7 +6,7 @@
     "random-number": "RNG",
     "team": "Team",
     "whitepaper": "Whitepaper",
-    "roadmap": "Roadmap",
+    "roadmap": "Timeline",
     "partners": "Partners"
   },
   "body": {
@@ -118,7 +118,7 @@
             "middleName": null,
             "lastName": "Kiss",
             "jobTitle": "Engineer",
-            "description": "David is a senior development veteran with extensive expertise in building Fintech products. David is currently leading RBC Reward’s server-side development team."
+            "description": "David is an expert Fintech engineer and is currently leading RBC Reward’s server-side development team."
           },
           "gabor-szokoli": {
             "firstName": "Gabor",
@@ -194,62 +194,73 @@
       }
     },
     "roadmap": {
-      "headerTitle": "Roadmap",
+      "headerTitle": "Timeline",
       "headerDescription": null,
       "sectionLang": {
         "projectionText": "Estimated Completion Time",
         "milestones": [
           {
-            "title": "Started thinking about the potential of blockchain technology",
+            "title": "Research & Development Initiated",
             "description": null
           },
           {
-            "title": "Completed research on current blockchain infrastructures",
+            "title": "Conceptualized Blockchain+",
             "description": null
           },
           {
-            "title": "Scrapped original idea of optimizing blockchains",
+            "title": "Whitepaper Completed",
             "description": null
           },
           {
-            "title": "Started thinking about new infrastructure",
+            "title": "Website Launch",
             "description": null
           },
           {
-            "title": "Completed first version of the whitepaper",
-            "description": "We created the whitepaper and did this and did that. Here is some more text."
-          },
-          {
-            "title": "Market Research Business Plan Started",
+            "title": "Blockchain+ Press Conference",
             "description": null
           },
           {
-            "title": "Completed second version of the whitepaper",
+            "title": "Blockchain+ Pre-Launch Conference, Toronto",
             "description": null
           },
           {
-            "title": "Completed first version of our Market Research & Business Plan",
+            "title": "Blockchain+ Pre-Launch Conference, New York",
             "description": null
           },
           {
-            "title": "Core Products Pre-Project Activities Identified",
+            "title": "Official Whitepaper Release",
             "description": null
           },
           {
-            "title": "Incorporated Blockchain+ (finally)",
+            "title": "Blockchain+ (Product 2) Beta",
             "description": null
           },
           {
-            "title": "Build the Core Application",
+            "title": "Blockchain+ Summit 2018",
             "description": null
           },
           {
-            "title": "Build the Jellyfish Random Number Generator",
+            "title": "Token Pre-Sale",
             "description": null
           },
           {
-            "title": "Build the Partner Network Housekeeping Application",
+            "title": "Blockchain+ Forum, Toronto",
             "description": null
+          },
+          {
+            "title": "Blockchain+ Forum, New York",
+            "description": null
+          },
+          {
+            "title": "Open Token Sale (Public)",
+            "description": null
+          },
+          {
+            "title": "Blockchain+ (Product 3) Beta & Blockchain+ (Product 4) Beta",
+            "description": null
+          },
+          {
+            "title": "Blockchain+ (Product 5), Blockchain+ (Product 6) Product Launch"
           }
         ]
       }
