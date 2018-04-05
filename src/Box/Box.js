@@ -7,17 +7,17 @@ import classes from './Box.css';
 class Box extends Component {
   componentDidMount() {
     const element = document.getElementById(this.props.id);
-    if (this.props.delay !== null) {
-      window.sr.reveal(element, {
-        mobile: false,
-        delay: this.props.delay,
-        rotate: {
-          x: 0,
-          y: 90,
-          z: 0
-        }
-      });
-    }
+    // if (this.props.delay !== null) {
+    //   window.sr.reveal(element, {
+    //     mobile: false,
+    //     delay: this.props.delay,
+    //     rotate: {
+    //       x: 0,
+    //       y: 90,
+    //       z: 0
+    //     }
+    //   });
+    // }
   }
   render() {
     const { image, lang, sectionId, link  } = this.props;

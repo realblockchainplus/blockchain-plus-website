@@ -7,12 +7,12 @@ import RoadmapSectionContainer from './RoadmapSectionContainer';
 class RoadmapContainer extends Component {
   componentDidMount() {
     const element = document.getElementById(`roadmap-${this.props.content.id}`);
-    window.sr.reveal(element, {
-      mobile: false,
-      delay: 0,
-      opacity: 0,
-      scale: 0.9
-    });
+    // window.sr.reveal(element, {
+    //   mobile: false,
+    //   delay: 0,
+    //   opacity: 0,
+    //   scale: 0.9
+    // });
   }
   getPercentColor(percent) {
     let h = percent * 1.2;
@@ -47,7 +47,6 @@ class RoadmapContainer extends Component {
     // const alertClass = this.getAlertClass(percentComplete, month, year);
     const order = direction === 'left' ? 1 : 3;
     const blurredStyle = index >= 4 ? { filter: 'blur(5px)' } : {};
-    console.log(blurredStyle);
     return (
       <div className={`${classes['roadmap-container']} row no-gutters`} id={`roadmap-${id}`} style={blurredStyle}>
         <RoadmapDotContainer

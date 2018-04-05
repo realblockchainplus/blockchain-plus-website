@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component, PureComponent } from 'react';
 import Header from './Header/Header';
 import Body from './Body/Body';
 import Footer from './Footer/Footer';
@@ -10,7 +10,7 @@ import enUS from './lang/en-us.json';
 
 import classes from './App.css';
 
-class App extends PureComponent {
+class App extends Component {
   state = {
     bodyHeight: null,
     navItems: [
@@ -45,6 +45,10 @@ class App extends PureComponent {
       {
         page: '',
         id: 'partners'
+      },
+      {
+        page: 'crowdsale',
+        id: 'crowdsale'
       }
     ],
     sections: [

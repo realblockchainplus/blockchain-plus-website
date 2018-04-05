@@ -7,7 +7,8 @@
     "team": "Team",
     "whitepaper": "Whitepaper",
     "roadmap": "Timeline",
-    "partners": "Partners"
+    "partners": "Partners",
+    "crowdsale": "Crowdsale"
   },
   "body": {
     "hero": "Next-generation distributed ledger system",

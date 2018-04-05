@@ -1,24 +1,12 @@
 import React, { Component } from 'react';
 import Section from '../../Section/Section';
 import Hero from '../../Hero/Hero';
-import Particles from 'react-particles-js';
-import ScrollReveal from 'scrollreveal';
 // import { Parallax } from 'react-scroll-parallax';
 import classes from './MainPage.css';
 
 class MainPage extends Component {
-  constructor() {
-    super();
-    window.sr = ScrollReveal({ duration: 1000 });
-  }
   componentDidMount() {
-    // const element = document.getElementById(this.props.id);
-    // window.sr.reveal(element, {
-    //   reset: true,
-    //   mobile: false,
-    //   delay: 100,
-    //   viewFactor: 0
-    // });
+    console.log('[Main Page] mounted');
   }
 
   render() {

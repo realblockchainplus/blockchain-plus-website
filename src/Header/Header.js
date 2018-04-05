@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
 import classes from './Header.css';
 import NavList from './NavList';
@@ -120,4 +121,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);

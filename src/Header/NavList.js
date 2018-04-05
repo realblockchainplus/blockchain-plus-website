@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavListItem from './NavListItem';
-// import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 // import classes from './Header.css';
 
 class NavList extends Component {
@@ -20,4 +20,4 @@ class NavList extends Component {
   }
 }
 
-export default NavList;
+export default withRouter(NavList);
