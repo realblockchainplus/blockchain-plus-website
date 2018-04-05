@@ -142,17 +142,17 @@ class App extends PureComponent {
                     blog: null
                   }
                 },
-                // {
-                //   id: 'david-kiss',
-                //   links: {
-                //     github: null,
-                //     linkedin: 'davidkiss',
-                //     facebook: null,
-                //     googlePlus: null,
-                //     bitbucket: null,
-                //     blog: null
-                //   }
-                // },
+                {
+                  id: 'david-kiss',
+                  links: {
+                    github: null,
+                    linkedin: 'davidkiss',
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: null,
+                    blog: null
+                  }
+                },
                 // {
                 //   id: 'gabor-szokoli',
                 //   links: {
@@ -241,7 +241,7 @@ class App extends PureComponent {
                   id: 'david-drake',
                   links: {
                     github: null,
-                    linkedin: 'ldjcaptial',
+                    linkedin: 'ldjcapital',
                     facebook: null,
                     googlePlus: null,
                     bitbucket: null,
@@ -413,64 +413,59 @@ class App extends PureComponent {
             },
             {
               percentComplete: 100,
-              month: 8,
-              year: 2017
-            },
-            {           
-              percentComplete: 100,
-              month: 10,
-              year: 2017
-            },
-            {           
-              percentComplete: 100,
-              month: 10,
-              year: 2017
-            },
-            {           
-              percentComplete: 100,
               month: 12,
               year: 2017
             },
             {           
               percentComplete: 100,
-              month: 12,
-              year: 2017
-            },
-            {             
-              percentComplete: 100,
               month: 2,
               year: 2018
             },
-            {             
+            {           
               percentComplete: 100,
-              month: 2,
+              month: 4,
               year: 2018
             },
-            {          
-              percentComplete: 100,
-              month: 2,
-              year: 2018
-            },
-            {             
-              percentComplete: 100,
-              month: 3,
-              year: 2018
-            },
-            {
-              percentComplete: 0,
-              month: 11,
-              year: 2018
-            },
-            {
-              percentComplete: 0,
-              month: 12,
-              year: 2018
-            },
-            {
-              percentComplete: 0,
-              month: 1,
-              year: 2019
-            }  
+            // {           
+            //   percentComplete: 100,
+            //   month: 12,
+            //   year: 2017
+            // },
+            // {             
+            //   percentComplete: 100,
+            //   month: 2,
+            //   year: 2018
+            // },
+            // {             
+            //   percentComplete: 100,
+            //   month: 2,
+            //   year: 2018
+            // },
+            // {          
+            //   percentComplete: 100,
+            //   month: 2,
+            //   year: 2018
+            // },
+            // {             
+            //   percentComplete: 100,
+            //   month: 3,
+            //   year: 2018
+            // }
+            // {
+            //   percentComplete: 0,
+            //   month: 11,
+            //   year: 2018
+            // },
+            // {
+            //   percentComplete: 0,
+            //   month: 12,
+            //   year: 2018
+            // },
+            // {
+            //   percentComplete: 0,
+            //   month: 1,
+            //   year: 2019
+            // }  
           ]
         }
       },
@@ -742,9 +737,9 @@ class App extends PureComponent {
     // let translatedFooter = enUS.footer;
     return (
       <div id='app' className={classes.App}>
-        {/* <JellyfishContainer 
+        <JellyfishContainer 
           onNewAnimationFrame={this.props.onNewAnimationFrame}
-        /> */}
+        />
         {/* <Parallax
           className={classes.parallax}
           offsetYMax={height}
