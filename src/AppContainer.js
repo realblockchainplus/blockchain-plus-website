@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LoadingScreen from './LoadingScreen/LoadingScreen';
 import App from './App';
-import Aux from './Aux';
+import Aux from './winAux';
 // import { ParallaxProvider } from 'react-scroll-parallax';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';

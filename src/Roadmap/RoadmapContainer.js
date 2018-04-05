@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Aux from '../Aux';
+// import Aux from '../winAux';
 import RoadmapDotContainer from './RoadmapDotContainer';
 import classes from './Roadmap.css';
 import RoadmapSectionContainer from './RoadmapSectionContainer';
@@ -37,7 +37,7 @@ class RoadmapContainer extends Component {
     }
   }
   render() {
-    const { content, direction, lang, id } = this.props;
+    const { content, index, direction, lang, id } = this.props;
     const percentComplete = this.getAvgPercent();
     const percentColor = this.getPercentColor(percentComplete);
     const percentStyle = {
@@ -45,9 +45,11 @@ class RoadmapContainer extends Component {
       textShadow: `0 0 4px ${percentColor}`
     };
     // const alertClass = this.getAlertClass(percentComplete, month, year);
-    const order = direction === 'left' ? 1 : 3;  
+    const order = direction === 'left' ? 1 : 3;
+    const blurredStyle = index >= 4 ? { filter: 'blur(5px)' } : {};
+    console.log(blurredStyle);
     return (
-      <div className={`${classes['roadmap-container']} row no-gutters`} id={`roadmap-${id}`}>
+      <div className={`${classes['roadmap-container']} row no-gutters`} id={`roadmap-${id}`} style={blurredStyle}>
         <RoadmapDotContainer
           percentStyle={percentStyle}
           percentComplete={percentComplete}

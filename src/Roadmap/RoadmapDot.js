@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Roadmap.css';
-import Aux from '../Aux';
+import Aux from '../winAux';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCheck from '@fortawesome/fontawesome-free-solid/faCheck';
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';

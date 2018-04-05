@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../Aux';
+import Aux from '../winAux';
 import RoadmapSectionHeader from './RoadmapSectionHeader';
 import RoadmapSectionDescription from './RoadmapSectionDescription';
 import RoadmapProjection from './RoadmapProjection';

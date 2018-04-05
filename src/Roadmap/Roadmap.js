@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Roadmap.css';
+import Aux from '../winAux';
 // import TeamPortrait from '../Team/TeamPortrait';
 // import TeamLink from '../Team/TeamLink';
 import RoadmapContainer from './RoadmapContainer';
@@ -27,14 +28,20 @@ class RoadMap extends Component {
         {Object.keys(dates).map((date, index) => {
           const milestones = dates[date];
           console.log(milestones);        
-          const direction = index % 2 === 0 ? 'left' : 'right';
-          return <RoadmapContainer
-            key={index}
-            id={date}
-            content={milestones}
-            direction={direction}
-            lang={this.props.lang}            
-          />
+          const direction = index % 2 === 0 ? 'left' : 'right';          
+          return (
+            <Aux>              
+              <RoadmapContainer
+                key={index}
+                id={date}
+                index={index}
+                content={milestones}
+                direction={direction}
+                lang={this.props.lang}            
+              />
+              { index === 3 && <h2 style={{ color: 'rgba(245,254,254,1)', textShadow: 'rgba(0, 0, 0, 0.5) -2px 5px 1px' }} className='text-center py-5'>TO BE CONTINUED...</h2> }
+            </Aux>
+          );
         })}
       </div>
     );
