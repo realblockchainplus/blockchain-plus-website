@@ -12,6 +12,7 @@ function initWin(w,h){
   canvas.height = docHeight;
   try {
     gl = canvas.getContext( "experimental-webgl" ) ;
+    console.log(gl);
     gl.viewportWidth = docWidth;
     gl.viewportHeight = docHeight;
   } catch(e) {
