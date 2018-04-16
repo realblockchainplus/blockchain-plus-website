@@ -19,12 +19,12 @@ function loadTexture(label, path, num) {
   texture[label].image = imageFile;
   imageFile.onload = function() {
     handleLoadedTexture(texture[label], label);
-    if (num === 32) {
-      console.log('last texture loaded');
-      document.getElementById('loading-screen').style.display = 'none';
-      document.documentElement.style.overflow = 'visible';
-      document.body.style.overflow = 'visible';
-    }
+    // if (num === 32) {
+    //   console.log('last texture loaded');
+    //   document.getElementById('loading-screen').style.display = 'none';
+    //   document.documentElement.style.overflow = 'visible';
+    //   document.body.style.overflow = 'visible';
+    // }
   }
 }
 
