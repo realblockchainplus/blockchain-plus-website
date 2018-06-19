@@ -113,14 +113,7 @@
             "lastName": "Singh",
             "jobTitle": "Chief Technology Officer",
             "description": "Jas is a super star engineer and has architected some of the largest E-Commerce applications in Canada. Jas has lead development teams for Canadian Tire, IBM & Presto."
-          },
-          "david-kiss": {
-            "firstName": "David",
-            "middleName": null,
-            "lastName": "Kiss",
-            "jobTitle": "Engineer",
-            "description": "David is an expert Fintech engineer and is currently leading RBC Reward’s server-side development team."
-          },
+          },          
           "gabor-szokoli": {
             "firstName": "Gabor",
             "middleName": null,
@@ -168,19 +161,19 @@
             "jobTitle": "Advisor",
             "description": "Kundan is the founder of TheApplabb. Kundan has grown the company to over 150 employees worldwide and is one of the fastest growing software development companies in Toronto."
           },
+          "david-kiss": {
+            "firstName": "David",
+            "middleName": null,
+            "lastName": "Kiss",
+            "jobTitle": "Engineer",
+            "description": "David is an expert Fintech engineer and is currently leading RBC Reward’s server-side development team."
+          },
           "tamas-haiman": {
             "firstName": "Tamas",
             "middleName": null,
             "lastName": "Haiman",
             "jobTitle": "Advisor",
             "description": "Tamas is a senior banker with experience from tier-one banks like Barclays, CITI and Sberbank. Most recently Tamas was the Head of Global Markets for Sberbank (Switzerland) AG, where he brought the bank back into the black."
-          },
-          "david-drake": {
-            "firstName": "David",
-            "middleName": null,
-            "lastName": "Drake",
-            "jobTitle": "Advisor",
-            "description": "David Drake is the founder and chairman of LDJ Capital a multi-family office with access to over $1.5 trillion in assets. David is also a pioneer and a thought leader in the blockchain space."
           }
         }
       }

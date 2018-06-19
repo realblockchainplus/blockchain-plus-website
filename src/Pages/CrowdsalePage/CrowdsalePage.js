@@ -11,7 +11,8 @@ class CrowdsalePage extends Component {
     }
     this.web3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/SG3z8qbWkyg2PEQUJGXi'));
     this.updateInterval = null;
-  }
+  };
+  
   componentDidMount() {
     let ethInContract = 0;
     this.web3.eth.getBalance('0x7beA89576840D73F5E63B8e99bb2B666C8AdC018').then(result => {
@@ -22,11 +23,11 @@ class CrowdsalePage extends Component {
     this.updateInterval = setInterval(() => {
       this.updateEthInContract();
     }, 5000);
-  }
+  };
 
   componentWillUnmount() {
     clearInterval(this.updateInterval);
-  }
+  };
 
   updateEthInContract() {
     let ethInContract = 0;
@@ -35,7 +36,7 @@ class CrowdsalePage extends Component {
       console.log('updated ethInContract');
       this.setState({ ethInContract });
     });
-  }
+  };
 
   render() {
     return (
@@ -59,9 +60,9 @@ class CrowdsalePage extends Component {
               </div>
               <div className='col-6'>
                 <h4>Start Date</h4>
-                <p>start date</p>
+                <p>13:00 EST - April 4, 2018</p>
                 <h4>End Date</h4>
-                <p>end date</p>
+                <p>00:00 EST - May 4, 2018</p>
                 <h4>Hard Cap</h4>
                 <p>500 ETH</p>
               </div>

@@ -46,10 +46,10 @@ class App extends Component {
         page: '',
         id: 'partners'
       },
-      {
-        page: 'crowdsale',
-        id: 'crowdsale'
-      }
+      // {
+      //   page: 'crowdsale',
+      //   id: 'crowdsale'
+      // }
     ],
     sections: [
       {
@@ -145,29 +145,18 @@ class App extends Component {
                     // bitbucket: 'mistletoe91',
                     blog: null
                   }
-                },
+                },                
                 {
-                  id: 'david-kiss',
+                  id: 'gabor-szokoli',
                   links: {
                     github: null,
-                    linkedin: 'davidkiss',
+                    linkedin: 'gabor-szokoli-25a16011',
                     facebook: null,
                     googlePlus: null,
                     bitbucket: null,
                     blog: null
                   }
                 },
-                // {
-                //   id: 'gabor-szokoli',
-                //   links: {
-                //     github: null,
-                //     linkedin: 'gabor-szokoli-25a16011',
-                //     facebook: null,
-                //     googlePlus: null,
-                //     bitbucket: null,
-                //     blog: null
-                //   }
-                // },
                 // {
                 //   id: 'lee-stecklov',
                 //   links: {
@@ -230,6 +219,17 @@ class App extends Component {
                     blog: null
                   }
                 },
+                {
+                  id: 'david-kiss',
+                  links: {
+                    github: null,
+                    linkedin: 'davidkiss',
+                    facebook: null,
+                    googlePlus: null,
+                    bitbucket: null,
+                    blog: null
+                  }
+                },
                 // {
                 //   id: 'tamas-haiman',
                 //   links: {
@@ -241,17 +241,6 @@ class App extends Component {
                 //     blog: null
                 //   }
                 // },
-                {
-                  id: 'david-drake',
-                  links: {
-                    github: null,
-                    linkedin: 'ldjcapital',
-                    facebook: null,
-                    googlePlus: null,
-                    bitbucket: null,
-                    blog: null
-                  }
-                }
                 // {
                 //   title: null,
                 //   firstName: 'Norbert',
@@ -491,20 +480,6 @@ class App extends Component {
               link: 'http://theapplabb.com/',
               delay: null
             },
-            {
-              id: 'ldj-captial',
-              title: 'LDJ Capital',
-              image: 'ldj_capital_small_transparent.png',
-              link: 'http://www.ldjcapital.com/',
-              delay: null
-            },
-            {
-              id: 'the-soho-loft',
-              title: 'The Soho Loft',
-              image: 'the_soho_loft.png',
-              link: 'https://www.thesoholoft.com/',
-              delay: null
-            }
             // {
             //   name: 'Trendency Online',
             //   image: 'trendency_logo.png'

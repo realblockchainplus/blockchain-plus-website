@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import AppContainer from './AppContainer';
+import babel from 'babel-polyfill';
 // import { ParallaxProvider } from 'react-scroll-parallax';
 import { BrowserRouter } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
@@ -11,7 +12,7 @@ import registerServiceWorker from './registerServiceWorker';
 //     whyDidYouUpdate(React)
 // }
 const app = (
-    <BrowserRouter>
+    <BrowserRouter basename='blockchain-plus-website'>
         <AppContainer />
     </BrowserRouter>
 );

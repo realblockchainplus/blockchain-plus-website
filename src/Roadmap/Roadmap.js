@@ -30,9 +30,8 @@ class RoadMap extends Component {
           console.log(milestones);        
           const direction = index % 2 === 0 ? 'left' : 'right';          
           return (
-            <Aux>              
-              <RoadmapContainer
-                key={index}
+            <Aux key={index}>              
+              <RoadmapContainer                
                 id={date}
                 index={index}
                 content={milestones}
