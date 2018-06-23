@@ -191,10 +191,10 @@ class App extends Component {
                   }
                 },
                 {
-                  id: 'sophia-wall',
+                  id: 'laszlo-benedek',
                   links: {
                     github: null,
-                    linkedin: '',
+                    linkedin: 'laszlobenedek',
                     facebook: null,
                     googlePlus: null,
                     bitbucket: null,
