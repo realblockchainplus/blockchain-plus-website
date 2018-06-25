@@ -12,7 +12,7 @@ import registerServiceWorker from './registerServiceWorker';
 //     whyDidYouUpdate(React)
 // }
 const app = (
-    <BrowserRouter basename='blockchain-plus-website'>
+    <BrowserRouter>
         <AppContainer />
     </BrowserRouter>
 );
