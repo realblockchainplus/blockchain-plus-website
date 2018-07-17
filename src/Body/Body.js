@@ -45,12 +45,12 @@ class Body extends Component {
           />
           <Route path='/whitepaper'
             component={() => {
-              window.open('blockchainplus_whitepaper.pdf', '_self')
+              window.location = 'https://s3-us-west-2.amazonaws.com/blockchainplus-whitepaper/blockchainplus_whitepaper.pdf';
             }}
           />
           <Route path='/presentation'
             component={() => {
-              window.location = 'https://s3-us-west-2.amazonaws.com/blockchainplus-whitepaper/blockchainplus_whitepaper.pdf';
+              window.location = 'https://s3-us-west-2.amazonaws.com/blockchainplus-whitepaper/blockchainplus_presentation.pdf';
             }}
           />
         </Switch>
