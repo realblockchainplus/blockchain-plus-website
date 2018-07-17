@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import MainPage from '../Pages/MainPage/MainPage';
 // import Whitepaper from '../Pages/Whitepaper/Whitepaper';
 // import diff from 'deep-diff';
@@ -44,13 +44,13 @@ class Body extends Component {
             }}
           />
           <Route path='/whitepaper'
-            render={() => {
-              return <Whitepaper />
+            component={() => {
+              window.open('blockchainplus_whitepaper.pdf', '_self')
             }}
           />
           <Route path='/presentation'
-            render={() => {
-              return <Presentation />
+            component={() => {
+              window.location = 'https://s3-us-west-2.amazonaws.com/blockchainplus-whitepaper/blockchainplus_whitepaper.pdf';
             }}
           />
         </Switch>
