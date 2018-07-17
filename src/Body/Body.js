@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import MainPage from '../Pages/MainPage/MainPage';
 // import Whitepaper from '../Pages/Whitepaper/Whitepaper';
 // import diff from 'deep-diff';
 // import Fade from '../Transitions/Fade';
 import classes from './Body.css';
+import Whitepaper from '../Pages/WhitepaperPage/Whitepaper';
 import CrowdsalePage from '../Pages/CrowdsalePage/CrowdsalePage';
+import Presentation from '../Pages/PresentationPage/Presentation';
 
 // const duration = 300;
 
@@ -39,6 +41,16 @@ class Body extends Component {
                 id='crowdsale'
                 content={this.props.content}
               />
+            }}
+          />
+          <Route path='/whitepaper'
+            render={() => {
+              return <Whitepaper />
+            }}
+          />
+          <Route path='/presentation'
+            render={() => {
+              return <Presentation />
             }}
           />
         </Switch>
