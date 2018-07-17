@@ -5,7 +5,7 @@ class Presentation extends Component {
     window.open('blockchainplus_presentation.pdf', '_self');
   }
   render() {
-    return null
+    return <div className='presentation'></div>
   }
 }
 

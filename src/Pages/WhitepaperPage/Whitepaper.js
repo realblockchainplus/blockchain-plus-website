@@ -5,7 +5,7 @@ class Whitepaper extends Component {
     window.open('blockchainplus_whitepaper.pdf', '_self');
   }
   render() {
-    return null
+    return <div className='whitepaper'></div>
   }
 }
 
